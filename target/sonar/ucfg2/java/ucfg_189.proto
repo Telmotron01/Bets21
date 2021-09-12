@@ -1,0 +1,16 @@
+
++domain.Event#getEventDate()Ljava/util/Date;W
+MC:/Users/telmo/Desktop/pruebabetssonar/Bets21/src/main/java/domain/Event.javaF F("1*ë
+1W
+MC:/Users/telmo/Desktop/pruebabetssonar/Bets21/src/main/java/domain/Event.javaG	 G(™
+–
+W
+MC:/Users/telmo/Desktop/pruebabetssonar/Bets21/src/main/java/domain/Event.javaG	 G(
+%0java.util.Date"__id**
+domain.Event"
+	eventDate"q
+W
+MC:/Users/telmo/Desktop/pruebabetssonar/Bets21/src/main/java/domain/Event.javaG G(
+
+%0java.util.DateB
+domain.Event

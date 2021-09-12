@@ -1,0 +1,47 @@
+
+5dataAccess.DataAccess#getQuestion(I)Ldomain/Question;b
+VC:/Users/telmo/Desktop/pruebabetssonar/Bets21/src/main/java/dataAccess/DataAccess.java³ ³("1*»
+1b
+VC:/Users/telmo/Desktop/pruebabetssonar/Bets21/src/main/java/dataAccess/DataAccess.java´ ´(·
+´
+b
+VC:/Users/telmo/Desktop/pruebabetssonar/Bets21/src/main/java/dataAccess/DataAccess.java´ ´(%
+%0javax.persistence.EntityManager"__id*!*
+dataAccess.DataAccess"
+db¤¡
+b
+VC:/Users/telmo/Desktop/pruebabetssonar/Bets21/src/main/java/dataAccess/DataAccess.java´ ´()
+%1#javax.persistence.EntityTransaction"Ujavax.persistence.EntityManager#getTransaction()Ljavax/persistence/EntityTransaction;*'
+%
+%0javax.persistence.EntityManager2getTransaction()×Ô
+b
+VC:/Users/telmo/Desktop/pruebabetssonar/Bets21/src/main/java/dataAccess/DataAccess.java´ ´(
+
+%2void",javax.persistence.EntityTransaction#begin()V*+
+)
+%1#javax.persistence.EntityTransaction2begin()·
+´
+b
+VC:/Users/telmo/Desktop/pruebabetssonar/Bets21/src/main/java/dataAccess/DataAccess.javaµ µ(%
+%3javax.persistence.EntityManager"__id*!*
+dataAccess.DataAccess"
+db¿¼
+b
+VC:/Users/telmo/Desktop/pruebabetssonar/Bets21/src/main/java/dataAccess/DataAccess.javaµ µ(3
+%4domain.Question"[javax.persistence.EntityManager#find(Ljava/lang/Class;Ljava/lang/Object;)Ljava/lang/Object;*'
+%
+%3javax.persistence.EntityManager*
+""*
+""2)find(Ljava/lang/Class;Ljava/lang/Object;)œ
+™
+b
+VC:/Users/telmo/Desktop/pruebabetssonar/Bets21/src/main/java/dataAccess/DataAccess.javaµ µ(4
+qdomain.Question"__id*
+
+%4domain.Question"|
+b
+VC:/Users/telmo/Desktop/pruebabetssonar/Bets21/src/main/java/dataAccess/DataAccess.java¶ ¶(
+
+qdomain.Question:
+""B
+dataAccess.DataAccess

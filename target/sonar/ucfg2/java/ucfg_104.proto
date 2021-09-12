@@ -1,0 +1,59 @@
+
+,domain.Question#toString()Ljava/lang/String;\
+PC:/Users/telmo/Desktop/pruebabetssonar/Bets21/src/main/java/domain/Question.java² ²("1*·
+1\
+PC:/Users/telmo/Desktop/pruebabetssonar/Bets21/src/main/java/domain/Question.java³	 ³(©
+¦
+\
+PC:/Users/telmo/Desktop/pruebabetssonar/Bets21/src/main/java/domain/Question.java³	 ³(
+%0java.lang.Integer"__id*'*%
+domain.Question"
+questionNumber¥
+¢
+\
+PC:/Users/telmo/Desktop/pruebabetssonar/Bets21/src/main/java/domain/Question.java³	 ³(
+%1java.lang.String"__concat*
+
+%0java.lang.Integer*
+;¢
+Ÿ
+\
+PC:/Users/telmo/Desktop/pruebabetssonar/Bets21/src/main/java/domain/Question.java³ ³($
+%2java.lang.String"__id*!*
+domain.Question"
+
+question·
+´
+\
+PC:/Users/telmo/Desktop/pruebabetssonar/Bets21/src/main/java/domain/Question.java³	 ³($
+%3java.lang.String"__concat*
+
+%1java.lang.String*
+
+%2java.lang.String¤
+¡
+\
+PC:/Users/telmo/Desktop/pruebabetssonar/Bets21/src/main/java/domain/Question.java³	 ³((
+%4java.lang.String"__concat*
+
+%3java.lang.String*
+;Å
+Â
+\
+PC:/Users/telmo/Desktop/pruebabetssonar/Bets21/src/main/java/domain/Question.java³) ³(C
+%5java.lang.String"-java.lang.Float#toString(F)Ljava/lang/String;*"
+java.lang.Float*
+""·
+´
+\
+PC:/Users/telmo/Desktop/pruebabetssonar/Bets21/src/main/java/domain/Question.java³	 ³(C
+%6java.lang.String"__concat*
+
+%4java.lang.String*
+
+%5java.lang.String"x
+\
+PC:/Users/telmo/Desktop/pruebabetssonar/Bets21/src/main/java/domain/Question.java³ ³(D
+
+%6java.lang.StringB
+domain.Question

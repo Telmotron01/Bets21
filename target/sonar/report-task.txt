@@ -1,0 +1,7 @@
+organization=telmoesnaola
+projectKey=telmoesnaola_bets
+serverUrl=https://sonarcloud.io
+serverVersion=8.0.0.23159
+dashboardUrl=https://sonarcloud.io/dashboard?id=telmoesnaola_bets
+ceTaskId=AXvbIr_y6PVVEaJzOhx7
+ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AXvbIr_y6PVVEaJzOhx7

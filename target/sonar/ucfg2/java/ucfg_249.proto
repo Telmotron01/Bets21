@@ -1,0 +1,65 @@
+
+AbusinessLogic.BLFacadeImplementation#isAdmin(Ljava/lang/String;)Zq
+eC:/Users/telmo/Desktop/pruebabetssonar/Bets21/src/main/java/businessLogic/BLFacadeImplementation.java≤ ≤("startingBlock*Ú
+startingBlockq
+eC:/Users/telmo/Desktop/pruebabetssonar/Bets21/src/main/java/businessLogic/BLFacadeImplementation.java≤ ≤(%æ
+ª
+q
+eC:/Users/telmo/Desktop/pruebabetssonar/Bets21/src/main/java/businessLogic/BLFacadeImplementation.java± ±(
+%6"
+__annotate*
+javax.jws.WebMethod*
+
+loginjava.lang.Stringß
+§
+q
+eC:/Users/telmo/Desktop/pruebabetssonar/Bets21/src/main/java/businessLogic/BLFacadeImplementation.java≤ ≤($
+loginjava.lang.String"__annotation*
+
+%6*
+1*©
+1q
+eC:/Users/telmo/Desktop/pruebabetssonar/Bets21/src/main/java/businessLogic/BLFacadeImplementation.java≥ ≥(“
+œ
+q
+eC:/Users/telmo/Desktop/pruebabetssonar/Bets21/src/main/java/businessLogic/BLFacadeImplementation.java≥ ≥(
+%0dataAccess.DataAccess"__id*7*5&
+$businessLogic.BLFacadeImplementation"
+	dbManager“œ
+q
+eC:/Users/telmo/Desktop/pruebabetssonar/Bets21/src/main/java/businessLogic/BLFacadeImplementation.java≥ ≥(
+
+%1void"dataAccess.DataAccess#open(Z)V*
+
+%0dataAccess.DataAccess*
+""2open(Z)“
+œ
+q
+eC:/Users/telmo/Desktop/pruebabetssonar/Bets21/src/main/java/businessLogic/BLFacadeImplementation.java¥ ¥(
+%2dataAccess.DataAccess"__id*7*5&
+$businessLogic.BLFacadeImplementation"
+	dbManageríè
+q
+eC:/Users/telmo/Desktop/pruebabetssonar/Bets21/src/main/java/businessLogic/BLFacadeImplementation.java¥ ¥(&
+%3boolean"2dataAccess.DataAccess#esAdmin(Ljava/lang/String;)Z*
+
+%2dataAccess.DataAccess*
+
+loginjava.lang.String2esAdmin(Ljava/lang/String;)“
+œ
+q
+eC:/Users/telmo/Desktop/pruebabetssonar/Bets21/src/main/java/businessLogic/BLFacadeImplementation.javaµ µ(
+%4dataAccess.DataAccess"__id*7*5&
+$businessLogic.BLFacadeImplementation"
+	dbManager «
+q
+eC:/Users/telmo/Desktop/pruebabetssonar/Bets21/src/main/java/businessLogic/BLFacadeImplementation.javaµ µ(
+
+%5void"dataAccess.DataAccess#close()V*
+
+%4dataAccess.DataAccess2close()"{
+q
+eC:/Users/telmo/Desktop/pruebabetssonar/Bets21/src/main/java/businessLogic/BLFacadeImplementation.java∂ ∂(
+"":
+loginjava.lang.StringB(&
+$businessLogic.BLFacadeImplementation
