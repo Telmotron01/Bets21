@@ -61,194 +61,194 @@ public class DataAccess  {
 		try {
 
 
-			Calendar today = Calendar.getInstance();
-
-			int month=today.get(Calendar.MONTH);
-			month+=1;
-			int year=today.get(Calendar.YEAR);
-			if (month==12) { month=0; year+=1;}  
-
-			Cuenta c1 = new Cuenta("admin", "admin", true);
-			Cuenta c2 = new Cuenta("usuario", "1234", false);
-
-
-			db.persist(c1);
-			db.persist(c2);
-
-			Event ev1=new Event(1, "Atlético-Athletic", UtilDate.newDate(year,month,17));
-			Event ev2=new Event(2, "Eibar-Barcelona", UtilDate.newDate(year,month,17));
-			Event ev3=new Event(3, "Getafe-Celta", UtilDate.newDate(year,month,17));
-			Event ev4=new Event(4, "Alavés-Deportivo", UtilDate.newDate(year,month,17));
-			Event ev5=new Event(5, "Español-Villareal", UtilDate.newDate(year,month,17));
-			Event ev6=new Event(6, "Las Palmas-Sevilla", UtilDate.newDate(year,month,17));
-			Event ev7=new Event(7, "Malaga-Valencia", UtilDate.newDate(year,month,17));
-			Event ev8=new Event(8, "Girona-Leganés", UtilDate.newDate(year,month,17));
-			Event ev9=new Event(9, "Real Sociedad-Levante", UtilDate.newDate(year,month,17));
-			Event ev10=new Event(10, "Betis-Real Madrid", UtilDate.newDate(year,month,17));
-
-			Event ev11=new Event(11, "Atletico-Athletic", UtilDate.newDate(year,month,1));
-			Event ev12=new Event(12, "Eibar-Barcelona", UtilDate.newDate(year,month,1));
-			Event ev13=new Event(13, "Getafe-Celta", UtilDate.newDate(year,month,1));
-			Event ev14=new Event(14, "Alavés-Deportivo", UtilDate.newDate(year,month,1));
-			Event ev15=new Event(15, "Español-Villareal", UtilDate.newDate(year,month,1));
-			Event ev16=new Event(16, "Las Palmas-Sevilla", UtilDate.newDate(year,month,1));
-
-
-			Event ev17=new Event(17, "Málaga-Valencia", UtilDate.newDate(year,month+1,28));
-			Event ev18=new Event(18, "Girona-Leganés", UtilDate.newDate(year,month+1,28));
-			Event ev19=new Event(19, "Real Sociedad-Levante", UtilDate.newDate(year,month+1,28));
-			Event ev20=new Event(20, "Betis-Real Madrid", UtilDate.newDate(year,month+1,28));
-
-
-
-
-			Event ev21=new Event(21, "Real Madrid-Real Sociedad", UtilDate.newDate(year,month,3));
-			Event ev22=new Event(22, "Valencia-Villareal", UtilDate.newDate(year,month,5));
-			Event ev23=new Event(23, "Valladolid-Getafe", UtilDate.newDate(year,month,6));
-			Event ev24=new Event(24, "Elche-Sevilla", UtilDate.newDate(year,month,6));
-			Event ev25=new Event(25, "Cadiz-Eibar", UtilDate.newDate(year,month,6));
-			Event ev26=new Event(26, "Osasuna-Barcelona", UtilDate.newDate(year,month,6));
-			Event ev27=new Event(27, "Huesca-Celta de Vigo", UtilDate.newDate(year,month,7));
-			Event ev28=new Event(28, "Atlético Madrid-Real Madrid", UtilDate.newDate(year,month,7));
-			Event ev29=new Event(29, "Real Sociedad-Levante", UtilDate.newDate(year,month,7));
-			Event ev30=new Event(30, "Ath. Bilbao-Granada", UtilDate.newDate(year,month,7));
-			Event ev31=new Event(31, "Betis-Alaves", UtilDate.newDate(year,month,8));
-
-
-			Event ev32=new Event(32, "Atlético Madrid-Ath.Bilbao", UtilDate.newDate(year,month,10));
-
-			Event ev33=new Event(33, "Levante-Valencia", UtilDate.newDate(year,month,12));
-			Event ev34=new Event(34, "Alavés-Cádiz", UtilDate.newDate(year,month,13));
-			Event ev35=new Event(35, "Real Madrid-Elche C.F", UtilDate.newDate(year,month,13));
-			Event ev36=new Event(36, "Osasuna-Valladolid", UtilDate.newDate(year,month,13));
-			Event ev37=new Event(37, "Getafe-Atlético Madrid", UtilDate.newDate(year,month,13));
-			Event ev38=new Event(38, "Celta de Vigo-Ath. Bilbao", UtilDate.newDate(year,month,14));
-			Event ev39=new Event(39, "Granada-Real Sociedad", UtilDate.newDate(year,month,14));
-			Event ev40=new Event(40, "Eibar-Villareal", UtilDate.newDate(year,month,14));
-			Event ev41=new Event(41, "Sevilla-Betis", UtilDate.newDate(year,month,14));
-			Event ev42=new Event(42, "Barcelona-Huesca", UtilDate.newDate(year,month,15));
-
-			Event ev43=new Event(43, "Sevilla-Elche", UtilDate.newDate(year,month,17));
-
-			Event ev44=new Event(44, "Betis-Levante", UtilDate.newDate(year,month,19));
-			Event ev45=new Event(45, "Ath.Bilbao-Eibar", UtilDate.newDate(year,month,20));
-			Event ev46=new Event(46, "Celta de Vigo-Real Madrid", UtilDate.newDate(year,month,20));
-			Event ev47=new Event(47, "Huesca-Osasuna", UtilDate.newDate(year,month,20));
-			Event ev48=new Event(48, "Valladolid-Sevilla", UtilDate.newDate(year,month,20));
-			Event ev49=new Event(49, "Getafe-Elche", UtilDate.newDate(year,month,21));
-			Event ev50=new Event(50, "Valencia-Granada", UtilDate.newDate(year,month,21));
-			Event ev51=new Event(51, "Villareal-Cádiz", UtilDate.newDate(year,month,21));
-			Event ev52=new Event(52, "Atlético Madrid-Alavés", UtilDate.newDate(year,month,21));
-			Event ev53=new Event(53, "Real Sociedad-Barcelona", UtilDate.newDate(year,month,21));
-
-
-
-
-			Question q1;
-			Question q2;
-			Question q3;
-			Question q4;
-			Question q5;
-			Question q6;
-
-			if (Locale.getDefault().equals(new Locale("es"))) {
-				q1=ev1.addQuestion("¿Quién ganará el partido?",1);
-				q2=ev1.addQuestion("¿Quién meterá el primer gol?",2);
-				q3=ev11.addQuestion("¿Quién ganará el partido?",1);
-				q4=ev11.addQuestion("¿Cuántos goles se marcarán?",2);
-				q5=ev17.addQuestion("¿Quién ganará el partido?",1);
-				q6=ev17.addQuestion("¿Habrá goles en la primera parte?",2);
-			}
-			else if (Locale.getDefault().equals(new Locale("en"))) {
-				q1=ev1.addQuestion("Who will win the match?",1);
-				q2=ev1.addQuestion("Who will score first?",2);
-				q3=ev11.addQuestion("Who will win the match?",1);
-				q4=ev11.addQuestion("How many goals will be scored in the match?",2);
-				q5=ev17.addQuestion("Who will win the match?",1);
-				q6=ev17.addQuestion("Will there be goals in the first half?",2);
-			}			
-			else {
-				q1=ev1.addQuestion("Zeinek irabaziko du partidua?",1);
-				q2=ev1.addQuestion("Zeinek sartuko du lehenengo gola?",2);
-				q3=ev11.addQuestion("Zeinek irabaziko du partidua?",1);
-				q4=ev11.addQuestion("Zenbat gol sartuko dira?",2);
-				q5=ev17.addQuestion("Zeinek irabaziko du partidua?",1);
-				q6=ev17.addQuestion("Golak sartuko dira lehenengo zatian?",2);
-
-			}
-
-			Pronostico p1=q3.addPronostico("Atletico", 1);
-			Pronostico p2=q3.addPronostico("Athletic", 3);
-
-			Pronostico p3=q4.addPronostico("0", 2);
-			Pronostico p4=q4.addPronostico("+2", 4);
-
-			db.persist(q1);
-			db.persist(q2);
-			db.persist(q3);
-			db.persist(q4);
-			db.persist(q5);
-			db.persist(q6); 
-
-
-			db.persist(ev1);
-			db.persist(ev2);
-			db.persist(ev3);
-			db.persist(ev4);
-			db.persist(ev5);
-			db.persist(ev6);
-			db.persist(ev7);
-			db.persist(ev8);
-			db.persist(ev9);
-			db.persist(ev10);
-			db.persist(ev11);
-			db.persist(ev12);
-			db.persist(ev13);
-			db.persist(ev14);
-			db.persist(ev15);
-			db.persist(ev16);
-			db.persist(ev17);
-			db.persist(ev18);
-			db.persist(ev19);
-			db.persist(ev20);
-			db.persist(ev21);
-			db.persist(ev22);
-			db.persist(ev23);
-			db.persist(ev24);
-			db.persist(ev25);
-			db.persist(ev26);
-			db.persist(ev27);
-			db.persist(ev28);
-			db.persist(ev29);
-			db.persist(ev30);
-			db.persist(ev31);
-			db.persist(ev32);
-			db.persist(ev33);
-			db.persist(ev34);
-			db.persist(ev35);
-			db.persist(ev36);
-			db.persist(ev37);
-			db.persist(ev38);
-			db.persist(ev39);
-			db.persist(ev40);
-			db.persist(ev41);
-			db.persist(ev42);
-			db.persist(ev43);
-			db.persist(ev44);
-			db.persist(ev45);
-			db.persist(ev46);
-			db.persist(ev47);
-			db.persist(ev48);
-			db.persist(ev49);
-			db.persist(ev50);
-			db.persist(ev51);
-			db.persist(ev52);
-			db.persist(ev53);
-
-			db.persist(p1);
-			db.persist(p2);
-			db.persist(p3);
-			db.persist(p4);
+//			Calendar today = Calendar.getInstance();
+//
+//			int month=today.get(Calendar.MONTH);
+//			month+=1;
+//			int year=today.get(Calendar.YEAR);
+//			if (month==12) { month=0; year+=1;}  
+//
+//			Cuenta c1 = new Cuenta("admin", "admin", true);
+//			Cuenta c2 = new Cuenta("usuario", "1234", false);
+//
+//
+//			db.persist(c1);
+//			db.persist(c2);
+//
+//			Event ev1=new Event(1, "Atlético-Athletic", UtilDate.newDate(year,month,17));
+//			Event ev2=new Event(2, "Eibar-Barcelona", UtilDate.newDate(year,month,17));
+//			Event ev3=new Event(3, "Getafe-Celta", UtilDate.newDate(year,month,17));
+//			Event ev4=new Event(4, "Alavés-Deportivo", UtilDate.newDate(year,month,17));
+//			Event ev5=new Event(5, "Español-Villareal", UtilDate.newDate(year,month,17));
+//			Event ev6=new Event(6, "Las Palmas-Sevilla", UtilDate.newDate(year,month,17));
+//			Event ev7=new Event(7, "Malaga-Valencia", UtilDate.newDate(year,month,17));
+//			Event ev8=new Event(8, "Girona-Leganés", UtilDate.newDate(year,month,17));
+//			Event ev9=new Event(9, "Real Sociedad-Levante", UtilDate.newDate(year,month,17));
+//			Event ev10=new Event(10, "Betis-Real Madrid", UtilDate.newDate(year,month,17));
+//
+//			Event ev11=new Event(11, "Atletico-Athletic", UtilDate.newDate(year,month,1));
+//			Event ev12=new Event(12, "Eibar-Barcelona", UtilDate.newDate(year,month,1));
+//			Event ev13=new Event(13, "Getafe-Celta", UtilDate.newDate(year,month,1));
+//			Event ev14=new Event(14, "Alavés-Deportivo", UtilDate.newDate(year,month,1));
+//			Event ev15=new Event(15, "Español-Villareal", UtilDate.newDate(year,month,1));
+//			Event ev16=new Event(16, "Las Palmas-Sevilla", UtilDate.newDate(year,month,1));
+//
+//
+//			Event ev17=new Event(17, "Málaga-Valencia", UtilDate.newDate(year,month+1,28));
+//			Event ev18=new Event(18, "Girona-Leganés", UtilDate.newDate(year,month+1,28));
+//			Event ev19=new Event(19, "Real Sociedad-Levante", UtilDate.newDate(year,month+1,28));
+//			Event ev20=new Event(20, "Betis-Real Madrid", UtilDate.newDate(year,month+1,28));
+//
+//
+//
+//
+//			Event ev21=new Event(21, "Real Madrid-Real Sociedad", UtilDate.newDate(year,month,3));
+//			Event ev22=new Event(22, "Valencia-Villareal", UtilDate.newDate(year,month,5));
+//			Event ev23=new Event(23, "Valladolid-Getafe", UtilDate.newDate(year,month,6));
+//			Event ev24=new Event(24, "Elche-Sevilla", UtilDate.newDate(year,month,6));
+//			Event ev25=new Event(25, "Cadiz-Eibar", UtilDate.newDate(year,month,6));
+//			Event ev26=new Event(26, "Osasuna-Barcelona", UtilDate.newDate(year,month,6));
+//			Event ev27=new Event(27, "Huesca-Celta de Vigo", UtilDate.newDate(year,month,7));
+//			Event ev28=new Event(28, "Atlético Madrid-Real Madrid", UtilDate.newDate(year,month,7));
+//			Event ev29=new Event(29, "Real Sociedad-Levante", UtilDate.newDate(year,month,7));
+//			Event ev30=new Event(30, "Ath. Bilbao-Granada", UtilDate.newDate(year,month,7));
+//			Event ev31=new Event(31, "Betis-Alaves", UtilDate.newDate(year,month,8));
+//
+//
+//			Event ev32=new Event(32, "Atlético Madrid-Ath.Bilbao", UtilDate.newDate(year,month,10));
+//
+//			Event ev33=new Event(33, "Levante-Valencia", UtilDate.newDate(year,month,12));
+//			Event ev34=new Event(34, "Alavés-Cádiz", UtilDate.newDate(year,month,13));
+//			Event ev35=new Event(35, "Real Madrid-Elche C.F", UtilDate.newDate(year,month,13));
+//			Event ev36=new Event(36, "Osasuna-Valladolid", UtilDate.newDate(year,month,13));
+//			Event ev37=new Event(37, "Getafe-Atlético Madrid", UtilDate.newDate(year,month,13));
+//			Event ev38=new Event(38, "Celta de Vigo-Ath. Bilbao", UtilDate.newDate(year,month,14));
+//			Event ev39=new Event(39, "Granada-Real Sociedad", UtilDate.newDate(year,month,14));
+//			Event ev40=new Event(40, "Eibar-Villareal", UtilDate.newDate(year,month,14));
+//			Event ev41=new Event(41, "Sevilla-Betis", UtilDate.newDate(year,month,14));
+//			Event ev42=new Event(42, "Barcelona-Huesca", UtilDate.newDate(year,month,15));
+//
+//			Event ev43=new Event(43, "Sevilla-Elche", UtilDate.newDate(year,month,17));
+//
+//			Event ev44=new Event(44, "Betis-Levante", UtilDate.newDate(year,month,19));
+//			Event ev45=new Event(45, "Ath.Bilbao-Eibar", UtilDate.newDate(year,month,20));
+//			Event ev46=new Event(46, "Celta de Vigo-Real Madrid", UtilDate.newDate(year,month,20));
+//			Event ev47=new Event(47, "Huesca-Osasuna", UtilDate.newDate(year,month,20));
+//			Event ev48=new Event(48, "Valladolid-Sevilla", UtilDate.newDate(year,month,20));
+//			Event ev49=new Event(49, "Getafe-Elche", UtilDate.newDate(year,month,21));
+//			Event ev50=new Event(50, "Valencia-Granada", UtilDate.newDate(year,month,21));
+//			Event ev51=new Event(51, "Villareal-Cádiz", UtilDate.newDate(year,month,21));
+//			Event ev52=new Event(52, "Atlético Madrid-Alavés", UtilDate.newDate(year,month,21));
+//			Event ev53=new Event(53, "Real Sociedad-Barcelona", UtilDate.newDate(year,month,21));
+//
+//
+//
+//
+//			Question q1;
+//			Question q2;
+//			Question q3;
+//			Question q4;
+//			Question q5;
+//			Question q6;
+//
+//			if (Locale.getDefault().equals(new Locale("es"))) {
+//				q1=ev1.addQuestion("¿Quién ganará el partido?",1);
+//				q2=ev1.addQuestion("¿Quién meterá el primer gol?",2);
+//				q3=ev11.addQuestion("¿Quién ganará el partido?",1);
+//				q4=ev11.addQuestion("¿Cuántos goles se marcarán?",2);
+//				q5=ev17.addQuestion("¿Quién ganará el partido?",1);
+//				q6=ev17.addQuestion("¿Habrá goles en la primera parte?",2);
+//			}
+//			else if (Locale.getDefault().equals(new Locale("en"))) {
+//				q1=ev1.addQuestion("Who will win the match?",1);
+//				q2=ev1.addQuestion("Who will score first?",2);
+//				q3=ev11.addQuestion("Who will win the match?",1);
+//				q4=ev11.addQuestion("How many goals will be scored in the match?",2);
+//				q5=ev17.addQuestion("Who will win the match?",1);
+//				q6=ev17.addQuestion("Will there be goals in the first half?",2);
+//			}			
+//			else {
+//				q1=ev1.addQuestion("Zeinek irabaziko du partidua?",1);
+//				q2=ev1.addQuestion("Zeinek sartuko du lehenengo gola?",2);
+//				q3=ev11.addQuestion("Zeinek irabaziko du partidua?",1);
+//				q4=ev11.addQuestion("Zenbat gol sartuko dira?",2);
+//				q5=ev17.addQuestion("Zeinek irabaziko du partidua?",1);
+//				q6=ev17.addQuestion("Golak sartuko dira lehenengo zatian?",2);
+//
+//			}
+//
+//			Pronostico p1=q3.addPronostico("Atletico", 1);
+//			Pronostico p2=q3.addPronostico("Athletic", 3);
+//
+//			Pronostico p3=q4.addPronostico("0", 2);
+//			Pronostico p4=q4.addPronostico("+2", 4);
+//
+//			db.persist(q1);
+//			db.persist(q2);
+//			db.persist(q3);
+//			db.persist(q4);
+//			db.persist(q5);
+//			db.persist(q6); 
+//
+//
+//			db.persist(ev1);
+//			db.persist(ev2);
+//			db.persist(ev3);
+//			db.persist(ev4);
+//			db.persist(ev5);
+//			db.persist(ev6);
+//			db.persist(ev7);
+//			db.persist(ev8);
+//			db.persist(ev9);
+//			db.persist(ev10);
+//			db.persist(ev11);
+//			db.persist(ev12);
+//			db.persist(ev13);
+//			db.persist(ev14);
+//			db.persist(ev15);
+//			db.persist(ev16);
+//			db.persist(ev17);
+//			db.persist(ev18);
+//			db.persist(ev19);
+//			db.persist(ev20);
+//			db.persist(ev21);
+//			db.persist(ev22);
+//			db.persist(ev23);
+//			db.persist(ev24);
+//			db.persist(ev25);
+//			db.persist(ev26);
+//			db.persist(ev27);
+//			db.persist(ev28);
+//			db.persist(ev29);
+//			db.persist(ev30);
+//			db.persist(ev31);
+//			db.persist(ev32);
+//			db.persist(ev33);
+//			db.persist(ev34);
+//			db.persist(ev35);
+//			db.persist(ev36);
+//			db.persist(ev37);
+//			db.persist(ev38);
+//			db.persist(ev39);
+//			db.persist(ev40);
+//			db.persist(ev41);
+//			db.persist(ev42);
+//			db.persist(ev43);
+//			db.persist(ev44);
+//			db.persist(ev45);
+//			db.persist(ev46);
+//			db.persist(ev47);
+//			db.persist(ev48);
+//			db.persist(ev49);
+//			db.persist(ev50);
+//			db.persist(ev51);
+//			db.persist(ev52);
+//			db.persist(ev53);
+//
+//			db.persist(p1);
+//			db.persist(p2);
+//			db.persist(p3);
+//			db.persist(p4);
 
 
 			db.getTransaction().commit();

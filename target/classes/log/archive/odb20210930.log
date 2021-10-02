@@ -1,0 +1,168 @@
+------------------------------------------------------------------------------------------------------------------------
+
+[2021-09-30 12:11:06 #1 store] 
+Database 'C:\Users\telmo\Desktop\Bets21Mockito\Bets21\src\main\resources\bets.temp' is opened by 12508@DESKTOP-7ADQIQM
+
+[2021-09-30 12:11:06 #2 type.registry] 
+New type domain.Cuenta
+
+[2021-09-30 12:11:06 #3 type] 
+Type domain.Cuenta is not enhanced.
+
+[2021-09-30 12:11:06 #4 type.registry] 
+New type domain.CuentaAhorro
+
+[2021-09-30 12:11:06 #5 type.registry] 
+New type java.util.Vector<domain.CuentaAhorro>
+
+[2021-09-30 12:11:06 #6 type] 
+Type domain.CuentaAhorro is not enhanced.
+
+[2021-09-30 12:11:06 #7 type.registry] 
+New type domain.Apuesta
+
+[2021-09-30 12:11:06 #8 type.registry] 
+New type java.util.Vector<domain.Apuesta>
+
+[2021-09-30 12:11:06 #9 type] 
+Type domain.Apuesta is not enhanced.
+
+[2021-09-30 12:11:06 #10 type.registry] 
+New type domain.Pronostico
+
+[2021-09-30 12:11:06 #11 type.registry] 
+New type domain.Question
+
+[2021-09-30 12:11:06 #12 type.registry] 
+New type domain.Event
+
+[2021-09-30 12:11:06 #13 type] 
+Type domain.Pronostico is not enhanced.
+
+[2021-09-30 12:11:06 #14 type] 
+Type domain.Question is not enhanced.
+
+[2021-09-30 12:11:06 #15 type.registry] 
+New type java.util.Vector<domain.Pronostico>
+
+[2021-09-30 12:11:06 #16 type] 
+Type domain.Event is not enhanced.
+
+[2021-09-30 12:11:06 #17 type.registry] 
+New type java.util.Vector<domain.Question>
+
+[2021-09-30 12:11:06 #18 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2021-09-30 12:11:23 #1 store] 
+Database 'C:\Users\telmo\Desktop\Bets21Mockito\Bets21\src\main\resources\bets.temp' is opened by 2924@DESKTOP-7ADQIQM
+
+[2021-09-30 12:11:23 #2 type.registry] 
+New type domain.Cuenta
+
+[2021-09-30 12:11:23 #3 type] 
+Type domain.Cuenta is not enhanced.
+
+[2021-09-30 12:11:23 #4 type.registry] 
+New type domain.CuentaAhorro
+
+[2021-09-30 12:11:23 #5 type.registry] 
+New type java.util.Vector<domain.CuentaAhorro>
+
+[2021-09-30 12:11:23 #6 type] 
+Type domain.CuentaAhorro is not enhanced.
+
+[2021-09-30 12:11:23 #7 type.registry] 
+New type domain.Apuesta
+
+[2021-09-30 12:11:23 #8 type.registry] 
+New type java.util.Vector<domain.Apuesta>
+
+[2021-09-30 12:11:23 #9 type] 
+Type domain.Apuesta is not enhanced.
+
+[2021-09-30 12:11:23 #10 type.registry] 
+New type domain.Pronostico
+
+[2021-09-30 12:11:23 #11 type.registry] 
+New type domain.Question
+
+[2021-09-30 12:11:23 #12 type.registry] 
+New type domain.Event
+
+[2021-09-30 12:11:23 #13 type] 
+Type domain.Pronostico is not enhanced.
+
+[2021-09-30 12:11:23 #14 type] 
+Type domain.Question is not enhanced.
+
+[2021-09-30 12:11:23 #15 type.registry] 
+New type java.util.Vector<domain.Pronostico>
+
+[2021-09-30 12:11:23 #16 type] 
+Type domain.Event is not enhanced.
+
+[2021-09-30 12:11:23 #17 type.registry] 
+New type java.util.Vector<domain.Question>
+
+[2021-09-30 12:11:23 #18 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2021-09-30 12:11:40 #1 store] 
+Database 'C:\Users\telmo\Desktop\Bets21Mockito\Bets21\src\main\resources\bets.temp' is opened by 17920@DESKTOP-7ADQIQM
+
+[2021-09-30 12:11:41 #2 type.registry] 
+New type domain.Cuenta
+
+[2021-09-30 12:11:41 #3 type] 
+Type domain.Cuenta is not enhanced.
+
+[2021-09-30 12:11:41 #4 type.registry] 
+New type domain.CuentaAhorro
+
+[2021-09-30 12:11:41 #5 type.registry] 
+New type java.util.Vector<domain.CuentaAhorro>
+
+[2021-09-30 12:11:41 #6 type] 
+Type domain.CuentaAhorro is not enhanced.
+
+[2021-09-30 12:11:41 #7 type.registry] 
+New type domain.Apuesta
+
+[2021-09-30 12:11:41 #8 type.registry] 
+New type java.util.Vector<domain.Apuesta>
+
+[2021-09-30 12:11:41 #9 type] 
+Type domain.Apuesta is not enhanced.
+
+[2021-09-30 12:11:41 #10 type.registry] 
+New type domain.Pronostico
+
+[2021-09-30 12:11:41 #11 type.registry] 
+New type domain.Question
+
+[2021-09-30 12:11:41 #12 type.registry] 
+New type domain.Event
+
+[2021-09-30 12:11:41 #13 type] 
+Type domain.Pronostico is not enhanced.
+
+[2021-09-30 12:11:41 #14 type] 
+Type domain.Question is not enhanced.
+
+[2021-09-30 12:11:41 #15 type.registry] 
+New type java.util.Vector<domain.Pronostico>
+
+[2021-09-30 12:11:41 #16 type] 
+Type domain.Event is not enhanced.
+
+[2021-09-30 12:11:41 #17 type.registry] 
+New type java.util.Vector<domain.Question>
+
+[2021-09-30 12:11:41 #18 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
