@@ -13,7 +13,12 @@ import javax.persistence.Persistence;
 import javax.persistence.TypedQuery;
 
 import configuration.ConfigXML;
+import domain.Apuesta;
+import domain.Cuenta;
+import domain.CuentaAhorro;
 import domain.Event;
+import domain.Pronostico;
+import domain.Question;
 
 public class TestUtilityDataAccess {
 	protected  EntityManager  db;
@@ -99,6 +104,144 @@ public class TestUtilityDataAccess {
 			System.out.println(">> DataAccess: existQuestion=> event= "+event+" question= "+question);
 			Event ev = db.find(Event.class, event.getEventNumber());
 			return ev.DoesQuestionExists(question);
+			
+		}
+		
+		public Cuenta añadirUsuario(String usuario, String password, boolean isAdmin) {
+			System.out.println(">> DataAccess: añadirUsuario=> usuario= "+usuario+" contraseña= "+password+" es admin= "+isAdmin);
+			Cuenta c=null;
+			db.getTransaction().begin();
+			try {
+				c=new Cuenta(usuario, password, isAdmin);
+				db.persist(c);
+				db.getTransaction().commit();
+				
+				} catch(Exception e) {
+				e.printStackTrace();
+			}
+			return c;	
+		}
+		
+		public CuentaAhorro añadirCuentaAhorro(Cuenta usuario, String nombre, float fondos) {
+			System.out.println(">> DataAccess: añadirCuentaAhorro=> usuario= "+usuario.getNombre()+" nombre= "+nombre+" fondos= "+fondos);
+			CuentaAhorro ca=null;
+			db.getTransaction().begin();
+			try {
+				ca=new CuentaAhorro(usuario, nombre);
+				ca.setFondos(fondos);
+				db.persist(ca);
+				db.getTransaction().commit();
+			}catch (Exception e) {
+				e.printStackTrace();
+			}
+			return ca;
+		}
+
+
+//		public Pronostico añadirPronostico(String string, float cuota, String queryText) {
+//			System.out.println(">> DataAccess: añadirPronostico=> Pronostico= "+string+" cuota= "+cuota+" pregunta= "+queryText);
+//			Question q = db.find(Question.class, queryText);
+//			Pronostico p=null;
+//			db.getTransaction().commit();
+//			try {
+//				p=q.addPronostico(string, cuota);
+//				db.persist(q);
+//				db.persist(p);
+//				
+//				db.getTransaction().commit();
+//			}catch (Exception e) {
+//				e.printStackTrace();
+//			}
+//			return null;
+//		}
+
+
+		public Event añadirEventoPreguntaPronostico(String eventText, Date oneDate, String queryText,
+				Float betMinimum, String string, float cuota) {
+				System.out.println(">> DataAccessTest: addEvent");
+				Event ev=null;
+				db.getTransaction().begin();
+					try {
+					    ev=new Event(eventText,oneDate);
+					    ev.addQuestion(queryText,  betMinimum);
+					    Vector<Question> questions = ev.getQuestions();
+					    questions.get(0).addPronostico(string, cuota);
+						db.persist(ev);
+						db.getTransaction().commit();
+					}
+					catch (Exception e){
+						e.printStackTrace();
+					}
+					
+		    
+			return ev;
+		}
+		
+		public Apuesta añadirApuesta(Pronostico p, float cantidadApostada, Event e, Question q, Cuenta usuario, CuentaAhorro c, boolean cerrada, boolean ganada) {
+			System.out.println(">> DataAccessTest: addApuesta");
+			Apuesta a = null;
+			Question q1 =db.find(Question.class, q.getQuestionNumber());
+			CuentaAhorro ca = db.find(CuentaAhorro.class, c.getCuentaAhorroNumber());
+			db.getTransaction().begin();
+			try {
+				a=q1.addApuesta(p, cantidadApostada, e, q1, usuario, c);
+				a.setCerrada(cerrada);
+				a.setGanada(ganada);
+				ca.addApuesta(a);
+				db.persist(a);
+				db.persist(ca);
+				db.getTransaction().commit();
+			} catch (Exception exception) {
+				exception.printStackTrace();
+			}
+			return a;
+		}
+
+
+		public void removeUsuario(Cuenta c) {
+			System.out.println(">> DataAccessTest: removeUsuario");
+			Cuenta c1 = db.find(Cuenta.class, c.getUsuario());
+			db.getTransaction().begin();
+			db.remove(c1);
+			db.getTransaction().commit();
+		}
+
+
+		public void removeCuentaAhorro(CuentaAhorro ca) {
+			System.out.println(">> DataAccessTest: removeUsuario");
+			CuentaAhorro ca1 = db.find(CuentaAhorro.class, ca.getCuentaAhorroNumber());
+			db.getTransaction().begin();
+			db.remove(ca1);
+			db.getTransaction().commit();
+		}
+
+
+		public void removeQuestion(Question pregunta1) {
+			System.out.println(">> DataAccessTest: removePregunta");
+			Question pregunta = db.find(Question.class, pregunta1.getQuestionNumber());
+			db.getTransaction().begin();
+			db.remove(pregunta);
+			db.getTransaction().commit();
+			
+		}
+
+
+		public void removeApuesta(Apuesta apuesta1) {
+			System.out.println(">> DataAccessTest: removeApuesta");
+			Apuesta a = db.find(Apuesta.class, apuesta1.getApuestaNumber());
+			db.getTransaction().begin();
+			db.remove(a);
+			db.getTransaction().commit();
+			
+		}
+
+
+		public void removePronostico(Pronostico pronostico1) {
+			System.out.println(">> DataAccessTest: removePronostico");
+			Pronostico p = db.find(Pronostico.class, pronostico1.getPronosticoNumber());
+			db.getTransaction().begin();
+			db.remove(p);
+			db.getTransaction().commit();
 			
 		}
 }
