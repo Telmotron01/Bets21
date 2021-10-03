@@ -1,17 +1,73 @@
 
-/domain.Question#getQuestion()Ljava/lang/String;I
-?/Users/iturrioz/git/Bets2021/src/main/java/domain/Question.javaH H("1*«
-1I
-?/Users/iturrioz/git/Bets2021/src/main/java/domain/Question.javaI	 I(è
-å
-I
-?/Users/iturrioz/git/Bets2021/src/main/java/domain/Question.javaI	 I(
-%0java.lang.String"__id*!*
-domain.Question"
+9dataAccess.DataAccess#getPronosticos(I)Ljava/util/Vector;`
+TC:/Users/telmo/Desktop/Bets21Mockito/Bets21/src/main/java/dataAccess/DataAccess.javaπ π()"1*˛
+1`
+TC:/Users/telmo/Desktop/Bets21Mockito/Bets21/src/main/java/dataAccess/DataAccess.java∫ ∫(µ
+≤
+`
+TC:/Users/telmo/Desktop/Bets21Mockito/Bets21/src/main/java/dataAccess/DataAccess.java∫ ∫(%
+%0javax.persistence.EntityManager"__id*!*
+dataAccess.DataAccess"
+db¢ü
+`
+TC:/Users/telmo/Desktop/Bets21Mockito/Bets21/src/main/java/dataAccess/DataAccess.java∫ ∫()
+%1#javax.persistence.EntityTransaction"Ujavax.persistence.EntityManager#getTransaction()Ljavax/persistence/EntityTransaction;*'
+%
+%0javax.persistence.EntityManager2getTransaction()’“
+`
+TC:/Users/telmo/Desktop/Bets21Mockito/Bets21/src/main/java/dataAccess/DataAccess.java∫ ∫(
 
-question"e
-I
-?/Users/iturrioz/git/Bets2021/src/main/java/domain/Question.javaI I(
+%2void",javax.persistence.EntityTransaction#begin()V*+
+)
+%1#javax.persistence.EntityTransaction2begin()èå
+`
+TC:/Users/telmo/Desktop/Bets21Mockito/Bets21/src/main/java/dataAccess/DataAccess.javaª ª(/
+%3java.util.Vector"java.util.Vector°
+û
+`
+TC:/Users/telmo/Desktop/Bets21Mockito/Bets21/src/main/java/dataAccess/DataAccess.javaª ª(1
+%4"java.util.Vector#<init>()V*
 
-%0java.lang.StringB
-domain.Question
+%3java.util.Vectorú
+ô
+`
+TC:/Users/telmo/Desktop/Bets21Mockito/Bets21/src/main/java/dataAccess/DataAccess.javaª ª(2
+pjava.util.Vector"__id*
+
+%3java.util.Vectorµ
+≤
+`
+TC:/Users/telmo/Desktop/Bets21Mockito/Bets21/src/main/java/dataAccess/DataAccess.javaº º(%
+%5javax.persistence.EntityManager"__id*!*
+dataAccess.DataAccess"
+dbΩ∫
+`
+TC:/Users/telmo/Desktop/Bets21Mockito/Bets21/src/main/java/dataAccess/DataAccess.javaº º(3
+%6domain.Question"[javax.persistence.EntityManager#find(Ljava/lang/Class;Ljava/lang/Object;)Ljava/lang/Object;*'
+%
+%5javax.persistence.EntityManager*
+""*
+""2)find(Ljava/lang/Class;Ljava/lang/Object;)ö
+ó
+`
+TC:/Users/telmo/Desktop/Bets21Mockito/Bets21/src/main/java/dataAccess/DataAccess.javaº º(4
+qdomain.Question"__id*
+
+%6domain.Question€ÿ
+`
+TC:/Users/telmo/Desktop/Bets21Mockito/Bets21/src/main/java/dataAccess/DataAccess.javaΩ Ω(
+%7java.util.Vector"2domain.Question#getPronosticos()Ljava/util/Vector;*
+
+qdomain.Question2getPronosticos()ú
+ô
+`
+TC:/Users/telmo/Desktop/Bets21Mockito/Bets21/src/main/java/dataAccess/DataAccess.javaΩ Ω(
+pjava.util.Vector"__id*
+
+%7java.util.Vector"{
+`
+TC:/Users/telmo/Desktop/Bets21Mockito/Bets21/src/main/java/dataAccess/DataAccess.javaæ æ(
+
+pjava.util.Vector:
+""B
+dataAccess.DataAccess

@@ -1,0 +1,81 @@
+
+-gui.AdminGUI#getBoton2()Ljavax/swing/JButton;U
+KC:/Users/telmo/Desktop/Bets21Mockito/Bets21/src/main/java/gui/AdminGUI.javar r("3*¯
+2U
+KC:/Users/telmo/Desktop/Bets21Mockito/Bets21/src/main/java/gui/AdminGUI.javat t(%Š‡
+U
+KC:/Users/telmo/Desktop/Bets21Mockito/Bets21/src/main/java/gui/AdminGUI.javat t(#
+%1javax.swing.JButton"javax.swing.JButtonœ
+™
+U
+KC:/Users/telmo/Desktop/Bets21Mockito/Bets21/src/main/java/gui/AdminGUI.javat t(%
+%2"javax.swing.JButton#<init>()V*
+
+%1javax.swing.JButton¥
+¢
+U
+KC:/Users/telmo/Desktop/Bets21Mockito/Bets21/src/main/java/gui/AdminGUI.javat t(%&
+gui.AdminGUI"
+jButtonCreateQuery"__id*
+
+%1javax.swing.JButton¥
+¢
+U
+KC:/Users/telmo/Desktop/Bets21Mockito/Bets21/src/main/java/gui/AdminGUI.javau u(
+%3javax.swing.JButton"__id*(*&
+gui.AdminGUI"
+jButtonCreateQueryïì
+U
+KC:/Users/telmo/Desktop/Bets21Mockito/Bets21/src/main/java/gui/AdminGUI.javau u(0
+
+%4void"7javax.swing.AbstractButton#setText(Ljava/lang/String;)V*
+
+%3javax.swing.JButton*
+AÃ±adir Pregunta2setText(Ljava/lang/String;)¥
+¢
+U
+KC:/Users/telmo/Desktop/Bets21Mockito/Bets21/src/main/java/gui/AdminGUI.javav v(
+%5javax.swing.JButton"__id*(*&
+gui.AdminGUI"
+jButtonCreateQuery}
+U
+KC:/Users/telmo/Desktop/Bets21Mockito/Bets21/src/main/java/gui/AdminGUI.javav, v(I
+%6gui.AdminGUI$2"gui.AdminGUI$2”
+‘
+U
+KC:/Users/telmo/Desktop/Bets21Mockito/Bets21/src/main/java/gui/AdminGUI.javav( {(
+%7"java.lang.Object#<init>()V*
+
+%6gui.AdminGUI$2Ÿœ
+U
+KC:/Users/telmo/Desktop/Bets21Mockito/Bets21/src/main/java/gui/AdminGUI.javav {(
+
+%8void"Njavax.swing.AbstractButton#addActionListener(Ljava/awt/event/ActionListener;)V*
+
+%5javax.swing.JButton*
+
+%6gui.AdminGUI$222addActionListener(Ljava/awt/event/ActionListener;)*
+1*Š
+3U
+KC:/Users/telmo/Desktop/Bets21Mockito/Bets21/src/main/java/gui/AdminGUI.javas s(¥
+¢
+U
+KC:/Users/telmo/Desktop/Bets21Mockito/Bets21/src/main/java/gui/AdminGUI.javas s(
+%0javax.swing.JButton"__id*(*&
+gui.AdminGUI"
+jButtonCreateQuery*
+2
+1*ø
+1U
+KC:/Users/telmo/Desktop/Bets21Mockito/Bets21/src/main/java/gui/AdminGUI.java}	 }(¥
+¢
+U
+KC:/Users/telmo/Desktop/Bets21Mockito/Bets21/src/main/java/gui/AdminGUI.java}	 }(
+%9javax.swing.JButton"__id*(*&
+gui.AdminGUI"
+jButtonCreateQuery"t
+U
+KC:/Users/telmo/Desktop/Bets21Mockito/Bets21/src/main/java/gui/AdminGUI.java} }(
+
+%9javax.swing.JButtonB
+gui.AdminGUI

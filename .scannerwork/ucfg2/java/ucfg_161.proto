@@ -1,0 +1,72 @@
+
+UbusinessLogic.BLFacadeImplementation#getEvents(Ljava/util/Date;)Ljava/util/ArrayList;m
+cC:/Users/telmo/Desktop/Bets21Mockito/Bets21/src/main/java/businessLogic/BLFacadeImplementation.java~ ~(""startingBlock*÷
+startingBlockm
+cC:/Users/telmo/Desktop/Bets21Mockito/Bets21/src/main/java/businessLogic/BLFacadeImplementation.java~" ~(-≠
+™
+m
+cC:/Users/telmo/Desktop/Bets21Mockito/Bets21/src/main/java/businessLogic/BLFacadeImplementation.java} }(
+%6"
+__annotate*
+	WebMethod*
+
+datejava.util.Date†
+ù
+m
+cC:/Users/telmo/Desktop/Bets21Mockito/Bets21/src/main/java/businessLogic/BLFacadeImplementation.java~( ~(,
+datejava.util.Date"__annotation*
+
+%6*
+1*É
+1m
+cC:/Users/telmo/Desktop/Bets21Mockito/Bets21/src/main/java/businessLogic/BLFacadeImplementation.java (Œ
+À
+m
+cC:/Users/telmo/Desktop/Bets21Mockito/Bets21/src/main/java/businessLogic/BLFacadeImplementation.java (
+%0dataAccess.DataAccess"__id*7*5&
+$businessLogic.BLFacadeImplementation"
+	dbManagerŒÀ
+m
+cC:/Users/telmo/Desktop/Bets21Mockito/Bets21/src/main/java/businessLogic/BLFacadeImplementation.java (
+
+%1void"dataAccess.DataAccess#open(Z)V*
+
+%0dataAccess.DataAccess*
+""2open(Z)–
+Õ
+o
+cC:/Users/telmo/Desktop/Bets21Mockito/Bets21/src/main/java/businessLogic/BLFacadeImplementation.javaÄ Ä($
+%2dataAccess.DataAccess"__id*7*5&
+$businessLogic.BLFacadeImplementation"
+	dbManager≠™
+o
+cC:/Users/telmo/Desktop/Bets21Mockito/Bets21/src/main/java/businessLogic/BLFacadeImplementation.javaÄ Ä(4
+%3java.util.ArrayList"FdataAccess.DataAccess#getEvents(Ljava/util/Date;)Ljava/util/ArrayList;*
+
+%2dataAccess.DataAccess*
+
+datejava.util.Date2getEvents(Ljava/util/Date;)∂
+≥
+o
+cC:/Users/telmo/Desktop/Bets21Mockito/Bets21/src/main/java/businessLogic/BLFacadeImplementation.javaÄ Ä(5
+eventsjava.util.ArrayList"__id*
+
+%3java.util.ArrayList–
+Õ
+o
+cC:/Users/telmo/Desktop/Bets21Mockito/Bets21/src/main/java/businessLogic/BLFacadeImplementation.javaÅ Å(
+%4dataAccess.DataAccess"__id*7*5&
+$businessLogic.BLFacadeImplementation"
+	dbManager»≈
+o
+cC:/Users/telmo/Desktop/Bets21Mockito/Bets21/src/main/java/businessLogic/BLFacadeImplementation.javaÅ Å(
+
+%5void"dataAccess.DataAccess#close()V*
+
+%4dataAccess.DataAccess2close()"í
+o
+cC:/Users/telmo/Desktop/Bets21Mockito/Bets21/src/main/java/businessLogic/BLFacadeImplementation.javaÇ Ç(
+
+eventsjava.util.ArrayList:
+datejava.util.DateB(&
+$businessLogic.BLFacadeImplementation

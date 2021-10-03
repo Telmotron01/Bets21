@@ -1,16 +1,16 @@
 
-?configuration.ConfigXML#getDataBaseOpenMode()Ljava/lang/String;S
-G/Users/iturrioz/git/Bets2021/src/main/java/configuration/ConfigXML.java¢ ¢(""1*õ
-1S
-G/Users/iturrioz/git/Bets2021/src/main/java/configuration/ConfigXML.java£	 £(©
-¦
-S
-G/Users/iturrioz/git/Bets2021/src/main/java/configuration/ConfigXML.java£	 £(
-%0java.lang.String"__id*1*/
-configuration.ConfigXML"
-dataBaseOpenMode"o
-S
-G/Users/iturrioz/git/Bets2021/src/main/java/configuration/ConfigXML.java£ £(
+-domain.Event#getQuestions()Ljava/util/Vector;U
+KC:/Users/telmo/Desktop/Bets21Mockito/Bets21/src/main/java/domain/Event.java (%"1*é
+1U
+KC:/Users/telmo/Desktop/Bets21Mockito/Bets21/src/main/java/domain/Event.java 	  (™
+–
+U
+KC:/Users/telmo/Desktop/Bets21Mockito/Bets21/src/main/java/domain/Event.java 	  (
+%0java.util.Vector"__id**
+domain.Event"
+	questions"q
+U
+KC:/Users/telmo/Desktop/Bets21Mockito/Bets21/src/main/java/domain/Event.java   (
 
-%0java.lang.StringB
-configuration.ConfigXML
+%0java.util.VectorB
+domain.Event

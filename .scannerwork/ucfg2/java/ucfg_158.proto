@@ -1,0 +1,85 @@
+
+^businessLogic.BLFacadeImplementation#createPronostico(ILjava/lang/String;F)Ldomain/Pronostico;m
+cC:/Users/telmo/Desktop/Bets21Mockito/Bets21/src/main/java/businessLogic/BLFacadeImplementation.java< <(#"startingBlock*æ
+startingBlockm
+cC:/Users/telmo/Desktop/Bets21Mockito/Bets21/src/main/java/businessLogic/BLFacadeImplementation.java<# <(Tµ
+²
+m
+cC:/Users/telmo/Desktop/Bets21Mockito/Bets21/src/main/java/businessLogic/BLFacadeImplementation.java; ;(
+%6"
+__annotate*
+	WebMethod* 
+
+
+pronosticojava.lang.String¨
+¥
+m
+cC:/Users/telmo/Desktop/Bets21Mockito/Bets21/src/main/java/businessLogic/BLFacadeImplementation.java<< <(F
+
+pronosticojava.lang.String"__annotation*
+
+%6*
+1*ª
+1m
+cC:/Users/telmo/Desktop/Bets21Mockito/Bets21/src/main/java/businessLogic/BLFacadeImplementation.java? ?(Î
+Ë
+m
+cC:/Users/telmo/Desktop/Bets21Mockito/Bets21/src/main/java/businessLogic/BLFacadeImplementation.java? ?(
+%0dataAccess.DataAccess"__id*7*5&
+$businessLogic.BLFacadeImplementation"
+	dbManagerÎË
+m
+cC:/Users/telmo/Desktop/Bets21Mockito/Bets21/src/main/java/businessLogic/BLFacadeImplementation.java? ?(
+
+%1void"dataAccess.DataAccess#open(Z)V*
+
+%0dataAccess.DataAccess*
+""2open(Z)˜
+•
+m
+cC:/Users/telmo/Desktop/Bets21Mockito/Bets21/src/main/java/businessLogic/BLFacadeImplementation.java@ @(
+sdomain.Pronostico"__id*
+""Î
+Ë
+m
+cC:/Users/telmo/Desktop/Bets21Mockito/Bets21/src/main/java/businessLogic/BLFacadeImplementation.javaB B(
+%2dataAccess.DataAccess"__id*7*5&
+$businessLogic.BLFacadeImplementation"
+	dbManagerÓÐ
+m
+cC:/Users/telmo/Desktop/Bets21Mockito/Bets21/src/main/java/businessLogic/BLFacadeImplementation.javaB B(?
+%3domain.Pronostico"NdataAccess.DataAccess#crearPronostico(ILjava/lang/String;F)Ldomain/Pronostico;*
+
+%2dataAccess.DataAccess*
+""* 
+
+
+pronosticojava.lang.String*
+""2%crearPronostico(ILjava/lang/String;F)«
+¨
+m
+cC:/Users/telmo/Desktop/Bets21Mockito/Bets21/src/main/java/businessLogic/BLFacadeImplementation.javaB B(?
+sdomain.Pronostico"__id*
+
+%3domain.PronosticoÎ
+Ë
+m
+cC:/Users/telmo/Desktop/Bets21Mockito/Bets21/src/main/java/businessLogic/BLFacadeImplementation.javaD D(
+%4dataAccess.DataAccess"__id*7*5&
+$businessLogic.BLFacadeImplementation"
+	dbManagerÆÃ
+m
+cC:/Users/telmo/Desktop/Bets21Mockito/Bets21/src/main/java/businessLogic/BLFacadeImplementation.javaD D(
+
+%5void"dataAccess.DataAccess#close()V*
+
+%4dataAccess.DataAccess2close()"‰
+m
+cC:/Users/telmo/Desktop/Bets21Mockito/Bets21/src/main/java/businessLogic/BLFacadeImplementation.javaF F(
+
+sdomain.Pronostico:
+"":
+
+pronosticojava.lang.String:
+""B(&
+$businessLogic.BLFacadeImplementation

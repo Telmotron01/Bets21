@@ -1,9 +1,16 @@
 
-*configuration.ConfigXML#isDatabaseLocal()ZQ
-G/Users/iturrioz/git/Bets2021/src/main/java/configuration/ConfigXML.javaA A("1*³
-1Q
-G/Users/iturrioz/git/Bets2021/src/main/java/configuration/ConfigXML.javaB	 B("[
-Q
-G/Users/iturrioz/git/Bets2021/src/main/java/configuration/ConfigXML.javaB B(
-""B
-configuration.ConfigXML
+,domain.Cuenta#getUsuario()Ljava/lang/String;V
+LC:/Users/telmo/Desktop/Bets21Mockito/Bets21/src/main/java/domain/Cuenta.java> >("1*ë
+1V
+LC:/Users/telmo/Desktop/Bets21Mockito/Bets21/src/main/java/domain/Cuenta.java?	 ?(™
+–
+V
+LC:/Users/telmo/Desktop/Bets21Mockito/Bets21/src/main/java/domain/Cuenta.java?	 ?(
+%0java.lang.String"__id**
+domain.Cuenta"	
+usuario"r
+V
+LC:/Users/telmo/Desktop/Bets21Mockito/Bets21/src/main/java/domain/Cuenta.java? ?(
+
+%0java.lang.StringB
+domain.Cuenta

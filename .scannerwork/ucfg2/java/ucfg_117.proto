@@ -1,0 +1,37 @@
+
+)domain.Event#toString()Ljava/lang/String;U
+KC:/Users/telmo/Desktop/Bets21Mockito/Bets21/src/main/java/domain/Event.javaO O("1*Þ
+1U
+KC:/Users/telmo/Desktop/Bets21Mockito/Bets21/src/main/java/domain/Event.javaP	 P(œ
+™
+U
+KC:/Users/telmo/Desktop/Bets21Mockito/Bets21/src/main/java/domain/Event.javaP	 P(
+%0java.lang.Integer"__id*!*
+domain.Event"
+eventNumberž
+›
+U
+KC:/Users/telmo/Desktop/Bets21Mockito/Bets21/src/main/java/domain/Event.javaP	 P(
+%1java.lang.String"__concat*
+
+%0java.lang.Integer*
+;›
+˜
+U
+KC:/Users/telmo/Desktop/Bets21Mockito/Bets21/src/main/java/domain/Event.javaP P($
+%2java.lang.String"__id*!*
+domain.Event"
+description°
+­
+U
+KC:/Users/telmo/Desktop/Bets21Mockito/Bets21/src/main/java/domain/Event.javaP	 P($
+%3java.lang.String"__concat*
+
+%1java.lang.String*
+
+%2java.lang.String"q
+U
+KC:/Users/telmo/Desktop/Bets21Mockito/Bets21/src/main/java/domain/Event.javaP P(%
+
+%3java.lang.StringB
+domain.Event

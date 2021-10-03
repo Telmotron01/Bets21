@@ -1,0 +1,69 @@
+
+HbusinessLogic.BLFacadeImplementation#getPronosticos(I)Ljava/util/Vector;o
+cC:/Users/telmo/Desktop/Bets21Mockito/Bets21/src/main/java/businessLogic/BLFacadeImplementation.java⁄ ⁄()"1*Ã
+1o
+cC:/Users/telmo/Desktop/Bets21Mockito/Bets21/src/main/java/businessLogic/BLFacadeImplementation.java€ €(–
+Õ
+o
+cC:/Users/telmo/Desktop/Bets21Mockito/Bets21/src/main/java/businessLogic/BLFacadeImplementation.java€ €(
+%0dataAccess.DataAccess"__id*7*5&
+$businessLogic.BLFacadeImplementation"
+	dbManager–Õ
+o
+cC:/Users/telmo/Desktop/Bets21Mockito/Bets21/src/main/java/businessLogic/BLFacadeImplementation.java€ €(
+
+%1void"dataAccess.DataAccess#open(Z)V*
+
+%0dataAccess.DataAccess*
+""2open(Z)ûõ
+o
+cC:/Users/telmo/Desktop/Bets21Mockito/Bets21/src/main/java/businessLogic/BLFacadeImplementation.java‹ ‹(/
+%2java.util.Vector"java.util.Vector∞
+≠
+o
+cC:/Users/telmo/Desktop/Bets21Mockito/Bets21/src/main/java/businessLogic/BLFacadeImplementation.java‹ ‹(1
+%3"java.util.Vector#<init>()V*
+
+%2java.util.Vector´
+®
+o
+cC:/Users/telmo/Desktop/Bets21Mockito/Bets21/src/main/java/businessLogic/BLFacadeImplementation.java‹ ‹(2
+pjava.util.Vector"__id*
+
+%2java.util.Vector–
+Õ
+o
+cC:/Users/telmo/Desktop/Bets21Mockito/Bets21/src/main/java/businessLogic/BLFacadeImplementation.java› ›(
+%4dataAccess.DataAccess"__id*7*5&
+$businessLogic.BLFacadeImplementation"
+	dbManagerÅ˛
+o
+cC:/Users/telmo/Desktop/Bets21Mockito/Bets21/src/main/java/businessLogic/BLFacadeImplementation.java› ›(+
+%5java.util.Vector"9dataAccess.DataAccess#getPronosticos(I)Ljava/util/Vector;*
+
+%4dataAccess.DataAccess*
+""2getPronosticos(I)´
+®
+o
+cC:/Users/telmo/Desktop/Bets21Mockito/Bets21/src/main/java/businessLogic/BLFacadeImplementation.java› ›(+
+pjava.util.Vector"__id*
+
+%5java.util.Vector–
+Õ
+o
+cC:/Users/telmo/Desktop/Bets21Mockito/Bets21/src/main/java/businessLogic/BLFacadeImplementation.javaﬁ ﬁ(
+%6dataAccess.DataAccess"__id*7*5&
+$businessLogic.BLFacadeImplementation"
+	dbManager»≈
+o
+cC:/Users/telmo/Desktop/Bets21Mockito/Bets21/src/main/java/businessLogic/BLFacadeImplementation.javaﬁ ﬁ(
+
+%7void"dataAccess.DataAccess#close()V*
+
+%6dataAccess.DataAccess2close()"ä
+o
+cC:/Users/telmo/Desktop/Bets21Mockito/Bets21/src/main/java/businessLogic/BLFacadeImplementation.javaﬂ ﬂ(
+
+pjava.util.Vector:
+""B(&
+$businessLogic.BLFacadeImplementation

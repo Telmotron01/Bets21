@@ -1,0 +1,82 @@
+
+VbusinessLogic.BLFacadeImplementation#hacerLogin(Ljava/lang/String;Ljava/lang/String;)Zo
+cC:/Users/telmo/Desktop/Bets21Mockito/Bets21/src/main/java/businessLogic/BLFacadeImplementation.java§ §("startingBlock*Å
+startingBlocko
+cC:/Users/telmo/Desktop/Bets21Mockito/Bets21/src/main/java/businessLogic/BLFacadeImplementation.java§ §(9²
+¯
+o
+cC:/Users/telmo/Desktop/Bets21Mockito/Bets21/src/main/java/businessLogic/BLFacadeImplementation.java¦ ¦(
+%6"
+__annotate*
+	WebMethod*
+
+loginjava.lang.String¥
+¢
+o
+cC:/Users/telmo/Desktop/Bets21Mockito/Bets21/src/main/java/businessLogic/BLFacadeImplementation.java§" §('
+loginjava.lang.String"__annotation*
+
+%6µ
+²
+o
+cC:/Users/telmo/Desktop/Bets21Mockito/Bets21/src/main/java/businessLogic/BLFacadeImplementation.java¦ ¦(
+%7"
+__annotate*
+	WebMethod*
+
+passwordjava.lang.String¨
+¥
+o
+cC:/Users/telmo/Desktop/Bets21Mockito/Bets21/src/main/java/businessLogic/BLFacadeImplementation.java§0 §(8
+passwordjava.lang.String"__annotation*
+
+%7*
+1*ã
+1o
+cC:/Users/telmo/Desktop/Bets21Mockito/Bets21/src/main/java/businessLogic/BLFacadeImplementation.java¨ ¨(Ð
+Í
+o
+cC:/Users/telmo/Desktop/Bets21Mockito/Bets21/src/main/java/businessLogic/BLFacadeImplementation.java¨ ¨(
+%0dataAccess.DataAccess"__id*7*5&
+$businessLogic.BLFacadeImplementation"
+	dbManagerÐÍ
+o
+cC:/Users/telmo/Desktop/Bets21Mockito/Bets21/src/main/java/businessLogic/BLFacadeImplementation.java¨ ¨(
+
+%1void"dataAccess.DataAccess#open(Z)V*
+
+%0dataAccess.DataAccess*
+""2open(Z)Ð
+Í
+o
+cC:/Users/telmo/Desktop/Bets21Mockito/Bets21/src/main/java/businessLogic/BLFacadeImplementation.javaª ª(
+%2dataAccess.DataAccess"__id*7*5&
+$businessLogic.BLFacadeImplementation"
+	dbManagerÚ×
+o
+cC:/Users/telmo/Desktop/Bets21Mockito/Bets21/src/main/java/businessLogic/BLFacadeImplementation.javaª ª(4
+%3boolean"GdataAccess.DataAccess#hacerLogin(Ljava/lang/String;Ljava/lang/String;)Z*
+
+%2dataAccess.DataAccess*
+
+loginjava.lang.String*
+
+passwordjava.lang.String20hacerLogin(Ljava/lang/String;Ljava/lang/String;)Ð
+Í
+o
+cC:/Users/telmo/Desktop/Bets21Mockito/Bets21/src/main/java/businessLogic/BLFacadeImplementation.java¬ ¬(
+%4dataAccess.DataAccess"__id*7*5&
+$businessLogic.BLFacadeImplementation"
+	dbManagerÈÅ
+o
+cC:/Users/telmo/Desktop/Bets21Mockito/Bets21/src/main/java/businessLogic/BLFacadeImplementation.java¬ ¬(
+
+%5void"dataAccess.DataAccess#close()V*
+
+%4dataAccess.DataAccess2close()"y
+o
+cC:/Users/telmo/Desktop/Bets21Mockito/Bets21/src/main/java/businessLogic/BLFacadeImplementation.java­ ­(
+"":
+loginjava.lang.String:
+passwordjava.lang.StringB(&
+$businessLogic.BLFacadeImplementation

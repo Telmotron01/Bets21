@@ -1,16 +1,16 @@
 
-@configuration.ConfigXML#getBusinessLogicPort()Ljava/lang/String;S
-G/Users/iturrioz/git/Bets2021/src/main/java/configuration/ConfigXML.java– –(#"1*ö
-1S
-G/Users/iturrioz/git/Bets2021/src/main/java/configuration/ConfigXML.java—	 —(ª
-§
-S
-G/Users/iturrioz/git/Bets2021/src/main/java/configuration/ConfigXML.java—	 —(
-%0java.lang.String"__id*2*0
-configuration.ConfigXML"
-businessLogicPort"o
-S
-G/Users/iturrioz/git/Bets2021/src/main/java/configuration/ConfigXML.java— —(
+2domain.Cuenta#getCuentasAhorro()Ljava/util/Vector;V
+LC:/Users/telmo/Desktop/Bets21Mockito/Bets21/src/main/java/domain/Cuenta.javaX X(-"1*ñ
+1V
+LC:/Users/telmo/Desktop/Bets21Mockito/Bets21/src/main/java/domain/Cuenta.javaY	 Y(Ÿ
+œ
+V
+LC:/Users/telmo/Desktop/Bets21Mockito/Bets21/src/main/java/domain/Cuenta.javaY	 Y(
+%0java.util.Vector"__id*$*"
+domain.Cuenta"
+cuentasAhorro"r
+V
+LC:/Users/telmo/Desktop/Bets21Mockito/Bets21/src/main/java/domain/Cuenta.javaY Y(
 
-%0java.lang.StringB
-configuration.ConfigXML
+%0java.util.VectorB
+domain.Cuenta

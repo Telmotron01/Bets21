@@ -32,9 +32,8 @@
 	<classpathentry kind="lib" path="src/main/resources/objectdb.jar"/>
 	<classpathentry kind="lib" path="src/main/resources/jcalendar-1.4.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/5"/>
-	<classpathentry kind="lib" path="F:/IS2/Bets21/libs/byte-buddy-1.10.1.jar"/>
-	<classpathentry kind="lib" path="F:/IS2/Bets21/libs/byte-buddy-agent-1.10.1.jar"/>
-	<classpathentry kind="lib" path="F:/IS2/Bets21/libs/mockito-core-3.0.0.jar"/>
-	<classpathentry kind="lib" path="F:/IS2/Bets21/libs/objenesis-tck-3.0.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/telmo/Desktop/Bets21Mockito/Bets21/libs/byte-buddy-1.10.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/telmo/Desktop/Bets21Mockito/Bets21/libs/byte-buddy-agent-1.10.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/telmo/Desktop/Bets21Mockito/Bets21/libs/objenesis-tck-3.0.1.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

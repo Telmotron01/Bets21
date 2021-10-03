@@ -1,16 +1,47 @@
 
-6domain.Question#getQuestionNumber()Ljava/lang/Integer;I
-?/Users/iturrioz/git/Bets2021/src/main/java/domain/Question.java4 4(!"1*Ï
-1I
-?/Users/iturrioz/git/Bets2021/src/main/java/domain/Question.java5	 5(–
-“
-I
-?/Users/iturrioz/git/Bets2021/src/main/java/domain/Question.java5	 5(
-%0java.lang.Integer"__id*'*%
-domain.Question"
-questionNumber"f
-I
-?/Users/iturrioz/git/Bets2021/src/main/java/domain/Question.java5 5(
-
-%0java.lang.IntegerB
-domain.Question
+/dataAccess.DataAccess#getEvent(I)Ldomain/Event;`
+TC:/Users/telmo/Desktop/Bets21Mockito/Bets21/src/main/java/dataAccess/DataAccess.java­ ­("1*Ÿ
+1`
+TC:/Users/telmo/Desktop/Bets21Mockito/Bets21/src/main/java/dataAccess/DataAccess.java® ®(µ
+²
+`
+TC:/Users/telmo/Desktop/Bets21Mockito/Bets21/src/main/java/dataAccess/DataAccess.java® ®(%
+%0javax.persistence.EntityManager"__id*!*
+dataAccess.DataAccess"
+db¢Ÿ
+`
+TC:/Users/telmo/Desktop/Bets21Mockito/Bets21/src/main/java/dataAccess/DataAccess.java® ®()
+%1#javax.persistence.EntityTransaction"Ujavax.persistence.EntityManager#getTransaction()Ljavax/persistence/EntityTransaction;*'
+%
+%0javax.persistence.EntityManager2getTransaction()ÕÒ
+`
+TC:/Users/telmo/Desktop/Bets21Mockito/Bets21/src/main/java/dataAccess/DataAccess.java® ®(
+
+%2void",javax.persistence.EntityTransaction#begin()V*+
+)
+%1#javax.persistence.EntityTransaction2begin()µ
+²
+`
+TC:/Users/telmo/Desktop/Bets21Mockito/Bets21/src/main/java/dataAccess/DataAccess.java¯ ¯(%
+%3javax.persistence.EntityManager"__id*!*
+dataAccess.DataAccess"
+dbº·
+`
+TC:/Users/telmo/Desktop/Bets21Mockito/Bets21/src/main/java/dataAccess/DataAccess.java¯ ¯($
+%4domain.Event"[javax.persistence.EntityManager#find(Ljava/lang/Class;Ljava/lang/Object;)Ljava/lang/Object;*'
+%
+%3javax.persistence.EntityManager*
+""*
+""2)find(Ljava/lang/Class;Ljava/lang/Object;)”
+‘
+`
+TC:/Users/telmo/Desktop/Bets21Mockito/Bets21/src/main/java/dataAccess/DataAccess.java¯ ¯(%
+edomain.Event"__id*
+
+%4domain.Event"w
+`
+TC:/Users/telmo/Desktop/Bets21Mockito/Bets21/src/main/java/dataAccess/DataAccess.java° °(
+
+edomain.Event:
+""B
+dataAccess.DataAccess
