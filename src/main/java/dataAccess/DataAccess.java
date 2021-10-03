@@ -542,11 +542,10 @@ public class DataAccess  {
 				if (a.isGanada()) {
 					f=f+(a.getCantidad()*a.getPronostico().getCuota())-a.getCantidad(); //Cambio
 				}else {
-					f=f-a.getCantidad();
+					f=f-a.getCantidad(); 
 				}
 			}
 		}
-		
 		return f;
 	}
 

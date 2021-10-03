@@ -22,13 +22,14 @@ class verGananciasDATest {
 	static DataAccess sut = new DataAccess(ConfigXML.getInstance().getDataBaseOpenMode().equals("initialize"));;
 	static TestUtilityDataAccess testDA = new TestUtilityDataAccess();
 
-
+	//Caso en el que le pasamos null
 	@Test
 	void test1() {
 		CuentaAhorro C0=null;
 		assertThrows(NullPointerException.class, ()->sut.verGanancias(C0));
 	}
-
+	
+	//Caso en el que le pasamos una cuenta que no esta en la base de datos
 	@Test
 	void test2() {
 		Cuenta Jon = new Cuenta("Jon", "1234", false);
@@ -36,6 +37,7 @@ class verGananciasDATest {
 		assertThrows(IllegalArgumentException.class, ()->sut.verGanancias(C0));
 	}
 	
+	//Usuario sin apuestas
 	@Test
 	public void test3() {
 		testDA.open();
@@ -49,6 +51,7 @@ class verGananciasDATest {
 		testDA.removeCuentaAhorro(C3);
 	}
 	
+	//Usuario con una apuesta ganada y la otra sin cerrar
 	@Test
 	void test4() throws ParseException {
 		//Creamos el usuario y su cuenta de ahorro
@@ -100,6 +103,7 @@ class verGananciasDATest {
 		testDA.close();
 	}
 	
+	//Usuario con una apuesta gada y otra perdida
 	@Test
 	void test5() throws ParseException {
 		//Creamos el usuario y su cuenta de ahorro
@@ -151,6 +155,7 @@ class verGananciasDATest {
 		testDA.close();
 	} 
 	
+	//Usuario con una apuesta ganada
 	@Test
 	void test6() throws ParseException {
 		//Creamos el usuario y su cuenta de ahorro
