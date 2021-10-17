@@ -1,5 +1,3 @@
-/.DS_Store
-/Etiquetas-en-US.properties
-/Etiquetas-en.properties
-/Etiquetas-es.properties
-/Etiquetas-eus.properties
+/META-INF/
+/gui/
+/businessLogic/
