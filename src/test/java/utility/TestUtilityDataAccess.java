@@ -107,7 +107,7 @@ public class TestUtilityDataAccess {
 			
 		}
 		
-		public Cuenta añadirUsuario(String usuario, String password, boolean isAdmin) {
+		public Cuenta anadirUsuario(String usuario, String password, boolean isAdmin) {
 			System.out.println(">> DataAccess: añadirUsuario=> usuario= "+usuario+" contraseña= "+password+" es admin= "+isAdmin);
 			Cuenta c=null;
 			db.getTransaction().begin();
@@ -122,7 +122,7 @@ public class TestUtilityDataAccess {
 			return c;	
 		}
 		
-		public CuentaAhorro añadirCuentaAhorro(Cuenta usuario, String nombre, float fondos) {
+		public CuentaAhorro anadirCuentaAhorro(Cuenta usuario, String nombre, float fondos) {
 			System.out.println(">> DataAccess: añadirCuentaAhorro=> usuario= "+usuario.getNombre()+" nombre= "+nombre+" fondos= "+fondos);
 			CuentaAhorro ca=null;
 			db.getTransaction().begin();
@@ -156,7 +156,7 @@ public class TestUtilityDataAccess {
 //		}
 
 
-		public Event añadirEventoPreguntaPronostico(String eventText, Date oneDate, String queryText,
+		public Event anadirEventoPreguntaPronostico(String eventText, Date oneDate, String queryText,
 				Float betMinimum, String string, float cuota) {
 				System.out.println(">> DataAccessTest: addEvent");
 				Event ev=null;
@@ -177,7 +177,7 @@ public class TestUtilityDataAccess {
 			return ev;
 		}
 		
-		public Apuesta añadirApuesta(Pronostico p, float cantidadApostada, Event e, Question q, Cuenta usuario, CuentaAhorro c, boolean cerrada, boolean ganada) {
+		public Apuesta anadirApuesta(Pronostico p, float cantidadApostada, Event e, Question q, Cuenta usuario, CuentaAhorro c, boolean cerrada, boolean ganada) {
 			System.out.println(">> DataAccessTest: addApuesta");
 			Apuesta a = null;
 			Question q1 =db.find(Question.class, q.getQuestionNumber());

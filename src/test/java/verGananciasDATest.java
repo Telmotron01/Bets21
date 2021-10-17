@@ -41,8 +41,8 @@ class verGananciasDATest {
 	@Test
 	public void test3() {
 		testDA.open();
-		Cuenta Telmo = testDA.añadirUsuario("Telmo", "1234", false);
-		CuentaAhorro C3 = testDA.añadirCuentaAhorro(Telmo, "Cuenta 2", 200);
+		Cuenta Telmo = testDA.anadirUsuario("Telmo", "1234", false);
+		CuentaAhorro C3 = testDA.anadirCuentaAhorro(Telmo, "Cuenta 2", 200);
 		testDA.close();
 		float obtained=sut.verGanancias(C3);
 		assertEquals(0, obtained);
@@ -56,8 +56,8 @@ class verGananciasDATest {
 	void test4() throws ParseException {
 		//Creamos el usuario y su cuenta de ahorro
 		testDA.open();
-		Cuenta Telmo = testDA.añadirUsuario("Telmo", "1234", false);
-		CuentaAhorro C1 = testDA.añadirCuentaAhorro(Telmo, "Cuenta 1", 100);
+		Cuenta Telmo = testDA.anadirUsuario("Telmo", "1234", false);
+		CuentaAhorro C1 = testDA.anadirCuentaAhorro(Telmo, "Cuenta 1", 100);
 		testDA.close();
 		
 		//Creamos el evento, la pregunta y el pronostico
@@ -71,7 +71,7 @@ class verGananciasDATest {
 		float Cuota1 = 1.7f;
 
 		testDA.open();
-		e1 = testDA.añadirEventoPreguntaPronostico(eventText1, oneDate1, queryText1, betMinimum1, "Pronostico1", Cuota1);
+		e1 = testDA.anadirEventoPreguntaPronostico(eventText1, oneDate1, queryText1, betMinimum1, "Pronostico1", Cuota1);
 		testDA.close();
 		
 		//Creamos las apuestas y las añadimos a la cuenta de ahorro
@@ -82,8 +82,8 @@ class verGananciasDATest {
 		float cantidadApuesta2=5f;
 		
 		testDA.open();
-		Apuesta apuesta1 = testDA.añadirApuesta(pronostico1, cantidadApuesta1, e1, pregunta1,  Telmo, C1, true, true);
-		Apuesta apuesta2 = testDA.añadirApuesta(pronostico1, cantidadApuesta2, e1, pregunta1,  Telmo, C1, false, false);
+		Apuesta apuesta1 = testDA.anadirApuesta(pronostico1, cantidadApuesta1, e1, pregunta1,  Telmo, C1, true, true);
+		Apuesta apuesta2 = testDA.anadirApuesta(pronostico1, cantidadApuesta2, e1, pregunta1,  Telmo, C1, false, false);
 		testDA.close();
 		
 		//Calculamos el resultado que deberiamos obtener y lo comparamos con el obtenido
@@ -108,8 +108,8 @@ class verGananciasDATest {
 	void test5() throws ParseException {
 		//Creamos el usuario y su cuenta de ahorro
 		testDA.open();
-		Cuenta Pedro = testDA.añadirUsuario("Pedro", "1234", false);
-		CuentaAhorro C2 = testDA.añadirCuentaAhorro(Pedro, "Cuenta Principal", 50);
+		Cuenta Pedro = testDA.anadirUsuario("Pedro", "1234", false);
+		CuentaAhorro C2 = testDA.anadirCuentaAhorro(Pedro, "Cuenta Principal", 50);
 		testDA.close();
 		
 		//Creamos el evento, la pregunta y el pronostico
@@ -123,7 +123,7 @@ class verGananciasDATest {
 		float Cuota1 = 3.0f;
 
 		testDA.open();
-		e1 = testDA.añadirEventoPreguntaPronostico(eventText1, oneDate1, queryText1, betMinimum1, "Pronostico1", Cuota1);
+		e1 = testDA.anadirEventoPreguntaPronostico(eventText1, oneDate1, queryText1, betMinimum1, "Pronostico1", Cuota1);
 		testDA.close();
 		
 		//Creamos las apuestas y las añadimos a la cuenta de ahorro
@@ -134,8 +134,8 @@ class verGananciasDATest {
 		float cantidadApuesta2=30f;
 		
 		testDA.open();
-		Apuesta apuesta1 = testDA.añadirApuesta(pronostico1, cantidadApuesta1, e1, pregunta1,  Pedro, C2, true, false);
-		Apuesta apuesta2 = testDA.añadirApuesta(pronostico1, cantidadApuesta2, e1, pregunta1,  Pedro, C2, true, true);
+		Apuesta apuesta1 = testDA.anadirApuesta(pronostico1, cantidadApuesta1, e1, pregunta1,  Pedro, C2, true, false);
+		Apuesta apuesta2 = testDA.anadirApuesta(pronostico1, cantidadApuesta2, e1, pregunta1,  Pedro, C2, true, true);
 		testDA.close();
 		
 		//Calculamos el resultado que deberiamos obtener y lo comparamos con el obtenido
@@ -160,8 +160,8 @@ class verGananciasDATest {
 	void test6() throws ParseException {
 		//Creamos el usuario y su cuenta de ahorro
 		testDA.open();
-		Cuenta Pedro = testDA.añadirUsuario("Pedro", "1234", false);
-		CuentaAhorro C4 = testDA.añadirCuentaAhorro(Pedro, "Cuenta Secundaria", 1000);
+		Cuenta Pedro = testDA.anadirUsuario("Pedro", "1234", false);
+		CuentaAhorro C4 = testDA.anadirCuentaAhorro(Pedro, "Cuenta Secundaria", 1000);
 		testDA.close();
 		
 		//Creamos el evento, la pregunta y el pronostico
@@ -175,7 +175,7 @@ class verGananciasDATest {
 		float Cuota1 = 2.0f;
 
 		testDA.open();
-		e1 = testDA.añadirEventoPreguntaPronostico(eventText1, oneDate1, queryText1, betMinimum1, "Pronostico1", Cuota1);
+		e1 = testDA.anadirEventoPreguntaPronostico(eventText1, oneDate1, queryText1, betMinimum1, "Pronostico1", Cuota1);
 		testDA.close();
 		
 		//Creamos las apuestas y las añadimos a la cuenta de ahorro
@@ -186,7 +186,7 @@ class verGananciasDATest {
 		
 		
 		testDA.open();
-		Apuesta apuesta1 = testDA.añadirApuesta(pronostico1, cantidadApuesta1, e1, pregunta1,  Pedro, C4, true, true);
+		Apuesta apuesta1 = testDA.anadirApuesta(pronostico1, cantidadApuesta1, e1, pregunta1,  Pedro, C4, true, true);
 		testDA.close();
 		
 		//Calculamos el resultado que deberiamos obtener y lo comparamos con el obtenido
