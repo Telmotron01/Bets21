@@ -23,7 +23,7 @@ class verGananciasDATest extends TestCase {
 	static DataAccess sut = new DataAccess(ConfigXML.getInstance().getDataBaseOpenMode().equals("initialize"));;
 	static TestUtilityDataAccess testDA = new TestUtilityDataAccess();
 
-	//Caso en el que le pasamos null
+	//Caso en el que le pasamos null sÃ±
 	@Test
 	void test1() {
 		CuentaAhorro C0=null;
@@ -75,7 +75,7 @@ class verGananciasDATest extends TestCase {
 		e1 = testDA.anadirEventoPreguntaPronostico(eventText1, oneDate1, queryText1, betMinimum1, "Pronostico1", Cuota1);
 		testDA.close();
 		
-		//Creamos las apuestas y las añadimos a la cuenta de ahorro
+		//Creamos las apuestas y las anadimos a la cuenta de ahorro
 		
 		Question pregunta1=e1.getQuestions().get(0);
 		Pronostico pronostico1=pregunta1.getPronosticos().get(0);
@@ -127,7 +127,7 @@ class verGananciasDATest extends TestCase {
 		e1 = testDA.anadirEventoPreguntaPronostico(eventText1, oneDate1, queryText1, betMinimum1, "Pronostico1", Cuota1);
 		testDA.close();
 		
-		//Creamos las apuestas y las añadimos a la cuenta de ahorro
+		//Creamos las apuestas y las anadimos a la cuenta de ahorro
 		
 		Question pregunta1=e1.getQuestions().get(0);
 		Pronostico pronostico1=pregunta1.getPronosticos().get(0);
@@ -179,7 +179,7 @@ class verGananciasDATest extends TestCase {
 		e1 = testDA.anadirEventoPreguntaPronostico(eventText1, oneDate1, queryText1, betMinimum1, "Pronostico1", Cuota1);
 		testDA.close();
 		
-		//Creamos las apuestas y las añadimos a la cuenta de ahorro
+		//Creamos las apuestas y las aÃ±adimos a la cuenta de ahorro
 		
 		Question pregunta1=e1.getQuestions().get(0);
 		Pronostico pronostico1=pregunta1.getPronosticos().get(0);
