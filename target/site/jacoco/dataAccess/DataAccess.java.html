@@ -1,0 +1,558 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>DataAccess.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">BetsCITelmo</a> &gt; <a href="index.source.html" class="el_package">dataAccess</a> &gt; <span class="el_source">DataAccess.java</span></div><h1>DataAccess.java</h1><pre class="source lang-java linenums">package dataAccess;
+
+import java.util.ArrayList;
+//hello
+import java.util.Calendar;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Locale;
+import java.util.Map;
+import java.util.ResourceBundle;
+import java.util.Vector;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+import javax.persistence.TypedQuery;
+
+import configuration.ConfigXML;
+import configuration.UtilDate;
+import domain.Apuesta;
+import domain.Cuenta;
+import domain.CuentaAhorro;
+import domain.Event;
+import domain.Pronostico;
+import domain.Question;
+import exceptions.EventAlreadyExist;
+import exceptions.PronosticoAlreadyExist;
+import exceptions.QuestionAlreadyExist;
+
+/**
+ * It implements the data access to the objectDb database
+ */
+public class DataAccess  {
+	protected static EntityManager  db;
+	protected static EntityManagerFactory emf;
+
+
+<span class="nc" id="L39">	ConfigXML c=ConfigXML.getInstance();</span>
+
+<span class="nc" id="L41">	public DataAccess(boolean initializeMode)  {</span>
+
+<span class="nc" id="L43">		System.out.println(&quot;Creating DataAccess instance =&gt; isDatabaseLocal: &quot;+c.isDatabaseLocal()+&quot; getDatabBaseOpenMode: &quot;+c.getDataBaseOpenMode());</span>
+
+<span class="nc" id="L45">		open(initializeMode);</span>
+
+<span class="nc" id="L47">	}</span>
+
+<span class="nc" id="L49">	public DataAccess()  {	</span>
+<span class="nc" id="L50">		new DataAccess(false);</span>
+<span class="nc" id="L51">	}</span>
+
+
+	/**
+	 * This is the data access method that initializes the database with some events and questions.
+	 * This method is invoked by the business logic (constructor of BLFacadeImplementation) when the option &quot;initialize&quot; is declared in the tag dataBaseOpenMode of resources/config.xml file
+	 */	
+	public void initializeDB(){
+
+<span class="nc" id="L60">		db.getTransaction().begin();</span>
+		try {
+
+
+<span class="nc" id="L64">			Calendar today = Calendar.getInstance();</span>
+
+<span class="nc" id="L66">			int month=today.get(Calendar.MONTH);</span>
+<span class="nc" id="L67">			month+=1;</span>
+<span class="nc" id="L68">			int year=today.get(Calendar.YEAR);</span>
+<span class="nc bnc" id="L69" title="All 2 branches missed.">			if (month==12) { month=0; year+=1;}  </span>
+
+<span class="nc" id="L71">			Cuenta c1 = new Cuenta(&quot;admin&quot;, &quot;admin&quot;, true);</span>
+<span class="nc" id="L72">			Cuenta c2 = new Cuenta(&quot;usuario&quot;, &quot;1234&quot;, false);</span>
+
+
+<span class="nc" id="L75">			db.persist(c1);</span>
+<span class="nc" id="L76">			db.persist(c2);</span>
+
+<span class="nc" id="L78">			Event ev1=new Event(1, &quot;Atlético-Athletic&quot;, UtilDate.newDate(year,month,17));</span>
+<span class="nc" id="L79">			Event ev2=new Event(2, &quot;Eibar-Barcelona&quot;, UtilDate.newDate(year,month,17));</span>
+<span class="nc" id="L80">			Event ev3=new Event(3, &quot;Getafe-Celta&quot;, UtilDate.newDate(year,month,17));</span>
+<span class="nc" id="L81">			Event ev4=new Event(4, &quot;Alavés-Deportivo&quot;, UtilDate.newDate(year,month,17));</span>
+<span class="nc" id="L82">			Event ev5=new Event(5, &quot;Español-Villareal&quot;, UtilDate.newDate(year,month,17));</span>
+<span class="nc" id="L83">			Event ev6=new Event(6, &quot;Las Palmas-Sevilla&quot;, UtilDate.newDate(year,month,17));</span>
+<span class="nc" id="L84">			Event ev7=new Event(7, &quot;Malaga-Valencia&quot;, UtilDate.newDate(year,month,17));</span>
+<span class="nc" id="L85">			Event ev8=new Event(8, &quot;Girona-Leganés&quot;, UtilDate.newDate(year,month,17));</span>
+<span class="nc" id="L86">			Event ev9=new Event(9, &quot;Real Sociedad-Levante&quot;, UtilDate.newDate(year,month,17));</span>
+<span class="nc" id="L87">			Event ev10=new Event(10, &quot;Betis-Real Madrid&quot;, UtilDate.newDate(year,month,17));</span>
+
+<span class="nc" id="L89">			Event ev11=new Event(11, &quot;Atletico-Athletic&quot;, UtilDate.newDate(year,month,1));</span>
+<span class="nc" id="L90">			Event ev12=new Event(12, &quot;Eibar-Barcelona&quot;, UtilDate.newDate(year,month,1));</span>
+<span class="nc" id="L91">			Event ev13=new Event(13, &quot;Getafe-Celta&quot;, UtilDate.newDate(year,month,1));</span>
+<span class="nc" id="L92">			Event ev14=new Event(14, &quot;Alavés-Deportivo&quot;, UtilDate.newDate(year,month,1));</span>
+<span class="nc" id="L93">			Event ev15=new Event(15, &quot;Español-Villareal&quot;, UtilDate.newDate(year,month,1));</span>
+<span class="nc" id="L94">			Event ev16=new Event(16, &quot;Las Palmas-Sevilla&quot;, UtilDate.newDate(year,month,1));</span>
+
+
+<span class="nc" id="L97">			Event ev17=new Event(17, &quot;Málaga-Valencia&quot;, UtilDate.newDate(year,month+1,28));</span>
+<span class="nc" id="L98">			Event ev18=new Event(18, &quot;Girona-Leganés&quot;, UtilDate.newDate(year,month+1,28));</span>
+<span class="nc" id="L99">			Event ev19=new Event(19, &quot;Real Sociedad-Levante&quot;, UtilDate.newDate(year,month+1,28));</span>
+<span class="nc" id="L100">			Event ev20=new Event(20, &quot;Betis-Real Madrid&quot;, UtilDate.newDate(year,month+1,28));</span>
+
+
+
+
+<span class="nc" id="L105">			Event ev21=new Event(21, &quot;Real Madrid-Real Sociedad&quot;, UtilDate.newDate(year,month,3));</span>
+<span class="nc" id="L106">			Event ev22=new Event(22, &quot;Valencia-Villareal&quot;, UtilDate.newDate(year,month,5));</span>
+<span class="nc" id="L107">			Event ev23=new Event(23, &quot;Valladolid-Getafe&quot;, UtilDate.newDate(year,month,6));</span>
+<span class="nc" id="L108">			Event ev24=new Event(24, &quot;Elche-Sevilla&quot;, UtilDate.newDate(year,month,6));</span>
+<span class="nc" id="L109">			Event ev25=new Event(25, &quot;Cadiz-Eibar&quot;, UtilDate.newDate(year,month,6));</span>
+<span class="nc" id="L110">			Event ev26=new Event(26, &quot;Osasuna-Barcelona&quot;, UtilDate.newDate(year,month,6));</span>
+<span class="nc" id="L111">			Event ev27=new Event(27, &quot;Huesca-Celta de Vigo&quot;, UtilDate.newDate(year,month,7));</span>
+<span class="nc" id="L112">			Event ev28=new Event(28, &quot;Atlético Madrid-Real Madrid&quot;, UtilDate.newDate(year,month,7));</span>
+<span class="nc" id="L113">			Event ev29=new Event(29, &quot;Real Sociedad-Levante&quot;, UtilDate.newDate(year,month,7));</span>
+<span class="nc" id="L114">			Event ev30=new Event(30, &quot;Ath. Bilbao-Granada&quot;, UtilDate.newDate(year,month,7));</span>
+<span class="nc" id="L115">			Event ev31=new Event(31, &quot;Betis-Alaves&quot;, UtilDate.newDate(year,month,8));</span>
+
+
+<span class="nc" id="L118">			Event ev32=new Event(32, &quot;Atlético Madrid-Ath.Bilbao&quot;, UtilDate.newDate(year,month,10));</span>
+
+<span class="nc" id="L120">			Event ev33=new Event(33, &quot;Levante-Valencia&quot;, UtilDate.newDate(year,month,12));</span>
+<span class="nc" id="L121">			Event ev34=new Event(34, &quot;Alavés-Cádiz&quot;, UtilDate.newDate(year,month,13));</span>
+<span class="nc" id="L122">			Event ev35=new Event(35, &quot;Real Madrid-Elche C.F&quot;, UtilDate.newDate(year,month,13));</span>
+<span class="nc" id="L123">			Event ev36=new Event(36, &quot;Osasuna-Valladolid&quot;, UtilDate.newDate(year,month,13));</span>
+<span class="nc" id="L124">			Event ev37=new Event(37, &quot;Getafe-Atlético Madrid&quot;, UtilDate.newDate(year,month,13));</span>
+<span class="nc" id="L125">			Event ev38=new Event(38, &quot;Celta de Vigo-Ath. Bilbao&quot;, UtilDate.newDate(year,month,14));</span>
+<span class="nc" id="L126">			Event ev39=new Event(39, &quot;Granada-Real Sociedad&quot;, UtilDate.newDate(year,month,14));</span>
+<span class="nc" id="L127">			Event ev40=new Event(40, &quot;Eibar-Villareal&quot;, UtilDate.newDate(year,month,14));</span>
+<span class="nc" id="L128">			Event ev41=new Event(41, &quot;Sevilla-Betis&quot;, UtilDate.newDate(year,month,14));</span>
+<span class="nc" id="L129">			Event ev42=new Event(42, &quot;Barcelona-Huesca&quot;, UtilDate.newDate(year,month,15));</span>
+
+<span class="nc" id="L131">			Event ev43=new Event(43, &quot;Sevilla-Elche&quot;, UtilDate.newDate(year,month,17));</span>
+
+<span class="nc" id="L133">			Event ev44=new Event(44, &quot;Betis-Levante&quot;, UtilDate.newDate(year,month,19));</span>
+<span class="nc" id="L134">			Event ev45=new Event(45, &quot;Ath.Bilbao-Eibar&quot;, UtilDate.newDate(year,month,20));</span>
+<span class="nc" id="L135">			Event ev46=new Event(46, &quot;Celta de Vigo-Real Madrid&quot;, UtilDate.newDate(year,month,20));</span>
+<span class="nc" id="L136">			Event ev47=new Event(47, &quot;Huesca-Osasuna&quot;, UtilDate.newDate(year,month,20));</span>
+<span class="nc" id="L137">			Event ev48=new Event(48, &quot;Valladolid-Sevilla&quot;, UtilDate.newDate(year,month,20));</span>
+<span class="nc" id="L138">			Event ev49=new Event(49, &quot;Getafe-Elche&quot;, UtilDate.newDate(year,month,21));</span>
+<span class="nc" id="L139">			Event ev50=new Event(50, &quot;Valencia-Granada&quot;, UtilDate.newDate(year,month,21));</span>
+<span class="nc" id="L140">			Event ev51=new Event(51, &quot;Villareal-Cádiz&quot;, UtilDate.newDate(year,month,21));</span>
+<span class="nc" id="L141">			Event ev52=new Event(52, &quot;Atlético Madrid-Alavés&quot;, UtilDate.newDate(year,month,21));</span>
+<span class="nc" id="L142">			Event ev53=new Event(53, &quot;Real Sociedad-Barcelona&quot;, UtilDate.newDate(year,month,21));</span>
+
+
+
+
+			Question q1;
+			Question q2;
+			Question q3;
+			Question q4;
+			Question q5;
+			Question q6;
+
+<span class="nc bnc" id="L154" title="All 2 branches missed.">			if (Locale.getDefault().equals(new Locale(&quot;es&quot;))) {</span>
+<span class="nc" id="L155">				q1=ev1.addQuestion(&quot;¿Quién ganará el partido?&quot;,1);</span>
+<span class="nc" id="L156">				q2=ev1.addQuestion(&quot;¿Quién meterá el primer gol?&quot;,2);</span>
+<span class="nc" id="L157">				q3=ev11.addQuestion(&quot;¿Quién ganará el partido?&quot;,1);</span>
+<span class="nc" id="L158">				q4=ev11.addQuestion(&quot;¿Cuántos goles se marcarán?&quot;,2);</span>
+<span class="nc" id="L159">				q5=ev17.addQuestion(&quot;¿Quién ganará el partido?&quot;,1);</span>
+<span class="nc" id="L160">				q6=ev17.addQuestion(&quot;¿Habrá goles en la primera parte?&quot;,2);</span>
+			}
+<span class="nc bnc" id="L162" title="All 2 branches missed.">			else if (Locale.getDefault().equals(new Locale(&quot;en&quot;))) {</span>
+<span class="nc" id="L163">				q1=ev1.addQuestion(&quot;Who will win the match?&quot;,1);</span>
+<span class="nc" id="L164">				q2=ev1.addQuestion(&quot;Who will score first?&quot;,2);</span>
+<span class="nc" id="L165">				q3=ev11.addQuestion(&quot;Who will win the match?&quot;,1);</span>
+<span class="nc" id="L166">				q4=ev11.addQuestion(&quot;How many goals will be scored in the match?&quot;,2);</span>
+<span class="nc" id="L167">				q5=ev17.addQuestion(&quot;Who will win the match?&quot;,1);</span>
+<span class="nc" id="L168">				q6=ev17.addQuestion(&quot;Will there be goals in the first half?&quot;,2);</span>
+			}			
+			else {
+<span class="nc" id="L171">				q1=ev1.addQuestion(&quot;Zeinek irabaziko du partidua?&quot;,1);</span>
+<span class="nc" id="L172">				q2=ev1.addQuestion(&quot;Zeinek sartuko du lehenengo gola?&quot;,2);</span>
+<span class="nc" id="L173">				q3=ev11.addQuestion(&quot;Zeinek irabaziko du partidua?&quot;,1);</span>
+<span class="nc" id="L174">				q4=ev11.addQuestion(&quot;Zenbat gol sartuko dira?&quot;,2);</span>
+<span class="nc" id="L175">				q5=ev17.addQuestion(&quot;Zeinek irabaziko du partidua?&quot;,1);</span>
+<span class="nc" id="L176">				q6=ev17.addQuestion(&quot;Golak sartuko dira lehenengo zatian?&quot;,2);</span>
+
+			}
+
+<span class="nc" id="L180">			Pronostico p1=q3.addPronostico(&quot;Atletico&quot;, 1);</span>
+<span class="nc" id="L181">			Pronostico p2=q3.addPronostico(&quot;Athletic&quot;, 3);</span>
+
+<span class="nc" id="L183">			Pronostico p3=q4.addPronostico(&quot;0&quot;, 2);</span>
+<span class="nc" id="L184">			Pronostico p4=q4.addPronostico(&quot;+2&quot;, 4);</span>
+
+<span class="nc" id="L186">			db.persist(q1);</span>
+<span class="nc" id="L187">			db.persist(q2);</span>
+<span class="nc" id="L188">			db.persist(q3);</span>
+<span class="nc" id="L189">			db.persist(q4);</span>
+<span class="nc" id="L190">			db.persist(q5);</span>
+<span class="nc" id="L191">			db.persist(q6); </span>
+
+
+<span class="nc" id="L194">			db.persist(ev1);</span>
+<span class="nc" id="L195">			db.persist(ev2);</span>
+<span class="nc" id="L196">			db.persist(ev3);</span>
+<span class="nc" id="L197">			db.persist(ev4);</span>
+<span class="nc" id="L198">			db.persist(ev5);</span>
+<span class="nc" id="L199">			db.persist(ev6);</span>
+<span class="nc" id="L200">			db.persist(ev7);</span>
+<span class="nc" id="L201">			db.persist(ev8);</span>
+<span class="nc" id="L202">			db.persist(ev9);</span>
+<span class="nc" id="L203">			db.persist(ev10);</span>
+<span class="nc" id="L204">			db.persist(ev11);</span>
+<span class="nc" id="L205">			db.persist(ev12);</span>
+<span class="nc" id="L206">			db.persist(ev13);</span>
+<span class="nc" id="L207">			db.persist(ev14);</span>
+<span class="nc" id="L208">			db.persist(ev15);</span>
+<span class="nc" id="L209">			db.persist(ev16);</span>
+<span class="nc" id="L210">			db.persist(ev17);</span>
+<span class="nc" id="L211">			db.persist(ev18);</span>
+<span class="nc" id="L212">			db.persist(ev19);</span>
+<span class="nc" id="L213">			db.persist(ev20);</span>
+<span class="nc" id="L214">			db.persist(ev21);</span>
+<span class="nc" id="L215">			db.persist(ev22);</span>
+<span class="nc" id="L216">			db.persist(ev23);</span>
+<span class="nc" id="L217">			db.persist(ev24);</span>
+<span class="nc" id="L218">			db.persist(ev25);</span>
+<span class="nc" id="L219">			db.persist(ev26);</span>
+<span class="nc" id="L220">			db.persist(ev27);</span>
+<span class="nc" id="L221">			db.persist(ev28);</span>
+<span class="nc" id="L222">			db.persist(ev29);</span>
+<span class="nc" id="L223">			db.persist(ev30);</span>
+<span class="nc" id="L224">			db.persist(ev31);</span>
+<span class="nc" id="L225">			db.persist(ev32);</span>
+<span class="nc" id="L226">			db.persist(ev33);</span>
+<span class="nc" id="L227">			db.persist(ev34);</span>
+<span class="nc" id="L228">			db.persist(ev35);</span>
+<span class="nc" id="L229">			db.persist(ev36);</span>
+<span class="nc" id="L230">			db.persist(ev37);</span>
+<span class="nc" id="L231">			db.persist(ev38);</span>
+<span class="nc" id="L232">			db.persist(ev39);</span>
+<span class="nc" id="L233">			db.persist(ev40);</span>
+<span class="nc" id="L234">			db.persist(ev41);</span>
+<span class="nc" id="L235">			db.persist(ev42);</span>
+<span class="nc" id="L236">			db.persist(ev43);</span>
+<span class="nc" id="L237">			db.persist(ev44);</span>
+<span class="nc" id="L238">			db.persist(ev45);</span>
+<span class="nc" id="L239">			db.persist(ev46);</span>
+<span class="nc" id="L240">			db.persist(ev47);</span>
+<span class="nc" id="L241">			db.persist(ev48);</span>
+<span class="nc" id="L242">			db.persist(ev49);</span>
+<span class="nc" id="L243">			db.persist(ev50);</span>
+<span class="nc" id="L244">			db.persist(ev51);</span>
+<span class="nc" id="L245">			db.persist(ev52);</span>
+<span class="nc" id="L246">			db.persist(ev53);</span>
+
+<span class="nc" id="L248">			db.persist(p1);</span>
+<span class="nc" id="L249">			db.persist(p2);</span>
+<span class="nc" id="L250">			db.persist(p3);</span>
+<span class="nc" id="L251">			db.persist(p4);</span>
+
+
+<span class="nc" id="L254">			db.getTransaction().commit();</span>
+<span class="nc" id="L255">			System.out.println(&quot;Db initialized&quot;);</span>
+		}
+<span class="nc" id="L257">		catch (Exception e){</span>
+<span class="nc" id="L258">			e.printStackTrace();</span>
+<span class="nc" id="L259">		}</span>
+<span class="nc" id="L260">	}</span>
+
+	/**
+	 * This method creates a question for an event, with a question text and the minimum bet
+	 * 
+	 * @param event to which question is added
+	 * @param question text of the question
+	 * @param betMinimum minimum quantity of the bet
+	 * @return the created question, or null, or an exception
+	 * @throws QuestionAlreadyExist if the same question already exists for the event
+	 */
+	public Question createQuestion(Event event, String question, float betMinimum) throws  QuestionAlreadyExist {
+<span class="nc" id="L272">		System.out.println(&quot;&gt;&gt; DataAccess: createQuestion=&gt; event= &quot;+event+&quot; question= &quot;+question+&quot; betMinimum=&quot;+betMinimum);</span>
+
+<span class="nc" id="L274">		Event ev = db.find(Event.class, event.getEventNumber());</span>
+
+<span class="nc bnc" id="L276" title="All 2 branches missed.">		if (ev.DoesQuestionExists(question)) throw new QuestionAlreadyExist(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;ErrorQueryAlreadyExist&quot;));</span>
+
+<span class="nc" id="L278">		db.getTransaction().begin();</span>
+<span class="nc" id="L279">		Question q = ev.addQuestion(question, betMinimum);</span>
+		//db.persist(q);
+<span class="nc" id="L281">		db.persist(ev); // db.persist(q) not required when CascadeType.PERSIST is added in questions property of Event class</span>
+		// @OneToMany(fetch=FetchType.EAGER, cascade=CascadeType.PERSIST)
+<span class="nc" id="L283">		db.getTransaction().commit();</span>
+<span class="nc" id="L284">		return q;</span>
+
+	}
+
+	public Pronostico crearPronostico(int numPregunta, String pronostico, float cuota) throws PronosticoAlreadyExist {
+<span class="nc" id="L289">		System.out.println(&quot;&gt;&gt; DataAccess: CreatePronostico=&gt; &quot;+pronostico);</span>
+<span class="nc" id="L290">		Question q = db.find(Question.class, numPregunta);</span>
+
+<span class="nc bnc" id="L292" title="All 2 branches missed.">		if (q.DoesPronosticoExists(pronostico)) throw new PronosticoAlreadyExist(&quot;EL pronostico ya existe&quot;);</span>
+
+<span class="nc" id="L294">		db.getTransaction().begin();</span>
+<span class="nc" id="L295">		Pronostico p = q.addPronostico(pronostico, cuota);</span>
+
+<span class="nc" id="L297">		db.persist(p);</span>
+<span class="nc" id="L298">		db.persist(q);</span>
+<span class="nc" id="L299">		db.getTransaction().commit();</span>
+<span class="nc" id="L300">		return p;</span>
+	}
+
+	public Event createEvent(String description, Date eventDate) {
+<span class="nc" id="L304">		System.out.println(&quot;&gt;&gt; DataAccess: createEvent=&gt; event= &quot;+description);</span>
+
+
+
+<span class="nc" id="L308">		db.getTransaction().begin();</span>
+<span class="nc" id="L309">		Event ev = new Event(description, eventDate);</span>
+		//db.persist(q);
+<span class="nc" id="L311">		db.persist(ev); // db.persist(q) not required when CascadeType.PERSIST is added in questions property of Event class</span>
+		// @OneToMany(fetch=FetchType.EAGER, cascade=CascadeType.PERSIST)
+<span class="nc" id="L313">		db.getTransaction().commit();</span>
+<span class="nc" id="L314">		return ev;</span>
+
+	}
+
+	/**
+	 * This method retrieves from the database the events of a given date 
+	 * 
+	 * @param date in which events are retrieved
+	 * @return collection of events
+	 */
+	public ArrayList&lt;Event&gt; getEvents(Date date) {
+<span class="nc" id="L325">		System.out.println(&quot;&gt;&gt; DataAccess: getEvents&quot;);</span>
+<span class="nc" id="L326">		ArrayList&lt;Event&gt; res = new ArrayList&lt;Event&gt;();	</span>
+<span class="nc" id="L327">		TypedQuery&lt;Event&gt; query = db.createQuery(&quot;SELECT ev FROM Event ev WHERE ev.eventDate=?1&quot;,Event.class);   </span>
+<span class="nc" id="L328">		query.setParameter(1, date);</span>
+<span class="nc" id="L329">		List&lt;Event&gt; events = query.getResultList();</span>
+<span class="nc bnc" id="L330" title="All 2 branches missed.">		for (Event ev:events){</span>
+<span class="nc" id="L331">			System.out.println(ev.toString());		 </span>
+<span class="nc" id="L332">			res.add(ev);</span>
+<span class="nc" id="L333">		}</span>
+<span class="nc" id="L334">		return res;</span>
+	}
+
+	/**
+	 * This method retrieves from the database the dates a month for which there are events
+	 * 
+	 * @param date of the month for which days with events want to be retrieved 
+	 * @return collection of dates
+	 */
+	public Vector&lt;Date&gt; getEventsMonth(Date date) {
+<span class="nc" id="L344">		System.out.println(&quot;&gt;&gt; DataAccess: getEventsMonth&quot;);</span>
+<span class="nc" id="L345">		Vector&lt;Date&gt; res = new Vector&lt;Date&gt;();	</span>
+
+<span class="nc" id="L347">		Date firstDayMonthDate= UtilDate.firstDayMonth(date);</span>
+<span class="nc" id="L348">		Date lastDayMonthDate= UtilDate.lastDayMonth(date);</span>
+
+
+<span class="nc" id="L351">		TypedQuery&lt;Date&gt; query = db.createQuery(&quot;SELECT DISTINCT ev.eventDate FROM Event ev WHERE ev.eventDate BETWEEN ?1 and ?2&quot;,Date.class);   </span>
+<span class="nc" id="L352">		query.setParameter(1, firstDayMonthDate);</span>
+<span class="nc" id="L353">		query.setParameter(2, lastDayMonthDate);</span>
+<span class="nc" id="L354">		List&lt;Date&gt; dates = query.getResultList();</span>
+<span class="nc bnc" id="L355" title="All 2 branches missed.">		for (Date d:dates){</span>
+<span class="nc" id="L356">			System.out.println(d.toString());		 </span>
+<span class="nc" id="L357">			res.add(d);</span>
+<span class="nc" id="L358">		}</span>
+<span class="nc" id="L359">		return res;</span>
+	}
+
+
+	public void open(boolean initializeMode){
+
+<span class="nc" id="L365">		System.out.println(&quot;Opening DataAccess instance =&gt; isDatabaseLocal: &quot;+c.isDatabaseLocal()+&quot; getDatabBaseOpenMode: &quot;+c.getDataBaseOpenMode());</span>
+
+<span class="nc" id="L367">		String fileName=c.getDbFilename();</span>
+<span class="nc bnc" id="L368" title="All 2 branches missed.">		if (initializeMode) {</span>
+<span class="nc" id="L369">			fileName=fileName+&quot;;drop&quot;;</span>
+<span class="nc" id="L370">			System.out.println(&quot;Deleting the DataBase&quot;);</span>
+		}
+
+<span class="nc bnc" id="L373" title="All 2 branches missed.">		if (c.isDatabaseLocal()) {</span>
+<span class="nc" id="L374">			emf = Persistence.createEntityManagerFactory(&quot;objectdb:&quot;+fileName);</span>
+<span class="nc" id="L375">			db = emf.createEntityManager();</span>
+		} else {
+<span class="nc" id="L377">			Map&lt;String, String&gt; properties = new HashMap&lt;String, String&gt;();</span>
+<span class="nc" id="L378">			properties.put(&quot;javax.persistence.jdbc.user&quot;, c.getUser());</span>
+<span class="nc" id="L379">			properties.put(&quot;javax.persistence.jdbc.password&quot;, c.getPassword());</span>
+
+<span class="nc" id="L381">			emf = Persistence.createEntityManagerFactory(&quot;objectdb://&quot;+c.getDatabaseNode()+&quot;:&quot;+c.getDatabasePort()+&quot;/&quot;+fileName, properties);</span>
+
+<span class="nc" id="L383">			db = emf.createEntityManager();</span>
+		}
+
+<span class="nc" id="L386">	}</span>
+	public boolean existQuestion(Event event, String question) {
+<span class="nc" id="L388">		System.out.println(&quot;&gt;&gt; DataAccess: existQuestion=&gt; event= &quot;+event+&quot; question= &quot;+question);</span>
+<span class="nc" id="L389">		Event ev = db.find(Event.class, event.getEventNumber());</span>
+<span class="nc" id="L390">		return ev.DoesQuestionExists(question);</span>
+
+	}
+
+	public boolean hacerLogin(String login, String password) {
+<span class="nc" id="L395">		db.getTransaction().begin();</span>
+<span class="nc" id="L396">		Cuenta c = db.find(Cuenta.class, login);</span>
+<span class="nc bnc" id="L397" title="All 2 branches missed.">		if (c==null) return false;</span>
+<span class="nc" id="L398">		return (c.getPassword().equals(password));</span>
+	}
+
+	public boolean esAdmin(String usuario) {
+<span class="nc" id="L402">		db.getTransaction().begin();</span>
+<span class="nc" id="L403">		Cuenta c = db.find(Cuenta.class, usuario);</span>
+<span class="nc" id="L404">		return c.isAdmin();</span>
+	}
+
+
+	public void close(){
+<span class="nc" id="L409">		db.close();</span>
+<span class="nc" id="L410">		System.out.println(&quot;DataBase closed&quot;);</span>
+<span class="nc" id="L411">	}</span>
+
+	public boolean registrar(String login, String password, String nombre, String apellido, String mail) {
+<span class="nc bnc" id="L414" title="All 2 branches missed.">		if (db.find(Cuenta.class, login)!=null) return false;</span>
+<span class="nc" id="L415">		db.getTransaction().begin();</span>
+<span class="nc" id="L416">		Cuenta c = new Cuenta(login, password, nombre, apellido, mail);</span>
+<span class="nc" id="L417">		db.persist(c);</span>
+<span class="nc" id="L418">		db.getTransaction().commit();</span>
+<span class="nc" id="L419">		return true;</span>
+	}
+
+	public Cuenta getCuenta(String l) {
+<span class="nc" id="L423">		db.getTransaction().begin();</span>
+<span class="nc" id="L424">		Cuenta c = db.find(Cuenta.class, l);</span>
+
+<span class="nc" id="L426">		return c;</span>
+	}
+
+	public Event getEvent(int id) {
+<span class="nc" id="L430">		db.getTransaction().begin();</span>
+<span class="nc" id="L431">		Event e = db.find(Event.class, id);</span>
+<span class="nc" id="L432">		return e;</span>
+	}
+
+	public Question getQuestion(int questionNum) {
+<span class="nc" id="L436">		db.getTransaction().begin();</span>
+<span class="nc" id="L437">		Question q = db.find(Question.class, questionNum);</span>
+<span class="nc" id="L438">		return q;</span>
+	}
+
+	public Vector&lt;Pronostico&gt; getPronosticos(int questionNum) {
+<span class="nc" id="L442">		db.getTransaction().begin();</span>
+<span class="nc" id="L443">		Vector&lt;Pronostico&gt; p = new Vector&lt;Pronostico&gt;();</span>
+<span class="nc" id="L444">		Question q = db.find(Question.class, questionNum);</span>
+<span class="nc" id="L445">		p = q.getPronosticos();</span>
+<span class="nc" id="L446">		return p;</span>
+	}
+
+	public Apuesta createApuesta(Pronostico p, float f, Event e, Question q, Cuenta usuario, CuentaAhorro c) {
+<span class="nc" id="L450">		Question q1 = db.find(Question.class, q.getQuestionNumber());</span>
+<span class="nc" id="L451">		CuentaAhorro c1 = db.find(CuentaAhorro.class, c.getCuentaAhorroNumber());</span>
+<span class="nc" id="L452">		db.getTransaction().begin();</span>
+<span class="nc" id="L453">		Apuesta a = q1.addApuesta(p, f, e, q1, usuario, c);</span>
+<span class="nc" id="L454">		c1.addApuesta(a);</span>
+<span class="nc" id="L455">		db.persist(a);</span>
+<span class="nc" id="L456">		db.persist(q1);</span>
+<span class="nc" id="L457">		db.persist(c1);</span>
+<span class="nc" id="L458">		db.getTransaction().commit();</span>
+<span class="nc" id="L459">		return a;</span>
+	}
+
+	public void restarFondos(CuentaAhorro c, float f) {
+<span class="nc" id="L463">		CuentaAhorro c1=db.find(CuentaAhorro.class, c.getCuentaAhorroNumber());</span>
+<span class="nc" id="L464">		db.getTransaction().begin();</span>
+<span class="nc" id="L465">		c1.setFondos(c1.getFondos()-f);</span>
+<span class="nc" id="L466">		db.persist(c1);</span>
+<span class="nc" id="L467">		db.getTransaction().commit();</span>
+<span class="nc" id="L468">	}</span>
+
+	public void cerrarPregunta(Pronostico p, Event e, Question q) {
+<span class="nc" id="L471">		Question q1=db.find(Question.class, q.getQuestionNumber());</span>
+<span class="nc" id="L472">		db.getTransaction().begin();</span>
+<span class="nc" id="L473">		q1.setPronosticoFinal(p);</span>
+<span class="nc" id="L474">		String r1= p.toString();</span>
+<span class="nc" id="L475">		Vector&lt;Apuesta&gt; apuestas=q1.getApuestas();</span>
+<span class="nc" id="L476">		db.persist(q1);</span>
+
+<span class="nc bnc" id="L478" title="All 2 branches missed.">		for (Apuesta a: apuestas) {</span>
+<span class="nc" id="L479">			Apuesta a1 = db.find(Apuesta.class, a.getApuestaNumber());</span>
+<span class="nc" id="L480">			String r = a1.getPronostico().toString();</span>
+
+<span class="nc bnc" id="L482" title="All 2 branches missed.">			if (r1.equals(r)) {</span>
+<span class="nc" id="L483">				a1.setGanada(true);</span>
+
+			}
+
+<span class="nc" id="L487">			a1.setCerrada(true);</span>
+<span class="nc" id="L488">			db.persist(a1);</span>
+
+<span class="nc" id="L490">		}</span>
+
+<span class="nc" id="L492">		q1.setCerrada(true);</span>
+
+<span class="nc" id="L494">		db.persist(q1);</span>
+<span class="nc" id="L495">		db.getTransaction().commit();</span>
+<span class="nc" id="L496">	}</span>
+
+	public void crearCuentaAhorro(Cuenta u, String s) {
+<span class="nc" id="L499">		Cuenta u1 = db.find(Cuenta.class, u.getUsuario());</span>
+<span class="nc" id="L500">		db.getTransaction().begin();</span>
+<span class="nc" id="L501">		CuentaAhorro c = u1.addCuentaAhorro(u1, s);</span>
+<span class="nc" id="L502">		db.persist(c);</span>
+<span class="nc" id="L503">		db.persist(u1);</span>
+<span class="nc" id="L504">		db.getTransaction().commit();</span>
+<span class="nc" id="L505">	}</span>
+
+	public Vector&lt;CuentaAhorro&gt; getCuentaAhorro(Cuenta u) {
+<span class="nc" id="L508">		db.getTransaction().begin();</span>
+<span class="nc" id="L509">		Cuenta u1 = db.find(Cuenta.class, u.getUsuario());</span>
+<span class="nc" id="L510">		Vector&lt;CuentaAhorro&gt; c = new Vector&lt;CuentaAhorro&gt;();</span>
+
+<span class="nc" id="L512">		c=u1.getCuentasAhorro();</span>
+
+<span class="nc" id="L514">		return c;</span>
+	}
+
+	public void cerrarEvento(Event e) {
+<span class="nc" id="L518">		Event e1 = db.find(Event.class, e.getEventNumber());</span>
+<span class="nc" id="L519">		db.getTransaction().begin();</span>
+<span class="nc bnc" id="L520" title="All 2 branches missed.">		for(Question q: e1.getQuestions()) {</span>
+<span class="nc bnc" id="L521" title="All 2 branches missed.">			for (Apuesta a: q.getApuestas()) {</span>
+<span class="nc bnc" id="L522" title="All 2 branches missed.">				if(a.isGanada()) {</span>
+<span class="nc" id="L523">					CuentaAhorro c = a.getCuentaAhorro();</span>
+<span class="nc" id="L524">					c.setFondos(c.getFondos()+(a.getCantidad()*a.getPronostico().getCuota()));</span>
+<span class="nc" id="L525">					db.persist(c);</span>
+				}
+<span class="nc" id="L527">			}</span>
+<span class="nc" id="L528">		}</span>
+<span class="nc" id="L529">		e1.setCerrado(true);</span>
+<span class="nc" id="L530">		db.persist(e1);</span>
+<span class="nc" id="L531">		db.getTransaction().commit();</span>
+
+<span class="nc" id="L533">	}</span>
+
+	public Float verGanancias(CuentaAhorro c1) {
+<span class="nc" id="L536">		CuentaAhorro c = db.find(CuentaAhorro.class, c1.getCuentaAhorroNumber());</span>
+<span class="nc" id="L537">		Vector&lt;Apuesta&gt; apuestas=c.getApuestas();</span>
+<span class="nc" id="L538">		float f=0;</span>
+		//Cambio
+<span class="nc bnc" id="L540" title="All 2 branches missed.">		for (Apuesta a:apuestas) {</span>
+<span class="nc bnc" id="L541" title="All 2 branches missed.">			if(a.isCerrada()) {</span>
+<span class="nc bnc" id="L542" title="All 2 branches missed.">				if (a.isGanada()) {</span>
+<span class="nc" id="L543">					f=f+(a.getCantidad()*a.getPronostico().getCuota())-a.getCantidad(); //Cambio</span>
+				}else {
+<span class="nc" id="L545">					f=f-a.getCantidad(); </span>
+				}
+			}
+<span class="nc" id="L548">		}</span>
+<span class="nc" id="L549">		return f;</span>
+	}
+
+
+
+}
+
+
+
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>

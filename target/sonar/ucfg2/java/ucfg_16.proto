@@ -1,89 +1,48 @@
 
-?gui.AdminGUI#getRdbtnNewRadioButton()Ljavax/swing/JRadioButton;Y
-MC:/Users/telmo/Desktop/pruebabetssonar/Bets21/src/main/java/gui/AdminGUI.java∫ ∫(,"3*Â
-2Y
-MC:/Users/telmo/Desktop/pruebabetssonar/Bets21/src/main/java/gui/AdminGUI.javaº* º(3òï
-Y
-MC:/Users/telmo/Desktop/pruebabetssonar/Bets21/src/main/java/gui/AdminGUI.javaº º()
-%1javax.swing.JRadioButton"javax.swing.JRadioButton…
-∆
-Y
-MC:/Users/telmo/Desktop/pruebabetssonar/Bets21/src/main/java/gui/AdminGUI.javaº º(4
-%2"4javax.swing.JRadioButton#<init>(Ljava/lang/String;)V* 
-
-%1javax.swing.JRadioButton*	
-EnglishØ
-¨
-Y
-MC:/Users/telmo/Desktop/pruebabetssonar/Bets21/src/main/java/gui/AdminGUI.javaº º(4'
-gui.AdminGUI"
-rdbtnNewRadioButton"__id* 
-
-%1javax.swing.JRadioButtonØ
-¨
-Y
-MC:/Users/telmo/Desktop/pruebabetssonar/Bets21/src/main/java/gui/AdminGUI.javaΩ Ω(
-%3javax.swing.JRadioButton"__id*)*'
-gui.AdminGUI"
-rdbtnNewRadioButtonÑÅ
-Y
-MC:/Users/telmo/Desktop/pruebabetssonar/Bets21/src/main/java/gui/AdminGUI.javaΩ- Ω(;
-%4gui.AdminGUI$6"gui.AdminGUI$6ò
-ï
-Y
-MC:/Users/telmo/Desktop/pruebabetssonar/Bets21/src/main/java/gui/AdminGUI.javaΩ) ¬(
-%5"java.lang.Object#<init>()V*
-
-%4gui.AdminGUI$6®•
-Y
-MC:/Users/telmo/Desktop/pruebabetssonar/Bets21/src/main/java/gui/AdminGUI.javaΩ ¬(
+5dataAccess.DataAccess#getQuestion(I)Ldomain/Question;E
+9F:/BetsCI/Bets21/src/main/java/dataAccess/DataAccess.java≥ ≥("1*—
 
-%6void"Njavax.swing.AbstractButton#addActionListener(Ljava/awt/event/ActionListener;)V* 
-
-%3javax.swing.JRadioButton*
-
-%4gui.AdminGUI$622addActionListener(Ljava/awt/event/ActionListener;)¶
-£
-Y
-MC:/Users/telmo/Desktop/pruebabetssonar/Bets21/src/main/java/gui/AdminGUI.java√ √(
-%7javax.swing.ButtonGroup"__id*!*
-gui.AdminGUI"
-buttonGroupØ
-¨
-Y
-MC:/Users/telmo/Desktop/pruebabetssonar/Bets21/src/main/java/gui/AdminGUI.java√ √(&
-%8javax.swing.JRadioButton"__id*)*'
-gui.AdminGUI"
-rdbtnNewRadioButtonåâ
-Y
-MC:/Users/telmo/Desktop/pruebabetssonar/Bets21/src/main/java/gui/AdminGUI.java√ √('
+1E
+9F:/BetsCI/Bets21/src/main/java/dataAccess/DataAccess.java¥ ¥(ö
+ó
+E
+9F:/BetsCI/Bets21/src/main/java/dataAccess/DataAccess.java¥ ¥(%
+%0javax.persistence.EntityManager"__id*!*
+dataAccess.DataAccess"
+dbáÑ
+E
+9F:/BetsCI/Bets21/src/main/java/dataAccess/DataAccess.java¥ ¥()
+%1#javax.persistence.EntityTransaction"Ujavax.persistence.EntityManager#getTransaction()Ljavax/persistence/EntityTransaction;*'
+%
+%0javax.persistence.EntityManager2getTransaction()∫∑
+E
+9F:/BetsCI/Bets21/src/main/java/dataAccess/DataAccess.java¥ ¥(
 
-%9void":javax.swing.ButtonGroup#add(Ljavax/swing/AbstractButton;)V*
-
-%7javax.swing.ButtonGroup* 
-
-%8javax.swing.JRadioButton2!add(Ljavax/swing/AbstractButton;)*
-1*ò
-3Y
-MC:/Users/telmo/Desktop/pruebabetssonar/Bets21/src/main/java/gui/AdminGUI.javaª ª(Ø
-¨
-Y
-MC:/Users/telmo/Desktop/pruebabetssonar/Bets21/src/main/java/gui/AdminGUI.javaª ª(
-%0javax.swing.JRadioButton"__id*)*'
-gui.AdminGUI"
-rdbtnNewRadioButton*
-2
-1*ë
-1Y
-MC:/Users/telmo/Desktop/pruebabetssonar/Bets21/src/main/java/gui/AdminGUI.java≈	 ≈(∞
-≠
-Y
-MC:/Users/telmo/Desktop/pruebabetssonar/Bets21/src/main/java/gui/AdminGUI.java≈	 ≈(
-%10javax.swing.JRadioButton"__id*)*'
-gui.AdminGUI"
-rdbtnNewRadioButton"~
-Y
-MC:/Users/telmo/Desktop/pruebabetssonar/Bets21/src/main/java/gui/AdminGUI.java≈ ≈(!
-
-%10javax.swing.JRadioButtonB
-gui.AdminGUI
+%2void",javax.persistence.EntityTransaction#begin()V*+
+)
+%1#javax.persistence.EntityTransaction2begin()ö
+ó
+E
+9F:/BetsCI/Bets21/src/main/java/dataAccess/DataAccess.javaµ µ(%
+%3javax.persistence.EntityManager"__id*!*
+dataAccess.DataAccess"
+db¢ü
+E
+9F:/BetsCI/Bets21/src/main/java/dataAccess/DataAccess.javaµ µ(3
+%4domain.Question"[javax.persistence.EntityManager#find(Ljava/lang/Class;Ljava/lang/Object;)Ljava/lang/Object;*'
+%
+%3javax.persistence.EntityManager*
+""*
+""2)find(Ljava/lang/Class;Ljava/lang/Object;)~
+|
+E
+9F:/BetsCI/Bets21/src/main/java/dataAccess/DataAccess.javaµ µ(4
+qdomain.Question"__id*
+
+%4domain.Question"_
+E
+9F:/BetsCI/Bets21/src/main/java/dataAccess/DataAccess.java∂ ∂(
+
+qdomain.Question:
+""B
+dataAccess.DataAccess

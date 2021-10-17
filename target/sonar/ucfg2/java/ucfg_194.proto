@@ -1,15 +1,38 @@
 
-domain.Event#hashCode()IW
-MC:/Users/telmo/Desktop/pruebabetssonar/Bets21/src/main/java/domain/Event.javar r("1*à
-1W
-MC:/Users/telmo/Desktop/pruebabetssonar/Bets21/src/main/java/domain/Event.javas s(ž
-›
-W
-MC:/Users/telmo/Desktop/pruebabetssonar/Bets21/src/main/java/domain/Event.javau u('
-%0java.lang.Integer"__id*!*
-domain.Event"
-eventNumber"a
-W
-MC:/Users/telmo/Desktop/pruebabetssonar/Bets21/src/main/java/domain/Event.javav v(
-""B
-domain.Event
+.domain.Pronostico#toString()Ljava/lang/String;?
+5F:/BetsCI/Bets21/src/main/java/domain/Pronostico.java/ /("1*Þ
+1?
+5F:/BetsCI/Bets21/src/main/java/domain/Pronostico.java0	 0(Š
+‡
+?
+5F:/BetsCI/Bets21/src/main/java/domain/Pronostico.java0 0($
+%0java.lang.String"__id*&*$
+domain.Pronostico"
+descripcion‘
+Ž
+?
+5F:/BetsCI/Bets21/src/main/java/domain/Pronostico.java0	 0($
+%1java.lang.String"__concat*
+Pronostico=*
+
+%0java.lang.StringŽ
+‹
+?
+5F:/BetsCI/Bets21/src/main/java/domain/Pronostico.java0	 0(1
+%2java.lang.String"__concat*
+
+%1java.lang.String*
+
+, cuota=ˆ
+…
+?
+5F:/BetsCI/Bets21/src/main/java/domain/Pronostico.java0	 0(9
+%3java.lang.String"__concat*
+
+%2java.lang.String*
+"""[
+?
+5F:/BetsCI/Bets21/src/main/java/domain/Pronostico.java0 0(:
+
+%3java.lang.StringB
+domain.Pronostico

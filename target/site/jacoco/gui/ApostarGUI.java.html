@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ApostarGUI.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">BetsCITelmo</a> &gt; <a href="index.source.html" class="el_package">gui</a> &gt; <span class="el_source">ApostarGUI.java</span></div><h1>ApostarGUI.java</h1><pre class="source lang-java linenums">package gui;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JComboBox;
+import javax.swing.JTextField;
+
+import businessLogic.BLFacade;
+import domain.Cuenta;
+import domain.CuentaAhorro;
+import domain.Pronostico;
+
+import javax.swing.ComboBoxModel;
+import javax.swing.DefaultComboBoxModel;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.util.Vector;
+import java.awt.Dimension;
+import java.awt.Event;
+import java.awt.event.ActionEvent;
+import java.awt.Font;
+
+public class ApostarGUI extends JFrame {
+	private JTextField cantField;
+	private JLabel eventLabel;
+	private JLabel preguntaLabel;
+	private JLabel eligePronosticoLabel;
+	private JComboBox&lt;String&gt; comboBox;
+	private JLabel lblNewLabel;
+	private JButton apostarButton;
+	private JLabel eventEnse�arLabel;
+	private JLabel preguntaEnse�arLabel;
+<span class="nc" id="L33">	private DefaultComboBoxModel&lt;String&gt; pronosticoList = new DefaultComboBoxModel&lt;String&gt;();</span>
+<span class="nc" id="L34">	private Vector&lt;Pronostico&gt; pronosticos = new Vector&lt;Pronostico&gt;();</span>
+	private JLabel lblNewLabel_1;
+	private JLabel apuestaMinimaLabel;
+	private Pronostico p;
+	private JLabel ERROR;
+	private JLabel lblNewLabel_2;
+	private JButton volverButton;
+	private JLabel lblEligeTuCuenta;
+	private JComboBox&lt;String&gt; comboBox_1;
+<span class="nc" id="L43">	private DefaultComboBoxModel&lt;String&gt; cuentasList = new DefaultComboBoxModel&lt;String&gt;();</span>
+<span class="nc" id="L44">	private Vector&lt;CuentaAhorro&gt; cuentas= new Vector&lt;CuentaAhorro&gt;();</span>
+<span class="nc" id="L45">	public ApostarGUI(Cuenta usuario, int questionNum, int eventNum) {</span>
+
+<span class="nc" id="L47">		this.setSize(new Dimension(441, 312));</span>
+
+<span class="nc" id="L49">		BLFacade facade = AdminGUI.getBusinessLogic();</span>
+
+
+<span class="nc" id="L52">		getContentPane().setLayout(null);</span>
+
+<span class="nc" id="L54">		eventLabel = new JLabel(&quot;Evento: &quot;);</span>
+<span class="nc" id="L55">		eventLabel.setBounds(91, 31, 59, 14);</span>
+<span class="nc" id="L56">		getContentPane().add(eventLabel);</span>
+
+<span class="nc" id="L58">		preguntaLabel = new JLabel(&quot;Pregunta: &quot;);</span>
+<span class="nc" id="L59">		preguntaLabel.setBounds(79, 56, 70, 14);</span>
+<span class="nc" id="L60">		getContentPane().add(preguntaLabel);</span>
+
+<span class="nc" id="L62">		eligePronosticoLabel = new JLabel(&quot;Elige tu pronostico:&quot;);</span>
+<span class="nc" id="L63">		eligePronosticoLabel.setBounds(41, 113, 109, 14);</span>
+<span class="nc" id="L64">		getContentPane().add(eligePronosticoLabel);</span>
+
+<span class="nc" id="L66">		comboBox = new JComboBox&lt;String&gt;();</span>
+<span class="nc" id="L67">		comboBox.setBounds(160, 110, 256, 20);</span>
+<span class="nc" id="L68">		pronosticos = facade.getPronosticos(questionNum);</span>
+<span class="nc bnc" id="L69" title="All 2 branches missed.">		for (domain.Pronostico p:pronosticos) {</span>
+<span class="nc" id="L70">			pronosticoList.addElement(p.toString());</span>
+<span class="nc" id="L71">		}</span>
+<span class="nc" id="L72">		comboBox.setModel(pronosticoList);</span>
+<span class="nc" id="L73">		getContentPane().add(comboBox);</span>
+
+<span class="nc" id="L75">		lblNewLabel = new JLabel(&quot;Cantidad a apostar:&quot;);</span>
+<span class="nc" id="L76">		lblNewLabel.setBounds(41, 189, 110, 14);</span>
+<span class="nc" id="L77">		getContentPane().add(lblNewLabel);</span>
+
+<span class="nc" id="L79">		cantField = new JTextField();</span>
+<span class="nc" id="L80">		cantField.setBounds(159, 186, 45, 20);</span>
+<span class="nc" id="L81">		getContentPane().add(cantField);</span>
+<span class="nc" id="L82">		cantField.setColumns(10);</span>
+
+<span class="nc" id="L84">		apostarButton = new JButton(&quot;Apostar&quot;);</span>
+<span class="nc" id="L85">		apostarButton.addActionListener(new ActionListener() {</span>
+			public void actionPerformed(ActionEvent arg0) {
+<span class="nc" id="L87">				ERROR.setVisible(false);</span>
+<span class="nc" id="L88">				lblNewLabel_2.setVisible(false);</span>
+<span class="nc" id="L89">				domain.Event e = facade.getEvent(eventNum);</span>
+<span class="nc" id="L90">				domain.Question q = facade.getQuestion(questionNum);</span>
+<span class="nc" id="L91">				CuentaAhorro c1 = null;</span>
+
+<span class="nc" id="L93">				float f = Float.parseFloat(cantField.getText());</span>
+				
+<span class="nc bnc" id="L95" title="All 2 branches missed.">				for (domain.CuentaAhorro c:cuentas) {</span>
+<span class="nc bnc" id="L96" title="All 2 branches missed.">					if(c.getNombreCuenta().equals(comboBox_1.getSelectedItem())) {</span>
+<span class="nc" id="L97">						c1=c;</span>
+					}
+<span class="nc" id="L99">				}</span>
+
+<span class="nc bnc" id="L101" title="All 4 branches missed.">				if (f&gt;=q.getBetMinimum()&amp;&amp;f&lt;=c1.getFondos()) {</span>
+<span class="nc bnc" id="L102" title="All 2 branches missed.">					for (domain.Pronostico i:pronosticos) {</span>
+<span class="nc bnc" id="L103" title="All 2 branches missed.">						if (i.toString().equals(comboBox.getSelectedItem())) {</span>
+<span class="nc" id="L104">							p=i;</span>
+						}
+<span class="nc" id="L106">					}</span>
+					
+
+<span class="nc" id="L109">					facade.createApuesta(p, f, e, q, usuario, c1);</span>
+<span class="nc" id="L110">					facade.restarFondos(c1, f);</span>
+<span class="nc" id="L111">					lblNewLabel_2.setVisible(true);</span>
+
+				}
+				else {
+<span class="nc" id="L115">					ERROR.setVisible(true);</span>
+				}
+<span class="nc" id="L117">			}</span>
+		});
+<span class="nc" id="L119">		apostarButton.setBounds(159, 217, 89, 23);</span>
+<span class="nc" id="L120">		getContentPane().add(apostarButton);</span>
+
+<span class="nc" id="L122">		eventEnse�arLabel = new JLabel(&quot;New label&quot;);</span>
+<span class="nc" id="L123">		eventEnse�arLabel.setBounds(159, 31, 136, 14);</span>
+<span class="nc" id="L124">		eventEnse�arLabel.setText(facade.getEvent(eventNum).getDescription());</span>
+<span class="nc" id="L125">		getContentPane().add(eventEnse�arLabel);</span>
+
+<span class="nc" id="L127">		preguntaEnse�arLabel = new JLabel(&quot;New label&quot;);</span>
+<span class="nc" id="L128">		preguntaEnse�arLabel.setBounds(159, 56, 213, 14);</span>
+<span class="nc" id="L129">		preguntaEnse�arLabel.setText(facade.getQuestion(questionNum).getQuestion());</span>
+<span class="nc" id="L130">		getContentPane().add(preguntaEnse�arLabel);</span>
+
+<span class="nc" id="L132">		lblNewLabel_1 = new JLabel(&quot;Apuesta m\u00EDnima:&quot;);</span>
+<span class="nc" id="L133">		lblNewLabel_1.setBounds(50, 88, 100, 14);</span>
+<span class="nc" id="L134">		getContentPane().add(lblNewLabel_1);</span>
+
+<span class="nc" id="L136">		apuestaMinimaLabel = new JLabel(&quot;New label&quot;);</span>
+<span class="nc" id="L137">		apuestaMinimaLabel.setBounds(160, 88, 46, 14);</span>
+<span class="nc" id="L138">		apuestaMinimaLabel.setText(Float.toString(facade.getQuestion(questionNum).getBetMinimum()));</span>
+<span class="nc" id="L139">		getContentPane().add(apuestaMinimaLabel);</span>
+
+<span class="nc" id="L141">		ERROR = new JLabel(&quot;ERROR&quot;);</span>
+<span class="nc" id="L142">		ERROR.setVisible(false);</span>
+<span class="nc" id="L143">		ERROR.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 14));</span>
+<span class="nc" id="L144">		ERROR.setBounds(169, 240, 89, 33);</span>
+<span class="nc" id="L145">		getContentPane().add(ERROR);</span>
+
+<span class="nc" id="L147">		lblNewLabel_2 = new JLabel(&quot;Apuesta realizada!&quot;);</span>
+<span class="nc" id="L148">		lblNewLabel_2.setVisible(false);</span>
+<span class="nc" id="L149">		lblNewLabel_2.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 13));</span>
+<span class="nc" id="L150">		lblNewLabel_2.setBounds(160, 245, 148, 25);</span>
+<span class="nc" id="L151">		getContentPane().add(lblNewLabel_2);</span>
+
+<span class="nc" id="L153">		volverButton = new JButton(&quot;Volver&quot;);</span>
+<span class="nc" id="L154">		volverButton.setBounds(305, 22, 89, 23);</span>
+<span class="nc" id="L155">		getContentPane().add(volverButton);</span>
+		
+<span class="nc" id="L157">		lblEligeTuCuenta = new JLabel(&quot;Elige tu cuenta:&quot;);</span>
+<span class="nc" id="L158">		lblEligeTuCuenta.setBounds(41, 150, 109, 14);</span>
+<span class="nc" id="L159">		getContentPane().add(lblEligeTuCuenta);</span>
+		
+<span class="nc" id="L161">		comboBox_1 = new JComboBox&lt;String&gt;();</span>
+<span class="nc" id="L162">		comboBox_1.setBounds(160, 147, 255, 20);</span>
+<span class="nc" id="L163">		cuentas = facade.getCuentaAhorro(usuario);</span>
+<span class="nc bnc" id="L164" title="All 2 branches missed.">		for (domain.CuentaAhorro c: cuentas) {</span>
+<span class="nc" id="L165">			cuentasList.addElement(c.getNombreCuenta());</span>
+<span class="nc" id="L166">		}</span>
+<span class="nc" id="L167">		comboBox_1.setModel(cuentasList);</span>
+<span class="nc" id="L168">		getContentPane().add(comboBox_1);</span>
+		
+		
+<span class="nc" id="L171">		volverButton.addActionListener(new ActionListener() {</span>
+			public void actionPerformed(ActionEvent arg0) {
+<span class="nc" id="L173">				JFrame b = new UserGUI(usuario);</span>
+<span class="nc" id="L174">				b.setVisible(true);</span>
+<span class="nc" id="L175">				setVisible(false);</span>
+<span class="nc" id="L176">			}</span>
+		});
+
+<span class="nc" id="L179">	}</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>

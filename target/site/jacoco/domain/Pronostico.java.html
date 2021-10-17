@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Pronostico.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">BetsCITelmo</a> &gt; <a href="index.source.html" class="el_package">domain</a> &gt; <span class="el_source">Pronostico.java</span></div><h1>Pronostico.java</h1><pre class="source lang-java linenums">package domain;
+
+import java.io.*;
+import javax.persistence.*;
+
+@SuppressWarnings(&quot;serial&quot;)
+@Entity
+public class Pronostico implements Serializable {
+	@Id
+	@GeneratedValue
+	private Integer pronosticoNumber;
+	private String descripcion;
+	private float cuota;
+	private Question pregunta;
+	
+<span class="nc" id="L16">	public Pronostico(String pronostico, float cuota, Question q) {</span>
+<span class="nc" id="L17">		this.descripcion=pronostico;</span>
+<span class="nc" id="L18">		this.cuota=cuota;</span>
+<span class="nc" id="L19">		this.pregunta=q;</span>
+<span class="nc" id="L20">	}</span>
+
+	public Integer getPronosticoNumber() {
+<span class="nc" id="L23">		return pronosticoNumber;</span>
+	}
+
+	public void setPronosticoNumber(Integer pronosticoNumber) {
+<span class="nc" id="L27">		this.pronosticoNumber = pronosticoNumber;</span>
+<span class="nc" id="L28">	}</span>
+
+	public String getPronostico() {
+<span class="nc" id="L31">		return descripcion;</span>
+	}
+
+	public void setPronostico(String pronostico) {
+<span class="nc" id="L35">		this.descripcion = pronostico;</span>
+<span class="nc" id="L36">	}</span>
+
+	public float getCuota() {
+<span class="nc" id="L39">		return cuota;</span>
+	}
+
+	public void setCuota(float cuota) {
+<span class="nc" id="L43">		this.cuota = cuota;</span>
+<span class="nc" id="L44">	}</span>
+
+	@Override
+	public String toString() {
+<span class="nc" id="L48">		return &quot;Pronostico=&quot; + descripcion + &quot;, cuota=&quot; + cuota;</span>
+	}
+
+	public Question getPregunta() {
+<span class="nc" id="L52">		return pregunta;</span>
+	}
+
+	public void setPregunta(Question pregunta) {
+<span class="nc" id="L56">		this.pregunta = pregunta;</span>
+<span class="nc" id="L57">	}</span>
+	
+	
+	
+	
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>

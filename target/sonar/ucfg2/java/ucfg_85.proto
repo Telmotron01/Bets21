@@ -1,16 +1,9 @@
 
-7domain.CuentaAhorro#getNombreCuenta()Ljava/lang/String;^
-TC:/Users/telmo/Desktop/pruebabetssonar/Bets21/src/main/java/domain/CuentaAhorro.javaJ J("1*Ž
-1^
-TC:/Users/telmo/Desktop/pruebabetssonar/Bets21/src/main/java/domain/CuentaAhorro.javaK	 K(¬
-©
-^
-TC:/Users/telmo/Desktop/pruebabetssonar/Bets21/src/main/java/domain/CuentaAhorro.javaK	 K(
-%0java.lang.String"__id*)*'
-domain.CuentaAhorro"
-nombreCuenta"z
-^
-TC:/Users/telmo/Desktop/pruebabetssonar/Bets21/src/main/java/domain/CuentaAhorro.javaK K(
-
-%0java.lang.StringB
-domain.CuentaAhorro
+domain.Cuenta#isAdmin()Z;
+1F:/BetsCI/Bets21/src/main/java/domain/Cuenta.javaN N("1*‡
+1;
+1F:/BetsCI/Bets21/src/main/java/domain/Cuenta.javaO	 O("E
+;
+1F:/BetsCI/Bets21/src/main/java/domain/Cuenta.javaO O(
+""B
+domain.Cuenta

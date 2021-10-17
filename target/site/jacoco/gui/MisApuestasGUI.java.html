@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>MisApuestasGUI.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">BetsCITelmo</a> &gt; <a href="index.source.html" class="el_package">gui</a> &gt; <span class="el_source">MisApuestasGUI.java</span></div><h1>MisApuestasGUI.java</h1><pre class="source lang-java linenums">package gui;
+
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.ResourceBundle;
+import java.util.Vector;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.table.DefaultTableModel;
+
+import businessLogic.BLFacade;
+import domain.Apuesta;
+import domain.Cuenta;
+import domain.CuentaAhorro;
+
+import javax.swing.JLabel;
+import javax.swing.JComboBox;
+import javax.swing.DefaultComboBoxModel;
+import javax.swing.JButton;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
+
+public class MisApuestasGUI extends JFrame {
+
+	private JPanel contentPane;
+<span class="nc" id="L30">	private String[] columnNamesApuestas = new String[] {</span>
+			&quot;Evento&quot;,
+			&quot;Pregunta&quot;,
+			&quot;Pronostico&quot;,
+			&quot;Cerrada&quot;,
+			&quot;Ganada&quot;,
+			&quot;Dinero Apostado&quot;,
+			&quot;Dinero Ganado&quot;,
+	};
+	private DefaultTableModel tableModelApuestas;
+<span class="nc" id="L40">	private JTable tableApuestas= new JTable();</span>
+<span class="nc" id="L41">	private JScrollPane scrollPane=new JScrollPane();</span>
+	private JButton btnNewButton;
+	private JComboBox&lt;String&gt; comboBox;
+<span class="nc" id="L44">	private DefaultComboBoxModel&lt;String&gt; cuentasList = new DefaultComboBoxModel&lt;String&gt;();</span>
+<span class="nc" id="L45">	private Vector&lt;CuentaAhorro&gt; cuentas= new Vector&lt;CuentaAhorro&gt;();</span>
+	private JLabel lblNewLabel_1;
+	private JLabel lblNewLabel_2;
+	private JButton btnNewButton_1;
+<span class="nc" id="L49">	public MisApuestasGUI(Cuenta u) {</span>
+
+<span class="nc" id="L51">		BLFacade facade = AdminGUI.getBusinessLogic();</span>
+
+<span class="nc" id="L53">		setBounds(100, 100, 760, 370);</span>
+<span class="nc" id="L54">		contentPane = new JPanel();</span>
+
+<span class="nc" id="L56">		setContentPane(contentPane);</span>
+<span class="nc" id="L57">		this.getContentPane().setLayout(null);</span>
+
+<span class="nc" id="L59">		JLabel lblNewLabel = new JLabel(&quot;Selecciona una cuenta: &quot;);</span>
+<span class="nc" id="L60">		lblNewLabel.setBounds(34, 32, 147, 14);</span>
+<span class="nc" id="L61">		this.getContentPane().add(lblNewLabel);</span>
+
+<span class="nc" id="L63">		comboBox = new JComboBox&lt;String&gt;();</span>
+<span class="nc" id="L64">		cuentas = facade.getCuentaAhorro(u);</span>
+<span class="nc bnc" id="L65" title="All 2 branches missed.">		for (domain.CuentaAhorro c: cuentas) {</span>
+<span class="nc" id="L66">			cuentasList.addElement(c.getNombreCuenta());</span>
+<span class="nc" id="L67">		}</span>
+<span class="nc" id="L68">		comboBox.setModel(cuentasList);</span>
+<span class="nc" id="L69">		comboBox.setBounds(164, 29, 203, 20);</span>
+<span class="nc" id="L70">		this.getContentPane().add(comboBox);</span>
+
+<span class="nc" id="L72">		btnNewButton = new JButton(&quot;Buscar apuestas&quot;);</span>
+<span class="nc" id="L73">		btnNewButton.setBounds(133, 72, 132, 23);</span>
+<span class="nc" id="L74">		btnNewButton.addActionListener(new ActionListener() {</span>
+			public void actionPerformed(ActionEvent arg0) {
+<span class="nc" id="L76">				CuentaAhorro c1 = null;</span>
+<span class="nc" id="L77">				tableModelApuestas.setDataVector(null, columnNamesApuestas);</span>
+<span class="nc" id="L78">				tableModelApuestas.setColumnCount(7);</span>
+
+<span class="nc bnc" id="L80" title="All 2 branches missed.">				for (domain.CuentaAhorro c:cuentas) {</span>
+<span class="nc bnc" id="L81" title="All 2 branches missed.">					if(c.getNombreCuenta().equals(comboBox.getSelectedItem())) {</span>
+<span class="nc" id="L82">						c1=c;</span>
+					}
+<span class="nc" id="L84">				}</span>
+
+<span class="nc" id="L86">				Vector&lt;Apuesta&gt; apuestas = c1.getApuestas();</span>
+
+<span class="nc bnc" id="L88" title="All 2 branches missed.">				for (domain.Apuesta a: apuestas) {</span>
+<span class="nc" id="L89">					Vector&lt;Object&gt; row = new Vector&lt;Object&gt;();</span>
+
+<span class="nc" id="L91">					row.add(a.getEvento().getDescription());</span>
+<span class="nc" id="L92">					row.add(a.getPregunta().getQuestion());</span>
+<span class="nc" id="L93">					row.add(a.getPronostico().getPronostico());</span>
+
+<span class="nc bnc" id="L95" title="All 2 branches missed.">					if (a.isCerrada()) {</span>
+<span class="nc" id="L96">						row.add(&quot;S�&quot;);</span>
+					}else {
+<span class="nc" id="L98">						row.add(&quot;No&quot;);</span>
+					}
+
+<span class="nc bnc" id="L101" title="All 2 branches missed.">					if (a.isGanada()) {</span>
+<span class="nc" id="L102">						row.add(&quot;S�&quot;);</span>
+					}else {
+<span class="nc" id="L104">						row.add(&quot;No&quot;);</span>
+					}
+
+<span class="nc" id="L107">					row.add(a.getCantidad());</span>
+
+<span class="nc bnc" id="L109" title="All 2 branches missed.">					if (a.isCerrada()) {</span>
+<span class="nc bnc" id="L110" title="All 2 branches missed.">						if (a.isGanada()) {</span>
+<span class="nc" id="L111">							row.add((a.getCantidad()*a.getPronostico().getCuota())-a.getCantidad());</span>
+						}else {
+<span class="nc" id="L113">							row.add(-(a.getCantidad()));</span>
+						}
+					}
+
+<span class="nc" id="L117">					tableModelApuestas.addRow(row);</span>
+<span class="nc" id="L118">				}</span>
+
+<span class="nc" id="L120">				lblNewLabel_2.setText(Float.toString(facade.verGanancias(c1)));</span>
+
+<span class="nc" id="L122">			}</span>
+		});
+<span class="nc" id="L124">		this.getContentPane().add(btnNewButton);</span>
+
+<span class="nc" id="L126">		scrollPane = new JScrollPane();</span>
+<span class="nc" id="L127">		scrollPane.setBounds(23, 122, 700, 176);</span>
+
+<span class="nc" id="L129">		scrollPane.setViewportView(tableApuestas);</span>
+<span class="nc" id="L130">		tableModelApuestas=new DefaultTableModel(null, columnNamesApuestas);</span>
+<span class="nc" id="L131">		tableApuestas.setModel(tableModelApuestas);</span>
+
+<span class="nc" id="L133">		this.getContentPane().add(scrollPane);</span>
+
+<span class="nc" id="L135">		lblNewLabel_1 = new JLabel(&quot;Ganancias: &quot;);</span>
+<span class="nc" id="L136">		lblNewLabel_1.setBounds(419, 32, 77, 14);</span>
+<span class="nc" id="L137">		contentPane.add(lblNewLabel_1);</span>
+
+<span class="nc" id="L139">		lblNewLabel_2 = new JLabel(&quot;&quot;);</span>
+<span class="nc" id="L140">		lblNewLabel_2.setBounds(506, 32, 84, 14);</span>
+<span class="nc" id="L141">		contentPane.add(lblNewLabel_2);</span>
+
+<span class="nc" id="L143">		btnNewButton_1 = new JButton(&quot;Volver&quot;);</span>
+<span class="nc" id="L144">		btnNewButton_1.setBounds(634, 72, 89, 23);</span>
+<span class="nc" id="L145">		contentPane.add(btnNewButton_1);</span>
+<span class="nc" id="L146">		btnNewButton_1.addActionListener(new ActionListener() {</span>
+			public void actionPerformed(ActionEvent arg0) {
+<span class="nc" id="L148">				JFrame b = new UserGUI(u);</span>
+<span class="nc" id="L149">				b.setVisible(true);</span>
+<span class="nc" id="L150">				setVisible(false);</span>
+<span class="nc" id="L151">			}</span>
+		});
+<span class="nc" id="L153">	}</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>CuentaAhorro.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">BetsCITelmo</a> &gt; <a href="index.source.html" class="el_package">domain</a> &gt; <span class="el_source">CuentaAhorro.java</span></div><h1>CuentaAhorro.java</h1><pre class="source lang-java linenums">package domain;
+import java.io.Serializable;
+import java.util.Vector;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlID;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+
+@XmlAccessorType(XmlAccessType.FIELD)   
+@Entity
+public class CuentaAhorro implements Serializable{
+
+	
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	@XmlID
+	@XmlJavaTypeAdapter(IntegerAdapter.class)
+	@Id @GeneratedValue
+	private Integer cuentaAhorroNumber;
+	private Cuenta usuario;
+	private float fondos;
+	private String nombreCuenta;
+<span class="nc" id="L33">	@OneToMany(fetch=FetchType.EAGER, cascade=CascadeType.PERSIST)</span>
+	private Vector&lt;Apuesta&gt; apuestas=new Vector&lt;Apuesta&gt;(); 
+	
+	public CuentaAhorro (Cuenta usuario, String nombre) {
+<span class="nc" id="L37">		super();</span>
+<span class="nc" id="L38">		this.usuario=usuario;</span>
+<span class="nc" id="L39">		this.nombreCuenta=nombre;</span>
+<span class="nc" id="L40">	}</span>
+	
+	public Integer getCuentaAhorroNumber() {
+<span class="nc" id="L43">		return cuentaAhorroNumber;</span>
+	}
+
+	public void setCuentaAhorroNumber(Integer cuentaAhorroNumber) {
+<span class="nc" id="L47">		this.cuentaAhorroNumber = cuentaAhorroNumber;</span>
+<span class="nc" id="L48">	}</span>
+
+	public Cuenta getUsuario() {
+<span class="nc" id="L51">		return usuario;</span>
+	}
+
+	public void setUsuario(Cuenta usuario) {
+<span class="nc" id="L55">		this.usuario = usuario;</span>
+<span class="nc" id="L56">	}</span>
+
+	public float getFondos() {
+<span class="nc" id="L59">		return fondos;</span>
+	}
+
+	public void setFondos(float fondos) {
+<span class="nc" id="L63">		this.fondos = fondos;</span>
+<span class="nc" id="L64">	}</span>
+
+	public Vector&lt;Apuesta&gt; getApuestas() {
+<span class="nc" id="L67">		return apuestas;</span>
+	}
+
+	public void setApuestas(Vector&lt;Apuesta&gt; apuestas) {
+<span class="nc" id="L71">		this.apuestas = apuestas;</span>
+<span class="nc" id="L72">	}</span>
+
+	public String getNombreCuenta() {
+<span class="nc" id="L75">		return nombreCuenta;</span>
+	}
+
+	public void setNombreCuenta(String nombreCuenta) {
+<span class="nc" id="L79">		this.nombreCuenta = nombreCuenta;</span>
+<span class="nc" id="L80">	}</span>
+
+	public void addApuesta(Apuesta a) {
+<span class="nc" id="L83">		apuestas.add(a);</span>
+		
+<span class="nc" id="L85">	}</span>
+	
+	
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>

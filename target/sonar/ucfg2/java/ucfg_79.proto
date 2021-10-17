@@ -1,16 +1,16 @@
 
-/domain.CuentaAhorro#getUsuario()Ldomain/Cuenta;^
-TC:/Users/telmo/Desktop/pruebabetssonar/Bets21/src/main/java/domain/CuentaAhorro.java2 2("1*ƒ
-1^
-TC:/Users/telmo/Desktop/pruebabetssonar/Bets21/src/main/java/domain/CuentaAhorro.java3	 3(¤
-¡
-^
-TC:/Users/telmo/Desktop/pruebabetssonar/Bets21/src/main/java/domain/CuentaAhorro.java3	 3(
-%0domain.Cuenta"__id*$*"
-domain.CuentaAhorro"	
-usuario"w
-^
-TC:/Users/telmo/Desktop/pruebabetssonar/Bets21/src/main/java/domain/CuentaAhorro.java3 3(
-
-%0domain.CuentaB
-domain.CuentaAhorro
+)domain.Cuenta#getMail()Ljava/lang/String;;
+1F:/BetsCI/Bets21/src/main/java/domain/Cuenta.java6 6("1*•
+1;
+1F:/BetsCI/Bets21/src/main/java/domain/Cuenta.java7	 7(z
+x
+;
+1F:/BetsCI/Bets21/src/main/java/domain/Cuenta.java7	 7(
+%0java.lang.String"__id**
+domain.Cuenta"
+mail"W
+;
+1F:/BetsCI/Bets21/src/main/java/domain/Cuenta.java7 7(
+
+%0java.lang.StringB
+domain.Cuenta

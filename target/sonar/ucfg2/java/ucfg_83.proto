@@ -1,17 +1,17 @@
 
-3domain.CuentaAhorro#getApuestas()Ljava/util/Vector;^
-TC:/Users/telmo/Desktop/pruebabetssonar/Bets21/src/main/java/domain/CuentaAhorro.javaB B(#"1*Š
-1^
-TC:/Users/telmo/Desktop/pruebabetssonar/Bets21/src/main/java/domain/CuentaAhorro.javaC	 C(¨
-¥
-^
-TC:/Users/telmo/Desktop/pruebabetssonar/Bets21/src/main/java/domain/CuentaAhorro.javaC	 C(
-%0java.util.Vector"__id*%*#
-domain.CuentaAhorro"
+-domain.Cuenta#getPassword()Ljava/lang/String;;
+1F:/BetsCI/Bets21/src/main/java/domain/Cuenta.javaF F("1*™
+1;
+1F:/BetsCI/Bets21/src/main/java/domain/Cuenta.javaG	 G(~
+|
+;
+1F:/BetsCI/Bets21/src/main/java/domain/Cuenta.javaG	 G(
+%0java.lang.String"__id**
+domain.Cuenta"
 
-apuestas"z
-^
-TC:/Users/telmo/Desktop/pruebabetssonar/Bets21/src/main/java/domain/CuentaAhorro.javaC C(
+password"W
+;
+1F:/BetsCI/Bets21/src/main/java/domain/Cuenta.javaG G(
 
-%0java.util.VectorB
-domain.CuentaAhorro
+%0java.lang.StringB
+domain.Cuenta

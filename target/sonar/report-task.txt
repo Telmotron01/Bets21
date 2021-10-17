@@ -1,7 +1,7 @@
-organization=telmoesnaola
-projectKey=sg
+organization=telmotron01
+projectKey=Bets21:BetsCITelmo
 serverUrl=https://sonarcloud.io
-serverVersion=8.0.0.23304
-dashboardUrl=https://sonarcloud.io/dashboard?id=sg
-ceTaskId=AXv_54MdzMn1J-cAcGs_
-ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AXv_54MdzMn1J-cAcGs_
+serverVersion=8.0.0.23912
+dashboardUrl=https://sonarcloud.io/dashboard?id=Bets21%3ABetsCITelmo
+ceTaskId=AXyOwcJZUYM9He6GeURr
+ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AXyOwcJZUYM9He6GeURr

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>RegistrarseGUI.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">BetsCITelmo</a> &gt; <a href="index.source.html" class="el_package">gui</a> &gt; <span class="el_source">RegistrarseGUI.java</span></div><h1>RegistrarseGUI.java</h1><pre class="source lang-java linenums">package gui;
+
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+
+import businessLogic.BLFacade;
+
+import javax.swing.JTextField;
+import javax.swing.JPasswordField;
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import java.awt.Color;
+import javax.swing.SwingConstants;
+
+public class RegistrarseGUI extends JFrame {
+
+	private JPanel contentPane;
+	private JTextField usuarioField;
+	private JPasswordField passwordField;
+	private JLabel lblError;
+	private JTextField nombreField;
+	private JTextField apellidoField;
+	private JTextField mailField;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+<span class="nc" id="L33">		EventQueue.invokeLater(new Runnable() {</span>
+			public void run() {
+				try {
+<span class="nc" id="L36">					RegistrarseGUI frame = new RegistrarseGUI();</span>
+<span class="nc" id="L37">					frame.setVisible(true);</span>
+<span class="nc" id="L38">				} catch (Exception e) {</span>
+<span class="nc" id="L39">					e.printStackTrace();</span>
+<span class="nc" id="L40">				}</span>
+<span class="nc" id="L41">			}</span>
+		});
+<span class="nc" id="L43">	}</span>
+
+	/**
+	 * Create the frame.
+	 */
+<span class="nc" id="L48">	public RegistrarseGUI() {</span>
+<span class="nc" id="L49">		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);</span>
+<span class="nc" id="L50">		setBounds(100, 100, 450, 300);</span>
+<span class="nc" id="L51">		contentPane = new JPanel();</span>
+<span class="nc" id="L52">		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));</span>
+<span class="nc" id="L53">		setContentPane(contentPane);</span>
+<span class="nc" id="L54">		contentPane.setLayout(null);</span>
+		
+<span class="nc" id="L56">		usuarioField = new JTextField();</span>
+<span class="nc" id="L57">		usuarioField.setBounds(133, 24, 148, 23);</span>
+<span class="nc" id="L58">		contentPane.add(usuarioField);</span>
+<span class="nc" id="L59">		usuarioField.setColumns(10);</span>
+		
+<span class="nc" id="L61">		passwordField = new JPasswordField();</span>
+<span class="nc" id="L62">		passwordField.setBounds(133, 156, 148, 23);</span>
+<span class="nc" id="L63">		contentPane.add(passwordField);</span>
+		
+<span class="nc" id="L65">		JButton btnRegistrate = new JButton(&quot;Registrate&quot;);</span>
+<span class="nc" id="L66">		btnRegistrate.setBounds(157, 185, 119, 23);</span>
+<span class="nc" id="L67">		btnRegistrate.addActionListener(new java.awt.event.ActionListener() {</span>
+			public void actionPerformed(java.awt.event.ActionEvent e) {
+<span class="nc" id="L69">				String l = usuarioField.getText();</span>
+<span class="nc" id="L70">				String p = new String(passwordField.getPassword());</span>
+<span class="nc" id="L71">				String n = nombreField.getText();</span>
+<span class="nc" id="L72">				String a = apellidoField.getText();</span>
+<span class="nc" id="L73">				String m = mailField.getText();</span>
+				
+<span class="nc" id="L75">				BLFacade facade = AdminGUI.getBusinessLogic();</span>
+<span class="nc bnc" id="L76" title="All 2 branches missed.">				if (facade.registrar(l, p, n, a, m)) {</span>
+<span class="nc" id="L77">					JFrame b = new UserGUI(facade.getCuenta(l));</span>
+
+<span class="nc" id="L79">					b.setVisible(true);</span>
+<span class="nc" id="L80">					setVisible(false);</span>
+<span class="nc" id="L81">				}else {</span>
+<span class="nc" id="L82">					lblError.setVisible(true);</span>
+				}
+<span class="nc" id="L84">			}</span>
+		});
+<span class="nc" id="L86">		contentPane.add(btnRegistrate);</span>
+		
+<span class="nc" id="L88">		lblError = new JLabel(&quot;ERROR&quot;);</span>
+<span class="nc" id="L89">		lblError.setForeground(Color.RED);</span>
+<span class="nc" id="L90">		lblError.setBounds(198, 219, 46, 14);</span>
+<span class="nc" id="L91">		lblError.setVisible(false);</span>
+<span class="nc" id="L92">		contentPane.add(lblError);</span>
+		
+<span class="nc" id="L94">		JLabel lblUsuario = new JLabel(&quot;Usuario&quot;);</span>
+<span class="nc" id="L95">		lblUsuario.setBounds(52, 28, 73, 14);</span>
+<span class="nc" id="L96">		contentPane.add(lblUsuario);</span>
+		
+<span class="nc" id="L98">		JLabel lblContrasea = new JLabel(&quot;Contrase\u00F1a&quot;);</span>
+<span class="nc" id="L99">		lblContrasea.setBounds(52, 160, 93, 14);</span>
+<span class="nc" id="L100">		contentPane.add(lblContrasea);</span>
+		
+<span class="nc" id="L102">		JLabel lblNewLabel = new JLabel(&quot;Nombre&quot;);</span>
+<span class="nc" id="L103">		lblNewLabel.setBounds(52, 60, 46, 14);</span>
+<span class="nc" id="L104">		contentPane.add(lblNewLabel);</span>
+		
+<span class="nc" id="L106">		JLabel lblNewLabel_1 = new JLabel(&quot;Apellido&quot;);</span>
+<span class="nc" id="L107">		lblNewLabel_1.setBounds(52, 94, 46, 14);</span>
+<span class="nc" id="L108">		contentPane.add(lblNewLabel_1);</span>
+		
+<span class="nc" id="L110">		JLabel lblNewLabel_2 = new JLabel(&quot;Mail&quot;);</span>
+<span class="nc" id="L111">		lblNewLabel_2.setHorizontalAlignment(SwingConstants.LEFT);</span>
+<span class="nc" id="L112">		lblNewLabel_2.setBounds(52, 126, 46, 14);</span>
+<span class="nc" id="L113">		contentPane.add(lblNewLabel_2);</span>
+		
+<span class="nc" id="L115">		nombreField = new JTextField();</span>
+<span class="nc" id="L116">		nombreField.setBounds(133, 56, 148, 23);</span>
+<span class="nc" id="L117">		contentPane.add(nombreField);</span>
+<span class="nc" id="L118">		nombreField.setColumns(10);</span>
+		
+<span class="nc" id="L120">		apellidoField = new JTextField();</span>
+<span class="nc" id="L121">		apellidoField.setBounds(133, 90, 148, 23);</span>
+<span class="nc" id="L122">		contentPane.add(apellidoField);</span>
+<span class="nc" id="L123">		apellidoField.setColumns(10);</span>
+		
+<span class="nc" id="L125">		mailField = new JTextField();</span>
+<span class="nc" id="L126">		mailField.setBounds(133, 123, 148, 23);</span>
+<span class="nc" id="L127">		contentPane.add(mailField);</span>
+<span class="nc" id="L128">		mailField.setColumns(10);</span>
+		
+<span class="nc" id="L130">	}</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>

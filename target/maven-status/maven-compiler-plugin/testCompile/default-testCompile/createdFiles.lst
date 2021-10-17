@@ -1,0 +1,7 @@
+verGananciasBLMockTest.class
+utility\TestUtilityFacadeImplementation.class
+CreateQuestionBLMockTest.class
+verGananciasDATest.class
+CreateQuestionBLTest.class
+utility\TestUtilityDataAccess.class
+CreateQuestionDATest.class
