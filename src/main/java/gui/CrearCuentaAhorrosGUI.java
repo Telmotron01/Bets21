@@ -92,7 +92,7 @@ public class CrearCuentaAhorrosGUI extends JFrame {
 		
 		btnAadirFondos.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				JFrame b = new AñadirFondosGUI(u);
+				JFrame b = new AnadirFondosGUI(u);
 				b.setVisible(true);
 				setVisible(false);
 			}

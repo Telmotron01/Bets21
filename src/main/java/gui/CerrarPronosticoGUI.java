@@ -24,8 +24,8 @@ public class CerrarPronosticoGUI extends JFrame {
 	private JLabel eligePronosticoLabel;
 	private JComboBox<String> comboBox;
 	private JButton apostarButton;
-	private JLabel eventEnseñarLabel;
-	private JLabel preguntaEnseñarLabel;
+	private JLabel eventEnsenarLabel;
+	private JLabel preguntaEnsenarLabel;
 	private DefaultComboBoxModel<String> pronosticoList = new DefaultComboBoxModel<String>();
 	private Vector<Pronostico> pronosticos = new Vector<Pronostico>();
 	private Pronostico p;
@@ -91,15 +91,15 @@ public class CerrarPronosticoGUI extends JFrame {
 		apostarButton.setBounds(146, 175, 135, 23);
 		getContentPane().add(apostarButton);
 
-		eventEnseñarLabel = new JLabel("New label");
-		eventEnseñarLabel.setBounds(159, 31, 136, 14);
-		eventEnseñarLabel.setText(facade.getEvent(eventNum).getDescription());
-		getContentPane().add(eventEnseñarLabel);
+		eventEnsenarLabel = new JLabel("New label");
+		eventEnsenarLabel.setBounds(159, 31, 136, 14);
+		eventEnsenarLabel.setText(facade.getEvent(eventNum).getDescription());
+		getContentPane().add(eventEnsenarLabel);
 
-		preguntaEnseñarLabel = new JLabel("New label");
-		preguntaEnseñarLabel.setBounds(159, 56, 213, 14);
-		preguntaEnseñarLabel.setText(facade.getQuestion(questionNum).getQuestion());
-		getContentPane().add(preguntaEnseñarLabel);
+		preguntaEnsenarLabel = new JLabel("New label");
+		preguntaEnsenarLabel.setBounds(159, 56, 213, 14);
+		preguntaEnsenarLabel.setText(facade.getQuestion(questionNum).getQuestion());
+		getContentPane().add(preguntaEnsenarLabel);
 
 		lblNewLabel_2 = new JLabel("Pregunta cerrada");
 		lblNewLabel_2.setVisible(false);

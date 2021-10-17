@@ -21,7 +21,7 @@ import javax.swing.JTextField;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JButton;
 
-public class AñadirFondosGUI extends JFrame {
+public class AnadirFondosGUI extends JFrame {
 
 	private JPanel contentPane;
 	private JLabel lblNewLabel;
@@ -35,7 +35,7 @@ public class AñadirFondosGUI extends JFrame {
 	private DefaultComboBoxModel<String> cuentasList = new DefaultComboBoxModel<String>();
 	private Vector<CuentaAhorro> cuentas= new Vector<CuentaAhorro>();
 
-	public AñadirFondosGUI(Cuenta u) {
+	public AnadirFondosGUI(Cuenta u) {
 		
 		BLFacade facade = AdminGUI.getBusinessLogic();
 		

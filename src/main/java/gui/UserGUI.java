@@ -32,8 +32,8 @@ public class UserGUI extends JFrame {
 
 
 	private JButton buscarButton;
-	private JButton añadirCuentaButton;
-	private JButton btnAñadirFondos;
+	private JButton anadirCuentaButton;
+	private JButton btnAnadirFondos;
 	private JButton btnMisApuestas;
 
 	/**
@@ -53,19 +53,19 @@ public class UserGUI extends JFrame {
 		buscarButton.setBounds(74, 131, 185, 60);
 		getContentPane().add(buscarButton);
 		
-		añadirCuentaButton = new JButton("A\u00F1adir cuenta");
-		añadirCuentaButton.setBounds(269, 131, 185, 60);
-		getContentPane().add(añadirCuentaButton);
+		anadirCuentaButton = new JButton("A\u00F1adir cuenta");
+		anadirCuentaButton.setBounds(269, 131, 185, 60);
+		getContentPane().add(anadirCuentaButton);
 		
-		btnAñadirFondos = new JButton("A\u00F1adir Fondos");
-		btnAñadirFondos.setBounds(74, 202, 185, 60);
-		getContentPane().add(btnAñadirFondos);
+		btnAnadirFondos = new JButton("A\u00F1adir Fondos");
+		btnAnadirFondos.setBounds(74, 202, 185, 60);
+		getContentPane().add(btnAnadirFondos);
 		
 		btnMisApuestas = new JButton("Mis Apuestas");
 		btnMisApuestas.setBounds(269, 202, 185, 60);
 		getContentPane().add(btnMisApuestas);
 		
-		añadirCuentaButton.addActionListener(new ActionListener() {
+		anadirCuentaButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				JFrame b = new CrearCuentaAhorrosGUI(u);
 				b.setVisible(true);
@@ -81,9 +81,9 @@ public class UserGUI extends JFrame {
 			}
 		});
 		
-		btnAñadirFondos.addActionListener(new ActionListener() {
+		btnAnadirFondos.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				JFrame b = new AñadirFondosGUI(u);
+				JFrame b = new AnadirFondosGUI(u);
 				b.setVisible(true);
 				setVisible(false);
 			}
