@@ -1,54 +1,0 @@
-
->businessLogic.BLFacadeImplementation#getEvent(I)Ldomain/Event;T
-HF:/BetsCI/Bets21/src/main/java/businessLogic/BLFacadeImplementation.javaÊ Ê("1*¶
-1T
-HF:/BetsCI/Bets21/src/main/java/businessLogic/BLFacadeImplementation.javaË Ë(µ
-²
-T
-HF:/BetsCI/Bets21/src/main/java/businessLogic/BLFacadeImplementation.javaË Ë(
-%0dataAccess.DataAccess"__id*7*5&
-$businessLogic.BLFacadeImplementation"
-	dbManagerµ²
-T
-HF:/BetsCI/Bets21/src/main/java/businessLogic/BLFacadeImplementation.javaË Ë(
-
-%1void"dataAccess.DataAccess#open(Z)V*
-
-%0dataAccess.DataAccess*
-""2open(Z)µ
-²
-T
-HF:/BetsCI/Bets21/src/main/java/businessLogic/BLFacadeImplementation.javaÌ Ì(
-%2dataAccess.DataAccess"__id*7*5&
-$businessLogic.BLFacadeImplementation"
-	dbManagerÒÏ
-T
-HF:/BetsCI/Bets21/src/main/java/businessLogic/BLFacadeImplementation.javaÌ Ì(!
-%3domain.Event"/dataAccess.DataAccess#getEvent(I)Ldomain/Event;*
-
-%2dataAccess.DataAccess*
-""2getEvent(I)ˆ
-…
-T
-HF:/BetsCI/Bets21/src/main/java/businessLogic/BLFacadeImplementation.javaÌ Ì("
-edomain.Event"__id*
-
-%3domain.Eventµ
-²
-T
-HF:/BetsCI/Bets21/src/main/java/businessLogic/BLFacadeImplementation.javaÍ Í(
-%4dataAccess.DataAccess"__id*7*5&
-$businessLogic.BLFacadeImplementation"
-	dbManager­ª
-T
-HF:/BetsCI/Bets21/src/main/java/businessLogic/BLFacadeImplementation.javaÍ Í(
-
-%5void"dataAccess.DataAccess#close()V*
-
-%4dataAccess.DataAccess2close()"k
-T
-HF:/BetsCI/Bets21/src/main/java/businessLogic/BLFacadeImplementation.javaÎ Î(
-
-edomain.Event:
-""B(&
-$businessLogic.BLFacadeImplementation

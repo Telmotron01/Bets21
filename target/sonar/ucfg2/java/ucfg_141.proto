@@ -1,72 +1,0 @@
-
-UbusinessLogic.BLFacadeImplementation#getEvents(Ljava/util/Date;)Ljava/util/ArrayList;R
-HF:/BetsCI/Bets21/src/main/java/businessLogic/BLFacadeImplementation.java~ ~(""startingBlock*è
-startingBlockR
-HF:/BetsCI/Bets21/src/main/java/businessLogic/BLFacadeImplementation.java~" ~(-ú
-ô
-R
-HF:/BetsCI/Bets21/src/main/java/businessLogic/BLFacadeImplementation.java} }(
-%6"
-__annotate*
-javax.jws.WebMethod*
-
-datejava.util.DateÖ
-Ç
-R
-HF:/BetsCI/Bets21/src/main/java/businessLogic/BLFacadeImplementation.java~( ~(,
-datejava.util.Date"__annotation*
-
-%6*
-1*è
-1R
-HF:/BetsCI/Bets21/src/main/java/businessLogic/BLFacadeImplementation.java (≥
-∞
-R
-HF:/BetsCI/Bets21/src/main/java/businessLogic/BLFacadeImplementation.java (
-%0dataAccess.DataAccess"__id*7*5&
-$businessLogic.BLFacadeImplementation"
-	dbManager≥∞
-R
-HF:/BetsCI/Bets21/src/main/java/businessLogic/BLFacadeImplementation.java (
-
-%1void"dataAccess.DataAccess#open(Z)V*
-
-%0dataAccess.DataAccess*
-""2open(Z)µ
-≤
-T
-HF:/BetsCI/Bets21/src/main/java/businessLogic/BLFacadeImplementation.javaÄ Ä($
-%2dataAccess.DataAccess"__id*7*5&
-$businessLogic.BLFacadeImplementation"
-	dbManageríè
-T
-HF:/BetsCI/Bets21/src/main/java/businessLogic/BLFacadeImplementation.javaÄ Ä(4
-%3java.util.ArrayList"FdataAccess.DataAccess#getEvents(Ljava/util/Date;)Ljava/util/ArrayList;*
-
-%2dataAccess.DataAccess*
-
-datejava.util.Date2getEvents(Ljava/util/Date;)õ
-ò
-T
-HF:/BetsCI/Bets21/src/main/java/businessLogic/BLFacadeImplementation.javaÄ Ä(5
-eventsjava.util.ArrayList"__id*
-
-%3java.util.ArrayListµ
-≤
-T
-HF:/BetsCI/Bets21/src/main/java/businessLogic/BLFacadeImplementation.javaÅ Å(
-%4dataAccess.DataAccess"__id*7*5&
-$businessLogic.BLFacadeImplementation"
-	dbManager≠™
-T
-HF:/BetsCI/Bets21/src/main/java/businessLogic/BLFacadeImplementation.javaÅ Å(
-
-%5void"dataAccess.DataAccess#close()V*
-
-%4dataAccess.DataAccess2close()"w
-T
-HF:/BetsCI/Bets21/src/main/java/businessLogic/BLFacadeImplementation.javaÇ Ç(
-
-eventsjava.util.ArrayList:
-datejava.util.DateB(&
-$businessLogic.BLFacadeImplementation

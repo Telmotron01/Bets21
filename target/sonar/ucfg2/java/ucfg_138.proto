@@ -1,85 +1,0 @@
-
-^businessLogic.BLFacadeImplementation#createPronostico(ILjava/lang/String;F)Ldomain/Pronostico;R
-HF:/BetsCI/Bets21/src/main/java/businessLogic/BLFacadeImplementation.java< <(#"startingBlock*Ÿ
-startingBlockR
-HF:/BetsCI/Bets21/src/main/java/businessLogic/BLFacadeImplementation.java<# <(T¤
-¡
-R
-HF:/BetsCI/Bets21/src/main/java/businessLogic/BLFacadeImplementation.java; ;(
-%6"
-__annotate*
-javax.jws.WebMethod* 
-
-
-pronosticojava.lang.String
-Š
-R
-HF:/BetsCI/Bets21/src/main/java/businessLogic/BLFacadeImplementation.java<< <(F
-
-pronosticojava.lang.String"__annotation*
-
-%6*
-1*™
-1R
-HF:/BetsCI/Bets21/src/main/java/businessLogic/BLFacadeImplementation.java? ?(³
-°
-R
-HF:/BetsCI/Bets21/src/main/java/businessLogic/BLFacadeImplementation.java? ?(
-%0dataAccess.DataAccess"__id*7*5&
-$businessLogic.BLFacadeImplementation"
-	dbManager³°
-R
-HF:/BetsCI/Bets21/src/main/java/businessLogic/BLFacadeImplementation.java? ?(
-
-%1void"dataAccess.DataAccess#open(Z)V*
-
-%0dataAccess.DataAccess*
-""2open(Z)|
-z
-R
-HF:/BetsCI/Bets21/src/main/java/businessLogic/BLFacadeImplementation.java@ @(
-sdomain.Pronostico"__id*
-""³
-°
-R
-HF:/BetsCI/Bets21/src/main/java/businessLogic/BLFacadeImplementation.javaB B(
-%2dataAccess.DataAccess"__id*7*5&
-$businessLogic.BLFacadeImplementation"
-	dbManager¸µ
-R
-HF:/BetsCI/Bets21/src/main/java/businessLogic/BLFacadeImplementation.javaB B(?
-%3domain.Pronostico"NdataAccess.DataAccess#crearPronostico(ILjava/lang/String;F)Ldomain/Pronostico;*
-
-%2dataAccess.DataAccess*
-""* 
-
-
-pronosticojava.lang.String*
-""2%crearPronostico(ILjava/lang/String;F)
-
-R
-HF:/BetsCI/Bets21/src/main/java/businessLogic/BLFacadeImplementation.javaB B(?
-sdomain.Pronostico"__id*
-
-%3domain.Pronostico³
-°
-R
-HF:/BetsCI/Bets21/src/main/java/businessLogic/BLFacadeImplementation.javaD D(
-%4dataAccess.DataAccess"__id*7*5&
-$businessLogic.BLFacadeImplementation"
-	dbManager«¨
-R
-HF:/BetsCI/Bets21/src/main/java/businessLogic/BLFacadeImplementation.javaD D(
-
-%5void"dataAccess.DataAccess#close()V*
-
-%4dataAccess.DataAccess2close()"n
-R
-HF:/BetsCI/Bets21/src/main/java/businessLogic/BLFacadeImplementation.javaF F(
-
-sdomain.Pronostico:
-"":
-
-pronosticojava.lang.String:
-""B(&
-$businessLogic.BLFacadeImplementation

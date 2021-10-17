@@ -1,152 +1,0 @@
-
-õbusinessLogic.BLFacadeImplementation#createApuesta(Ldomain/Pronostico;FLdomain/Event;Ldomain/Question;Ldomain/Cuenta;Ldomain/CuentaAhorro;)Ldomain/Apuesta;T
-HF:/BetsCI/Bets21/src/main/java/businessLogic/BLFacadeImplementation.java„ „("startingBlock*∑
-startingBlockT
-HF:/BetsCI/Bets21/src/main/java/businessLogic/BLFacadeImplementation.java„ „(iù
-ö
-T
-HF:/BetsCI/Bets21/src/main/java/businessLogic/BLFacadeImplementation.java‚ ‚(
-
-%6"
-__annotate*
-java.lang.Override*
-
-pdomain.Pronosticoá
-Ñ
-T
-HF:/BetsCI/Bets21/src/main/java/businessLogic/BLFacadeImplementation.java„) „(*
-pdomain.Pronostico"__annotation*
-
-%6ò
-ï
-T
-HF:/BetsCI/Bets21/src/main/java/businessLogic/BLFacadeImplementation.java‚ ‚(
-
-%7"
-__annotate*
-java.lang.Override*
-
-edomain.EventÅ
-
-T
-HF:/BetsCI/Bets21/src/main/java/businessLogic/BLFacadeImplementation.java„; „(<
-edomain.Event"__annotation*
-
-%7õ
-ò
-T
-HF:/BetsCI/Bets21/src/main/java/businessLogic/BLFacadeImplementation.java‚ ‚(
-
-%8"
-__annotate*
-java.lang.Override*
-
-qdomain.QuestionÖ
-Ç
-T
-HF:/BetsCI/Bets21/src/main/java/businessLogic/BLFacadeImplementation.java„G „(H
-qdomain.Question"__annotation*
-
-%8ü
-ú
-T
-HF:/BetsCI/Bets21/src/main/java/businessLogic/BLFacadeImplementation.java‚ ‚(
-
-%9"
-__annotate*
-java.lang.Override*
-
-usuariodomain.Cuentaâ
-Ü
-T
-HF:/BetsCI/Bets21/src/main/java/businessLogic/BLFacadeImplementation.java„Q „(X
-usuariodomain.Cuenta"__annotation*
-
-%9†
-ù
-T
-HF:/BetsCI/Bets21/src/main/java/businessLogic/BLFacadeImplementation.java‚ ‚(
-
-%10"
-__annotate*
-java.lang.Override*
-
-cdomain.CuentaAhorroä
-á
-T
-HF:/BetsCI/Bets21/src/main/java/businessLogic/BLFacadeImplementation.java„g „(h
-cdomain.CuentaAhorro"__annotation*
-
-%10*
-1*Û
-1T
-HF:/BetsCI/Bets21/src/main/java/businessLogic/BLFacadeImplementation.java‰ ‰(µ
-≤
-T
-HF:/BetsCI/Bets21/src/main/java/businessLogic/BLFacadeImplementation.java‰ ‰(
-%0dataAccess.DataAccess"__id*7*5&
-$businessLogic.BLFacadeImplementation"
-	dbManagerµ≤
-T
-HF:/BetsCI/Bets21/src/main/java/businessLogic/BLFacadeImplementation.java‰ ‰(
-
-%1void"dataAccess.DataAccess#open(Z)V*
-
-%0dataAccess.DataAccess*
-""2open(Z){
-y
-T
-HF:/BetsCI/Bets21/src/main/java/businessLogic/BLFacadeImplementation.javaÂ Â(
-adomain.Apuesta"__id*
-""µ
-≤
-T
-HF:/BetsCI/Bets21/src/main/java/businessLogic/BLFacadeImplementation.javaÊ Ê(
-%2dataAccess.DataAccess"__id*7*5&
-$businessLogic.BLFacadeImplementation"
-	dbManageråâ
-T
-HF:/BetsCI/Bets21/src/main/java/businessLogic/BLFacadeImplementation.javaÊ Ê(3
-%3domain.Apuesta"ådataAccess.DataAccess#createApuesta(Ldomain/Pronostico;FLdomain/Event;Ldomain/Question;Ldomain/Cuenta;Ldomain/CuentaAhorro;)Ldomain/Apuesta;*
-
-%2dataAccess.DataAccess*
-
-pdomain.Pronostico*
-""*
-
-edomain.Event*
-
-qdomain.Question*
-
-usuariodomain.Cuenta*
-
-cdomain.CuentaAhorro2fcreateApuesta(Ldomain/Pronostico;FLdomain/Event;Ldomain/Question;Ldomain/Cuenta;Ldomain/CuentaAhorro;)å
-â
-T
-HF:/BetsCI/Bets21/src/main/java/businessLogic/BLFacadeImplementation.javaÊ Ê(3
-adomain.Apuesta"__id*
-
-%3domain.Apuestaµ
-≤
-T
-HF:/BetsCI/Bets21/src/main/java/businessLogic/BLFacadeImplementation.javaÁ Á(
-%4dataAccess.DataAccess"__id*7*5&
-$businessLogic.BLFacadeImplementation"
-	dbManager≠™
-T
-HF:/BetsCI/Bets21/src/main/java/businessLogic/BLFacadeImplementation.javaÁ Á(
-
-%5void"dataAccess.DataAccess#close()V*
-
-%4dataAccess.DataAccess2close()"m
-T
-HF:/BetsCI/Bets21/src/main/java/businessLogic/BLFacadeImplementation.javaË Ë(
-
-adomain.Apuesta:
-pdomain.Pronostico:
-"":
-edomain.Event:
-qdomain.Question:
-usuariodomain.Cuenta:
-cdomain.CuentaAhorroB(&
-$businessLogic.BLFacadeImplementation

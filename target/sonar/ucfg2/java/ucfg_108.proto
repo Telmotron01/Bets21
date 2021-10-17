@@ -1,49 +1,0 @@
-
-!domain.Event#preguntasCerradas()Z<
-0F:/BetsCI/Bets21/src/main/java/domain/Event.java (!"5*·
-2<
-0F:/BetsCI/Bets21/src/main/java/domain/Event.java (d
-b
-<
-0F:/BetsCI/Bets21/src/main/java/domain/Event.java (
-qdomain.Question"__id*
-""…
-‚
-<
-0F:/BetsCI/Bets21/src/main/java/domain/Event.java (
-qdomain.Question"
-__arrayGet*
-
-%0java.util.Vector*
-""*
-4
-1*‰
-3<
-0F:/BetsCI/Bets21/src/main/java/domain/Event.java’ ’("F
-<
-0F:/BetsCI/Bets21/src/main/java/domain/Event.java’ ’(
-""*ß
-4<
-0F:/BetsCI/Bets21/src/main/java/domain/Event.java‘ ‘(	“
-<
-0F:/BetsCI/Bets21/src/main/java/domain/Event.java‘ ‘(
-%1boolean"domain.Question#isCerrada()Z*
-
-qdomain.Question2isCerrada()*
-2
-3*Ç
-5<
-0F:/BetsCI/Bets21/src/main/java/domain/Event.java (
-}
-<
-0F:/BetsCI/Bets21/src/main/java/domain/Event.java (
-%0java.util.Vector"__id**
-domain.Event"
-	questions*
-2*‰
-1<
-0F:/BetsCI/Bets21/src/main/java/domain/Event.java•	 •("F
-<
-0F:/BetsCI/Bets21/src/main/java/domain/Event.java• •(
-""B
-domain.Event

@@ -3,7 +3,6 @@ F:\BetsCI\Bets21\src\main\java\configuration\UtilDate.java
 F:\BetsCI\Bets21\src\main\java\gui\BusquedaApostarGUI.java
 F:\BetsCI\Bets21\src\main\java\exceptions\EventFinished.java
 F:\BetsCI\Bets21\src\main\java\gui\CerrarEventoGUI.java
-F:\BetsCI\Bets21\src\main\java\gui\AñadirFondosGUI.java
 F:\BetsCI\Bets21\src\main\java\businessLogic\BusinessLogicServer.java
 F:\BetsCI\Bets21\src\main\java\domain\Apuesta.java
 F:\BetsCI\Bets21\src\main\java\gui\MisApuestasGUI.java
@@ -26,6 +25,7 @@ F:\BetsCI\Bets21\src\main\java\gui\CrearPronosticosGUI.java
 F:\BetsCI\Bets21\src\main\java\domain\Question.java
 F:\BetsCI\Bets21\src\main\java\domain\CuentaAhorro.java
 F:\BetsCI\Bets21\src\main\java\dataAccess\ObjectdbManagerServerAWS.java
+F:\BetsCI\Bets21\src\main\java\gui\AnadirFondosGUI.java
 F:\BetsCI\Bets21\src\main\java\gui\RegistrarseGUI.java
 F:\BetsCI\Bets21\src\main\java\exceptions\EventAlreadyExist.java
 F:\BetsCI\Bets21\src\main\java\domain\Pronostico.java

@@ -1,129 +1,0 @@
-
-1gui.AdminGUI#getLblNewLabel()Ljavax/swing/JLabel;<
-0F:/BetsCI/Bets21/src/main/java/gui/AdminGUI.java± ±("3*£
-2<
-0F:/BetsCI/Bets21/src/main/java/gui/AdminGUI.java³# ³(1à
-Ý
-<
-0F:/BetsCI/Bets21/src/main/java/gui/AdminGUI.java³# ³(H
-%1java.util.ResourceBundle"Pjava.util.ResourceBundle#getBundle(Ljava/lang/String;)Ljava/util/ResourceBundle;*"
-java.util.ResourceBundle*
-	Etiquetasöó
-<
-0F:/BetsCI/Bets21/src/main/java/gui/AdminGUI.java³# ³(b
-%2java.lang.String"Hjava.util.ResourceBundle#getString(Ljava/lang/String;)Ljava/lang/String;* 
-
-%1java.util.ResourceBundle*
-SelectOption2getString(Ljava/lang/String;)nl
-<
-0F:/BetsCI/Bets21/src/main/java/gui/AdminGUI.java³ ³("
-%3javax.swing.JLabel"javax.swing.JLabel­
-ª
-<
-0F:/BetsCI/Bets21/src/main/java/gui/AdminGUI.java³ ³(c
-%4".javax.swing.JLabel#<init>(Ljava/lang/String;)V*
-
-%3javax.swing.JLabel*
-
-%2java.lang.String‹
-ˆ
-<
-0F:/BetsCI/Bets21/src/main/java/gui/AdminGUI.java³ ³(c&
-gui.AdminGUI"
-jLabelSelectOption"__id*
-
-%3javax.swing.JLabel‹
-ˆ
-<
-0F:/BetsCI/Bets21/src/main/java/gui/AdminGUI.java´ ´(
-%5javax.swing.JLabel"__id*(*&
-gui.AdminGUI"
-jLabelSelectOptionY
-W
-<
-0F:/BetsCI/Bets21/src/main/java/gui/AdminGUI.java´1 ´(:	
-%6int"__id*
-""db
-<
-0F:/BetsCI/Bets21/src/main/java/gui/AdminGUI.java´" ´(&
-%7java.awt.Font"java.awt.Fontª
-§
-<
-0F:/BetsCI/Bets21/src/main/java/gui/AdminGUI.java´ ´(?
-%8"+java.awt.Font#<init>(Ljava/lang/String;II)V*
-
-%7java.awt.Font*
-
-Tahoma*
-	
-%6int*2ÌÉ
-<
-0F:/BetsCI/Bets21/src/main/java/gui/AdminGUI.java´ ´(@
-
-%9void"0javax.swing.JComponent#setFont(Ljava/awt/Font;)V*
-
-%5javax.swing.JLabel*
-
-%7java.awt.Font2setFont(Ljava/awt/Font;)Œ
-‰
-<
-0F:/BetsCI/Bets21/src/main/java/gui/AdminGUI.javaµ µ(
-%10javax.swing.JLabel"__id*(*&
-gui.AdminGUI"
-jLabelSelectOptione
-c
-<
-0F:/BetsCI/Bets21/src/main/java/gui/AdminGUI.javaµ$ µ(/
-%11java.awt.Color"__id*
-""ÞÛ
-<
-0F:/BetsCI/Bets21/src/main/java/gui/AdminGUI.javaµ µ(0
-%12void"7javax.swing.JComponent#setForeground(Ljava/awt/Color;)V*
-
-%10javax.swing.JLabel*
-
-%11java.awt.Color2setForeground(Ljava/awt/Color;)Œ
-‰
-<
-0F:/BetsCI/Bets21/src/main/java/gui/AdminGUI.java¶ ¶(
-%13javax.swing.JLabel"__id*(*&
-gui.AdminGUI"
-jLabelSelectOptionZ
-X
-<
-0F:/BetsCI/Bets21/src/main/java/gui/AdminGUI.java¶- ¶(B
-
-%14int"__id*
-""ÃÀ
-<
-0F:/BetsCI/Bets21/src/main/java/gui/AdminGUI.java¶ ¶(C
-%15void"-javax.swing.JLabel#setHorizontalAlignment(I)V*
-
-%13javax.swing.JLabel*
-
-
-%14int2setHorizontalAlignment(I)*
-1*×
-3<
-0F:/BetsCI/Bets21/src/main/java/gui/AdminGUI.java² ²(‹
-ˆ
-<
-0F:/BetsCI/Bets21/src/main/java/gui/AdminGUI.java² ²(
-%0javax.swing.JLabel"__id*(*&
-gui.AdminGUI"
-jLabelSelectOption*
-2
-1*­
-1<
-0F:/BetsCI/Bets21/src/main/java/gui/AdminGUI.java¸	 ¸(Œ
-‰
-<
-0F:/BetsCI/Bets21/src/main/java/gui/AdminGUI.java¸	 ¸(
-%16javax.swing.JLabel"__id*(*&
-gui.AdminGUI"
-jLabelSelectOption"[
-<
-0F:/BetsCI/Bets21/src/main/java/gui/AdminGUI.java¸ ¸(
-
-%16javax.swing.JLabelB
-gui.AdminGUI

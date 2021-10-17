@@ -1,16 +1,0 @@
-
-0domain.Event#getEventNumber()Ljava/lang/Integer;:
-0F:/BetsCI/Bets21/src/main/java/domain/Event.java6 6("1*›
-1:
-0F:/BetsCI/Bets21/src/main/java/domain/Event.java7	 7(€
-~
-:
-0F:/BetsCI/Bets21/src/main/java/domain/Event.java7	 7(
-%0java.lang.Integer"__id*!*
-domain.Event"
-eventNumber"W
-:
-0F:/BetsCI/Bets21/src/main/java/domain/Event.java7 7(
-
-%0java.lang.IntegerB
-domain.Event

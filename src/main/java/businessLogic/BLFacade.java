@@ -1,7 +1,7 @@
 package businessLogic;
 
 
-//Prueba integración continua
+//Prueba integracion continua
 
 import java.util.Vector;
 import java.util.ArrayList;

@@ -93,13 +93,13 @@ public class MisApuestasGUI extends JFrame {
 					row.add(a.getPronostico().getPronostico());
 
 					if (a.isCerrada()) {
-						row.add("Sí");
+						row.add("S\u00ED");
 					}else {
 						row.add("No");
 					}
 
 					if (a.isGanada()) {
-						row.add("Sí");
+						row.add("S\u00ED");
 					}else {
 						row.add("No");
 					}

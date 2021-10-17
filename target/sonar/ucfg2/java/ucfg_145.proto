@@ -1,82 +1,0 @@
-
-VbusinessLogic.BLFacadeImplementation#hacerLogin(Ljava/lang/String;Ljava/lang/String;)ZT
-HF:/BetsCI/Bets21/src/main/java/businessLogic/BLFacadeImplementation.javaß ß("startingBlock*“
-startingBlockT
-HF:/BetsCI/Bets21/src/main/java/businessLogic/BLFacadeImplementation.javaß ß(9°
-û
-T
-HF:/BetsCI/Bets21/src/main/java/businessLogic/BLFacadeImplementation.java¶ ¶(
-%6"
-__annotate*
-javax.jws.WebMethod*
-
-loginjava.lang.Stringä
-á
-T
-HF:/BetsCI/Bets21/src/main/java/businessLogic/BLFacadeImplementation.javaß" ß('
-loginjava.lang.String"__annotation*
-
-%6§
-°
-T
-HF:/BetsCI/Bets21/src/main/java/businessLogic/BLFacadeImplementation.java¶ ¶(
-%7"
-__annotate*
-javax.jws.WebMethod*
-
-passwordjava.lang.Stringç
-ä
-T
-HF:/BetsCI/Bets21/src/main/java/businessLogic/BLFacadeImplementation.javaß0 ß(8
-passwordjava.lang.String"__annotation*
-
-%7*
-1*ã
-1T
-HF:/BetsCI/Bets21/src/main/java/businessLogic/BLFacadeImplementation.java® ®(µ
-≤
-T
-HF:/BetsCI/Bets21/src/main/java/businessLogic/BLFacadeImplementation.java® ®(
-%0dataAccess.DataAccess"__id*7*5&
-$businessLogic.BLFacadeImplementation"
-	dbManagerµ≤
-T
-HF:/BetsCI/Bets21/src/main/java/businessLogic/BLFacadeImplementation.java® ®(
-
-%1void"dataAccess.DataAccess#open(Z)V*
-
-%0dataAccess.DataAccess*
-""2open(Z)µ
-≤
-T
-HF:/BetsCI/Bets21/src/main/java/businessLogic/BLFacadeImplementation.java™ ™(
-%2dataAccess.DataAccess"__id*7*5&
-$businessLogic.BLFacadeImplementation"
-	dbManagerøº
-T
-HF:/BetsCI/Bets21/src/main/java/businessLogic/BLFacadeImplementation.java™ ™(4
-%3boolean"GdataAccess.DataAccess#hacerLogin(Ljava/lang/String;Ljava/lang/String;)Z*
-
-%2dataAccess.DataAccess*
-
-loginjava.lang.String*
-
-passwordjava.lang.String20hacerLogin(Ljava/lang/String;Ljava/lang/String;)µ
-≤
-T
-HF:/BetsCI/Bets21/src/main/java/businessLogic/BLFacadeImplementation.java¨ ¨(
-%4dataAccess.DataAccess"__id*7*5&
-$businessLogic.BLFacadeImplementation"
-	dbManager≠™
-T
-HF:/BetsCI/Bets21/src/main/java/businessLogic/BLFacadeImplementation.java¨ ¨(
-
-%5void"dataAccess.DataAccess#close()V*
-
-%4dataAccess.DataAccess2close()"^
-T
-HF:/BetsCI/Bets21/src/main/java/businessLogic/BLFacadeImplementation.java≠ ≠(
-"":
-loginjava.lang.String:
-passwordjava.lang.StringB(&
-$businessLogic.BLFacadeImplementation

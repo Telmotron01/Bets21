@@ -1,69 +1,0 @@
-
-HbusinessLogic.BLFacadeImplementation#getPronosticos(I)Ljava/util/Vector;T
-HF:/BetsCI/Bets21/src/main/java/businessLogic/BLFacadeImplementation.java⁄ ⁄()"1*á
-1T
-HF:/BetsCI/Bets21/src/main/java/businessLogic/BLFacadeImplementation.java€ €(µ
-≤
-T
-HF:/BetsCI/Bets21/src/main/java/businessLogic/BLFacadeImplementation.java€ €(
-%0dataAccess.DataAccess"__id*7*5&
-$businessLogic.BLFacadeImplementation"
-	dbManagerµ≤
-T
-HF:/BetsCI/Bets21/src/main/java/businessLogic/BLFacadeImplementation.java€ €(
-
-%1void"dataAccess.DataAccess#open(Z)V*
-
-%0dataAccess.DataAccess*
-""2open(Z)ÉÄ
-T
-HF:/BetsCI/Bets21/src/main/java/businessLogic/BLFacadeImplementation.java‹ ‹(/
-%2java.util.Vector"java.util.Vectorï
-í
-T
-HF:/BetsCI/Bets21/src/main/java/businessLogic/BLFacadeImplementation.java‹ ‹(1
-%3"java.util.Vector#<init>()V*
-
-%2java.util.Vectorê
-ç
-T
-HF:/BetsCI/Bets21/src/main/java/businessLogic/BLFacadeImplementation.java‹ ‹(2
-pjava.util.Vector"__id*
-
-%2java.util.Vectorµ
-≤
-T
-HF:/BetsCI/Bets21/src/main/java/businessLogic/BLFacadeImplementation.java› ›(
-%4dataAccess.DataAccess"__id*7*5&
-$businessLogic.BLFacadeImplementation"
-	dbManagerÊ„
-T
-HF:/BetsCI/Bets21/src/main/java/businessLogic/BLFacadeImplementation.java› ›(+
-%5java.util.Vector"9dataAccess.DataAccess#getPronosticos(I)Ljava/util/Vector;*
-
-%4dataAccess.DataAccess*
-""2getPronosticos(I)ê
-ç
-T
-HF:/BetsCI/Bets21/src/main/java/businessLogic/BLFacadeImplementation.java› ›(+
-pjava.util.Vector"__id*
-
-%5java.util.Vectorµ
-≤
-T
-HF:/BetsCI/Bets21/src/main/java/businessLogic/BLFacadeImplementation.javaﬁ ﬁ(
-%6dataAccess.DataAccess"__id*7*5&
-$businessLogic.BLFacadeImplementation"
-	dbManager≠™
-T
-HF:/BetsCI/Bets21/src/main/java/businessLogic/BLFacadeImplementation.javaﬁ ﬁ(
-
-%7void"dataAccess.DataAccess#close()V*
-
-%6dataAccess.DataAccess2close()"o
-T
-HF:/BetsCI/Bets21/src/main/java/businessLogic/BLFacadeImplementation.javaﬂ ﬂ(
-
-pjava.util.Vector:
-""B(&
-$businessLogic.BLFacadeImplementation

@@ -9,7 +9,6 @@ domain\Cuenta.class
 gui\AdminGUI$2.class
 gui\RegistrarseGUI$2.class
 dataAccess\ObjectdbManagerServer$1.class
-gui\AñadirFondosGUI$1.class
 gui\CrearEventosGUI$3.class
 gui\Login$1.class
 exceptions\PronosticoAlreadyExist.class
@@ -18,6 +17,7 @@ gui\ApostarGUI$2.class
 gui\CerrarPronosticoGUI$2.class
 exceptions\EventAlreadyExist.class
 gui\CreateQuestionGUI.class
+gui\AnadirFondosGUI$2.class
 businessLogic\BusinessLogicServer$2.class
 domain\CuentaAhorro.class
 domain\Question.class
@@ -30,15 +30,14 @@ domain\Event.class
 dataAccess\DataAccess.class
 gui\CrearPronosticosGUI$1.class
 gui\AdminGUI.class
+gui\AnadirFondosGUI$1.class
 gui\CerrarPronosticoGUI$1.class
 exceptions\EventFinished.class
 configuration\UtilDate.class
 businessLogic\BusinessLogicServer$1.class
-gui\AñadirFondosGUI.class
 gui\Login$2.class
 gui\UserGUI$2.class
 gui\MisApuestasGUI$1.class
-gui\AñadirFondosGUI$2.class
 gui\BusquedaApostarGUI$3.class
 gui\CrearEventosGUI.class
 gui\ApplicationLauncher.class
@@ -68,6 +67,7 @@ domain\Pronostico.class
 gui\CrearPronosticosGUI$4.class
 gui\CrearPronosticosGUI.class
 gui\UserGUI$4.class
+gui\AnadirFondosGUI.class
 dataAccess\ObjectdbManagerServer.class
 domain\Apuesta.class
 gui\BusquedaApostarGUI$1.class

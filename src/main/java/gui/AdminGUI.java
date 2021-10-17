@@ -114,7 +114,7 @@ public class AdminGUI extends JFrame {
 	private JButton getBoton2() {
 		if (jButtonCreateQuery == null) {
 			jButtonCreateQuery = new JButton();
-			jButtonCreateQuery.setText("Añadir Pregunta");
+			jButtonCreateQuery.setText("A\u00F1adir Pregunta");
 			jButtonCreateQuery.addActionListener(new java.awt.event.ActionListener() {
 				public void actionPerformed(java.awt.event.ActionEvent e) {
 					JFrame a = new CreateQuestionGUI(new Vector<Event>());

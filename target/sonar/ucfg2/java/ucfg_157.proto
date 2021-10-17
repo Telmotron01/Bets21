@@ -1,88 +1,0 @@
-
-WbusinessLogic.BLFacadeImplementation#getCuentaAhorro(Ldomain/Cuenta;)Ljava/util/Vector;T
-HF:/BetsCI/Bets21/src/main/java/businessLogic/BLFacadeImplementation.javaà à(,"startingBlock*å
-startingBlockT
-HF:/BetsCI/Bets21/src/main/java/businessLogic/BLFacadeImplementation.javaà, à(6ô
-ñ
-T
-HF:/BetsCI/Bets21/src/main/java/businessLogic/BLFacadeImplementation.javaá á(
-
-%8"
-__annotate*
-java.lang.Override*
-
-udomain.CuentaÉ
-Ä
-T
-HF:/BetsCI/Bets21/src/main/java/businessLogic/BLFacadeImplementation.javaà4 à(5
-udomain.Cuenta"__annotation*
-
-%8*
-1*≥
-1T
-HF:/BetsCI/Bets21/src/main/java/businessLogic/BLFacadeImplementation.javaâ â(µ
-≤
-T
-HF:/BetsCI/Bets21/src/main/java/businessLogic/BLFacadeImplementation.javaâ â(
-%0dataAccess.DataAccess"__id*7*5&
-$businessLogic.BLFacadeImplementation"
-	dbManagerµ≤
-T
-HF:/BetsCI/Bets21/src/main/java/businessLogic/BLFacadeImplementation.javaâ â(
-
-%1void"dataAccess.DataAccess#open(Z)V*
-
-%0dataAccess.DataAccess*
-""2open(Z)ÉÄ
-T
-HF:/BetsCI/Bets21/src/main/java/businessLogic/BLFacadeImplementation.javaä ä(3
-%2java.util.Vector"java.util.Vectorï
-í
-T
-HF:/BetsCI/Bets21/src/main/java/businessLogic/BLFacadeImplementation.javaä ä(5
-%3"java.util.Vector#<init>()V*
-
-%2java.util.Vectorê
-ç
-T
-HF:/BetsCI/Bets21/src/main/java/businessLogic/BLFacadeImplementation.javaä ä(6
-cjava.util.Vector"__id*
-
-%2java.util.Vectorµ
-≤
-T
-HF:/BetsCI/Bets21/src/main/java/businessLogic/BLFacadeImplementation.javaã ã(
-%4dataAccess.DataAccess"__id*7*5&
-$businessLogic.BLFacadeImplementation"
-	dbManageríè
-T
-HF:/BetsCI/Bets21/src/main/java/businessLogic/BLFacadeImplementation.javaã ã( 
-%5java.util.Vector"HdataAccess.DataAccess#getCuentaAhorro(Ldomain/Cuenta;)Ljava/util/Vector;*
-
-%4dataAccess.DataAccess*
-
-udomain.Cuenta2 getCuentaAhorro(Ldomain/Cuenta;)ê
-ç
-T
-HF:/BetsCI/Bets21/src/main/java/businessLogic/BLFacadeImplementation.javaã ã( 
-cjava.util.Vector"__id*
-
-%5java.util.Vectorµ
-≤
-T
-HF:/BetsCI/Bets21/src/main/java/businessLogic/BLFacadeImplementation.javaå å(
-%6dataAccess.DataAccess"__id*7*5&
-$businessLogic.BLFacadeImplementation"
-	dbManager≠™
-T
-HF:/BetsCI/Bets21/src/main/java/businessLogic/BLFacadeImplementation.javaå å(
-
-%7void"dataAccess.DataAccess#close()V*
-
-%6dataAccess.DataAccess2close()"o
-T
-HF:/BetsCI/Bets21/src/main/java/businessLogic/BLFacadeImplementation.javaç ç(
-
-cjava.util.Vector:
-udomain.CuentaB(&
-$businessLogic.BLFacadeImplementation
