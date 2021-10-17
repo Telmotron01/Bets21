@@ -15,9 +15,10 @@ import domain.CuentaAhorro;
 import domain.Event;
 import domain.Pronostico;
 import domain.Question;
+import junit.framework.TestCase;
 import utility.TestUtilityDataAccess;
 
-class verGananciasDATest {
+class verGananciasDATest extends TestCase {
 
 	static DataAccess sut = new DataAccess(ConfigXML.getInstance().getDataBaseOpenMode().equals("initialize"));;
 	static TestUtilityDataAccess testDA = new TestUtilityDataAccess();
