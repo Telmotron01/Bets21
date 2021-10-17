@@ -108,7 +108,7 @@ public class TestUtilityDataAccess {
 		}
 		
 		public Cuenta anadirUsuario(String usuario, String password, boolean isAdmin) {
-			System.out.println(">> DataAccess: añadirUsuario=> usuario= "+usuario+" contraseña= "+password+" es admin= "+isAdmin);
+			System.out.println(">> DataAccess: anadirUsuario=> usuario= "+usuario+" contrasena= "+password+" es admin= "+isAdmin);
 			Cuenta c=null;
 			db.getTransaction().begin();
 			try {
@@ -123,7 +123,7 @@ public class TestUtilityDataAccess {
 		}
 		
 		public CuentaAhorro anadirCuentaAhorro(Cuenta usuario, String nombre, float fondos) {
-			System.out.println(">> DataAccess: añadirCuentaAhorro=> usuario= "+usuario.getNombre()+" nombre= "+nombre+" fondos= "+fondos);
+			System.out.println(">> DataAccess: anadirCuentaAhorro=> usuario= "+usuario.getNombre()+" nombre= "+nombre+" fondos= "+fondos);
 			CuentaAhorro ca=null;
 			db.getTransaction().begin();
 			try {
@@ -136,24 +136,6 @@ public class TestUtilityDataAccess {
 			}
 			return ca;
 		}
-
-
-//		public Pronostico añadirPronostico(String string, float cuota, String queryText) {
-//			System.out.println(">> DataAccess: añadirPronostico=> Pronostico= "+string+" cuota= "+cuota+" pregunta= "+queryText);
-//			Question q = db.find(Question.class, queryText);
-//			Pronostico p=null;
-//			db.getTransaction().commit();
-//			try {
-//				p=q.addPronostico(string, cuota);
-//				db.persist(q);
-//				db.persist(p);
-//				
-//				db.getTransaction().commit();
-//			}catch (Exception e) {
-//				e.printStackTrace();
-//			}
-//			return null;
-//		}
 
 
 		public Event anadirEventoPreguntaPronostico(String eventText, Date oneDate, String queryText,

@@ -15,15 +15,14 @@ import domain.CuentaAhorro;
 import domain.Event;
 import domain.Pronostico;
 import domain.Question;
-import junit.framework.TestCase;
 import utility.TestUtilityDataAccess;
 
-class verGananciasDATest extends TestCase {
+class verGananciasDATest{
 
 	static DataAccess sut = new DataAccess(ConfigXML.getInstance().getDataBaseOpenMode().equals("initialize"));;
 	static TestUtilityDataAccess testDA = new TestUtilityDataAccess();
 
-	//Caso en el que le pasamos null sñ
+	//Caso en el que le pasamos null 
 	@Test
 	void test1() {
 		CuentaAhorro C0=null;
