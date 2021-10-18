@@ -4,8 +4,10 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+
 
 import configuration.ConfigXML;
 import dataAccess.DataAccess;
@@ -17,7 +19,7 @@ import domain.Pronostico;
 import domain.Question;
 import utility.TestUtilityDataAccess;
 
-public class verGananciasDATest{
+class verGananciasDATest{
 
 	static DataAccess sut = new DataAccess(ConfigXML.getInstance().getDataBaseOpenMode().equals("initialize"));;
 	static TestUtilityDataAccess testDA = new TestUtilityDataAccess();
