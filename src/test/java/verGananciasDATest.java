@@ -17,13 +17,13 @@ import domain.Pronostico;
 import domain.Question;
 import utility.TestUtilityDataAccess;
 
-class verGananciasDATest{
+public class verGananciasDATest{
 
 	static DataAccess sut = new DataAccess(ConfigXML.getInstance().getDataBaseOpenMode().equals("initialize"));;
 	static TestUtilityDataAccess testDA = new TestUtilityDataAccess();
 
 	//Caso en el que le pasamos null 
-	
+	@Test
 	void test1() {
 		CuentaAhorro C0=null;
 		assertThrows(NullPointerException.class, ()->sut.verGanancias(C0));
