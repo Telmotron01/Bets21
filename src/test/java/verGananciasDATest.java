@@ -22,7 +22,7 @@ import utility.TestUtilityDataAccess;
 class verGananciasDATest{
 
 	static DataAccess sut = new DataAccess(ConfigXML.getInstance().getDataBaseOpenMode().equals("initialize"));;
-	static TestUtilityDataAccess testDA = new TestUtilityDataAccess();
+	static TestUtilityDataAccess testDA = new TestUtilityDataAccess(); 
 
 	//Caso en el que le pasamos null 
 	@Test
