@@ -20,6 +20,8 @@ import domain.Pronostico;
 import domain.Question;
 import utility.TestUtilityDataAccess;
 
+//Evaluación
+
 class verGananciasDA2Test{
 
 	static DataAccessEsnaola2 sut = new DataAccessEsnaola2(ConfigXML.getInstance().getDataBaseOpenMode().equals("initialize"));;
