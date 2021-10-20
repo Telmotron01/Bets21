@@ -38,6 +38,14 @@
 				<version>2.19.1</version>
 				<configuration>
 					<testFailureIgnore>true</testFailureIgnore>
+					<includes>
+						<include>CreateQuestionBLMockTest.java</include>
+						<include>CreateQuestionBLTest.java</include>
+						<include>CreateQuestionDATest.java</include>
+						<include>verGananciasBLMockTest.java</include>
+						<include>verGananciasDA2MockTest.java</include>
+						<include>verGananciasDAMockTest.java</include>
+					</includes>
 				</configuration>
 			</plugin>
 
