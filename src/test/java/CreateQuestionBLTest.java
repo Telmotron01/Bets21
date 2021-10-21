@@ -24,8 +24,8 @@ import exceptions.QuestionAlreadyExist;
 import utility.TestUtilityFacadeImplementation;
 
 class CreateQuestionBLTest {
-	private DataAccess da = new DataAccess(ConfigXML.getInstance().getDataBaseOpenMode().equals("initialize"));
-
+//	private DataAccess da = new DataAccess(ConfigXML.getInstance().getDataBaseOpenMode().equals("initialize"));
+	private DataAccess da = new DataAccess(true);
 	private  BLFacadeImplementation sut= new BLFacadeImplementation(da);
 	private  TestUtilityFacadeImplementation testBL= new TestUtilityFacadeImplementation();
 
