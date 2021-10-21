@@ -68,7 +68,7 @@
 		<sonar.java.coveragePlugin>jacoco</sonar.java.coveragePlugin>
 		<sonar.login>be90a317ec828abb7003f4b5c3741b65ff5ed053</sonar.login>
 		
-		<sonar.coverage.jacoco.xmlReportPaths>VerGanancias2.xml VerGanancias.xml</sonar.coverage.jacoco.xmlReportPaths>
+		<!--<sonar.coverage.jacoco.xmlReportPaths>VerGanancias2.xml VerGanancias.xml</sonar.coverage.jacoco.xmlReportPaths>  -->
 	</properties>
 
 	<!-- https://mvnrepository.com/artifact/junit/junit -->
