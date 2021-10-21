@@ -37,7 +37,7 @@ class CreateQuestionBLTest {
 	void test1() {
 		try {
 			// configure the state of the system (create object in the dabatase)
-			String eventText = "Event Text";
+			String eventText = "Event Text1";
 			SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 			Date oneDate = sdf.parse("05/10/2022");
 			String queryText = "Query Text";
